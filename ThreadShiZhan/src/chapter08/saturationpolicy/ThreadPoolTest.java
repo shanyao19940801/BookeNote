@@ -14,8 +14,23 @@ public class ThreadPoolTest {
 //        abort();
 //        discard();
 //        discardpolicyoldest();
-        callerruns();
+//        callerruns();
+        bondExecutorTest();
     }
+    //通过信号量控制提交评率
+    private static void bondExecutorTest() {
+        ThreadPoolTest threadPoolTest = new ThreadPoolTest();
+        BondedExecutor bondedExecutor = new BondedExecutor(threadPoolTest.executor,2);
+        for (int i = 0; i < 50; i++) {
+            System.out.println("main:"+i);
+            try {
+                bondedExecutor.submeitTask(new PrintTask(i));
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
     //调用者运行
     //这里就是由主线程运行，这时候就会暂时提交任务
     private static void callerruns() {
