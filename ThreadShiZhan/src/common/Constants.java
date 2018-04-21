@@ -5,4 +5,5 @@ package common;
  */
 public class Constants {
     public static long SLEEP_GRANULARITY = 1000;
+    public static int BUFFER_SIZE =10;
 }
