@@ -7,12 +7,13 @@ public class Main {
     public static void main(String[] args) {
         Person person = new Person("小菜");
         System.out.println("第一种装扮");
-        Sneakers pqx = new Sneakers();
-        BigTrouser kk = new BigTrouser();
-        TShirts dtx = new TShirts();
-        pqx.decorate(person);
-        kk.decorate(pqx);
-        dtx.decorate(kk);
-        dtx.show();
+        Sneakers sneakers = new Sneakers();
+        BigTrouser bigTrouser = new BigTrouser();
+        Tie tie = new Tie();
+        TShirts shirts = new TShirts();
+        sneakers.decorate(person);
+        bigTrouser.decorate(sneakers);
+        shirts.decorate(bigTrouser);
+        shirts.show();
     }
 }
