@@ -10,6 +10,6 @@ public abstract class AbstractClass {
     public void TemplateMethod() {
         PrimitiveOperation1();
         PrimitiveOperation2();
-        System.out.println("");
+//        System.out.println("");
     }
 }
