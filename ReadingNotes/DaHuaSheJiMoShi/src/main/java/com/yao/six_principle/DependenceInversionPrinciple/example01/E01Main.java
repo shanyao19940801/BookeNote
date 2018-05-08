@@ -6,7 +6,9 @@ package com.yao.six_principle.DependenceInversionPrinciple.example01;
 public class E01Main {
     public static void main(String[] args) {
         XiaoMing xiaoMing = new XiaoMing();
-        DaHuaSheJiMoShi daHuaSheJiMoShi = new DaHuaSheJiMoShi();
-        xiaoMing.read(daHuaSheJiMoShi);
+        IRead daHuaSheJiMoShi = new DaHuaSheJiMoShi();
+        IRead dao = new DaoShanShuDIan();
+        xiaoMing.reader(daHuaSheJiMoShi);
+        xiaoMing.reader(dao);
     }
 }
