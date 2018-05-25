@@ -10,6 +10,7 @@ public class Main {
         subject.attach(new ConcreteObserver("Y",subject));
         subject.attach(new ConcreteObserver("Z",subject));
         subject.setSubjectState("ABC");
+        
         subject.notifyMy();
     }
 }
