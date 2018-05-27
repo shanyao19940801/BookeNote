@@ -7,3 +7,7 @@
 * 结构图
 
 ![观察者模式结构图](https://github.com/shanyao19940801/BookeNote/blob/master/ReadingNotes/DaHuaSheJiMoShi/src/main/java/com/yao/chapter14_Observer/image/observer.PNG)
+
+* 应用
+
+有一个微信公众号服务，不定时发布一些消息，关注公众号就可以收到推送消息，取消关注就收不到推送消息。
