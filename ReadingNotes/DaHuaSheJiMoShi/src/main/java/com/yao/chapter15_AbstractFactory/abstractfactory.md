@@ -40,3 +40,29 @@ AbstractFactoryPatternDemo，我们的演示类使用 FactoryProducer 来获取 
 ![结构图](https://github.com/shanyao19940801/BookeNote/blob/master/ReadingNotes/DaHuaSheJiMoShi/src/main/java/com/yao/chapter15_AbstractFactory/image/abstractfactory.PNG)
 
 [实例代码](https://github.com/shanyao19940801/BookeNote/tree/master/ReadingNotes/DaHuaSheJiMoShi/src/main/java/com/yao/chapter15_AbstractFactory/example)
+
+# 优化
+类
+[FactoryProducer](https://github.com/shanyao19940801/BookeNote/blob/master/ReadingNotes/DaHuaSheJiMoShi/src/main/java/com/yao/chapter15_AbstractFactory/example/FactoryProducer.java)
+中有一段代码如下：<br>
+
+        if(choice.equalsIgnoreCase("SHAPE")){
+            return new ShapeFactory();
+        } else if(choice.equalsIgnoreCase("COLOR")){
+            return new ColorFactory();
+        }
+
+每当我们新增一个Factory时都需要修改这个类中的代码，很显然这违背了设计模式的开闭原则，这里可以用java的**反射技术**来实现优化
+
+优化后代码如下
+
+    public static AbstractFactory getFactory(Class clzz) {
+        try {
+            return (AbstractFactory)clzz.newInstance();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
