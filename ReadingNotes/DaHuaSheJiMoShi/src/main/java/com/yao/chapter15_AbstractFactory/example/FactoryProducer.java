@@ -12,7 +12,6 @@ public class FactoryProducer {
         } else if(choice.equalsIgnoreCase("COLOR")){
             return new ColorFactory();
         }
-
         return null;
     }
 
