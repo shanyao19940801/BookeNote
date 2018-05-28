@@ -5,6 +5,8 @@
 
 * 结构图
 
+![结构图](https://github.com/shanyao19940801/BookeNote/blob/master/ReadingNotes/DaHuaSheJiMoShi/src/main/java/com/yao/chapter15_AbstractFactory/image/jiegoutu.PNG)
+
 * 介绍
 
 **意图**：提供一个创建一系列相关或相互依赖对象的接口，而无需指定它们具体的类。
