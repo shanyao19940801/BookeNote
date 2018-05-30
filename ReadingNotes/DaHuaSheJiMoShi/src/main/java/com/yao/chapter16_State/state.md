@@ -27,3 +27,8 @@
 **使用场景**： 1、行为随状态改变而改变的场景。 2、条件、分支语句的代替者。
 
 **注意事项**：在行为受状态约束的时候使用状态模式，而且状态不超过 5 个。
+
+* 实例
+[代码](https://github.com/shanyao19940801/BookeNote/tree/master/ReadingNotes/DaHuaSheJiMoShi/src/main/java/com/yao/chapter16_State/example)
+
+[结构图](https://github.com/shanyao19940801/BookeNote/blob/master/ReadingNotes/DaHuaSheJiMoShi/src/main/java/com/yao/chapter16_State/image/state_01.PNG)
