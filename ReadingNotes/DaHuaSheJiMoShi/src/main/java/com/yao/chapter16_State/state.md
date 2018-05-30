@@ -3,7 +3,7 @@
 
 * 结构图
 
-![结构图]()
+![结构图](https://github.com/shanyao19940801/BookeNote/blob/master/ReadingNotes/DaHuaSheJiMoShi/src/main/java/com/yao/chapter16_State/image/state_01.PNG)
 
 * 介绍
 
