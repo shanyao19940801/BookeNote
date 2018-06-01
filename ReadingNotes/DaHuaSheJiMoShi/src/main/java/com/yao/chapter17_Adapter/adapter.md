@@ -4,5 +4,5 @@
 
 * 结构图
 
-![适配器模式](https://github.com/shanyao19940801/BookeNote/tree/master/ReadingNotes/DaHuaSheJiMoShi/src/main/java/com/yao/chapter17_Adapter/image/adapter.PNG)
+![适配器模式](https://github.com/shanyao19940801/BookeNote/blob/master/ReadingNotes/DaHuaSheJiMoShi/src/main/java/com/yao/chapter17_Adapter/image/adpter.PNG)
 
