@@ -18,7 +18,11 @@ public class Leaf extends Component {
     }
 
     public void display(int depth) {
-        System.out.println(depth + "-" + name);
 
+        String g = "";
+        for (int i = 0; i < depth; i++) {
+            g += "-";
+        }
+        System.out.println("-" + g + name);
     }
 }
