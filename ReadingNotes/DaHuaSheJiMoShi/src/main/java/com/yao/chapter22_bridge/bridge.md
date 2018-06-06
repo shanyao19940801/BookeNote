@@ -6,16 +6,18 @@
 <br>
 按照品牌分离结构图：
 
-![]()
+![结构图](https://github.com/shanyao19940801/BookeNote/blob/master/ReadingNotes/DaHuaSheJiMoShi/src/main/java/com/yao/chapter22_bridge/image/bridge1.PNG)
 
 按照软件分离结构图
 
-![]()
+![结构图](https://github.com/shanyao19940801/BookeNote/blob/master/ReadingNotes/DaHuaSheJiMoShi/src/main/java/com/yao/chapter22_bridge/image/bridge2.PNG)
 
 
 **由于实现方式有多种**，桥接模式的核心意图就是把这些实现独立出来，让他们各自地变化。这就使得每种实现的变化不会影响其他实现，从而达到对应变化的目的。
 
-![]()
+* 使用桥接模式的结构图
+
+![结构图](https://github.com/shanyao19940801/BookeNote/blob/master/ReadingNotes/DaHuaSheJiMoShi/src/main/java/com/yao/chapter22_bridge/image/bridge3.PNG)
 
 * 结构图：
 
