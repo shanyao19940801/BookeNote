@@ -15,3 +15,12 @@
 第五：由于加进新的具体命令类不影响其他的类，因此增加新的具体命令类很容易；<br>
 第六：把请求一个操作的对象与知道怎么执行一个操作的对象分割开
 
+## 实例
+
+### 饭店点餐
+
+* 结构图
+
+![结构图](https://github.com/shanyao19940801/BookeNote/blob/master/ReadingNotes/DaHuaSheJiMoShi/src/main/java/com/yao/chapter23_Command/image/command01.PNG)
+
+
