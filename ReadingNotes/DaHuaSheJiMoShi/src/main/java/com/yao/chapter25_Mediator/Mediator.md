@@ -4,7 +4,9 @@
 
 * 结构图
 
-![]()
+![](https://github.com/shanyao19940801/BookeNote/blob/master/ReadingNotes/DaHuaSheJiMoShi/src/main/java/com/yao/chapter25_Mediator/image/meditor.PNG)
+
+![](https://github.com/shanyao19940801/BookeNote/blob/master/ReadingNotes/DaHuaSheJiMoShi/src/main/java/com/yao/chapter25_Mediator/image/meditor1.PNG)
 
 * 优点
 
