@@ -29,7 +29,17 @@ public class RectCover {
 
     public static void main(String[] args) {
         System.out.println(NumberOf2(3));
-        System.out.println(1&1);
+        System.out.println(Long.MAX_VALUE);
+        System.out.println(Integer.MAX_VALUE);
     }
 
+    /*int num = 0;
+        int flag = 1;
+        while (flag != 0) {
+            if ((n & flag) != 0)
+                num++;
+            flag = flag <<1;//当左移超过31变为0
+
+        }
+        return num;*/
 }
