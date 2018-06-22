@@ -15,7 +15,7 @@ public class Problem05 {
             return;
         }
         digui(head.next);
-        System.out.println(head.value);
+        System.out.println(head.val);
     }
     //利用栈
     public void printListInverselyUsingStack(ListNode head) {
@@ -24,7 +24,7 @@ public class Problem05 {
         }
         Stack<Integer> stack = new Stack<>();
         while (head != null) {
-            stack.add(head.value);
+            stack.add(head.val);
             head = head.next;
         }
 

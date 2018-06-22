@@ -2,9 +2,6 @@ package jianzhi.niuke;
 
 import jianzhi.Standard.ListNode;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Created by shanyao on 2018/6/22.
  */
@@ -34,15 +31,16 @@ public class ReverseList {
             listNodes.get(i).next = listNodes.get(i-1);
         }
         */
-
-        ListNode pB = new ListNode(head.value);
+        if (head == null || head.next == null)
+            return head;
+        ListNode pHead = new ListNode(head.val);
         while (head.next != null) {
-            ListNode pH = new ListNode(head.next.value);
-            pH.next = pB;
-            pB = pH;
+            ListNode pH = new ListNode(head.next.val);
+            pH.next = pHead;
+            pHead = pH;
             head = head.next;
         }
-        return pB;
+        return pHead;
     }
 
     public ListNode ReverseList1(ListNode head) {
