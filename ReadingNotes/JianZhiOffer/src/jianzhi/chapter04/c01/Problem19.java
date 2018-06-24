@@ -6,7 +6,7 @@ import jianzhi.Util;
 /**
  * Created by shanyao on 2018/6/24.
  */
-public class Mirror {
+public class Problem19 {
     public static TreeNode Mirror(TreeNode root) {
         if (root == null || (root.left == null && root.right == null)) {
             return root;
