@@ -1,6 +1,7 @@
 package jianzhi;
 
 import jianzhi.Standard.ListNode;
+import jianzhi.Standard.TreeNode;
 
 /**
  * Created by shanyao on 2018/6/23.
@@ -26,5 +27,22 @@ public class Util {
         head3.next = head4;
         head4.next = null;*/
         return head;
+    }
+
+    public static TreeNode getTree(){
+        TreeNode root = new TreeNode(8);
+        TreeNode root8 = new TreeNode(8);
+        root.left = root8;
+        TreeNode root9 = new TreeNode(9);
+        root8.left = root9;
+        TreeNode root2 = new TreeNode(2);
+        root8.right = root2;
+        TreeNode root4 = new TreeNode(4);
+        root2.left = root4;
+        TreeNode root7 = new TreeNode(7);
+        root2.right = root7;
+        TreeNode root71 = new TreeNode(7);
+        root.right = root71;
+        return root;
     }
 }
