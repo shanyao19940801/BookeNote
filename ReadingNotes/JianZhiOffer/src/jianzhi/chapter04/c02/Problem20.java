@@ -21,8 +21,8 @@ public class Problem20 {
             printCycle(matrix,start,x,y,result);
         }
         return result;
-        //方法一：
 
+        //方法一：
         /*int [] start = {0,0};
         int [] end = {matrix[0].length-1,matrix.length-1};
         while(start[0]<=end[0] && start[1]<=end[1]){
