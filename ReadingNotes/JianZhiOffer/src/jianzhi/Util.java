@@ -45,4 +45,22 @@ public class Util {
         root.right = root71;
         return root;
     }
+
+    public static TreeNode getSouSuoTree() {
+        TreeNode root4 = new TreeNode(4);
+        TreeNode root6 = new TreeNode(6);
+        root6.left = root4;
+
+        TreeNode root8 = new TreeNode(8);
+        root6.right = root8;
+        TreeNode root10 = new TreeNode(10);
+        root10.left = root6;
+        TreeNode root14 = new TreeNode(14);
+        root10.right = root14;
+        TreeNode root12 = new TreeNode(12);
+        root14.left = root12;
+        TreeNode root16 = new TreeNode(16);
+        root14.right = root16;
+        return root10;
+    }
 }
