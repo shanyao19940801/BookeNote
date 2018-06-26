@@ -12,6 +12,35 @@ public class Problem26 {
     {
         if(pHead == null)
             return null;
+        RandomListNode head = pHead;
+        while(head != null ) {
+            RandomListNode temp = new RandomListNode(head.label);
+            temp.next = head.next;
+            head.next = temp;
+            head = temp.next;
+        }
+        head = pHead;
+        while(head != null) {
+            if (head.random != null) {
+                head.next.random = head.random.next;
+            } else {
+                head.next.random = null;
+            }
+            head = head.next.next;
+        }
+        head = pHead;
+        RandomListNode resultNode = head.next;
+        RandomListNode reNode = resultNode;
+        head = resultNode.next;
+        while(head != null ) {
+            resultNode.next = head.next;
+            resultNode = resultNode.next;
+            head = head.next.next;
+        }
+        return reNode;
+        //方法一：
+        /*if(pHead == null)
+            return null;
         RandomListNode clone = new RandomListNode(pHead.label);
         HashMap<RandomListNode,RandomListNode> map = new HashMap<>();
         RandomListNode returnNode = clone;
@@ -36,7 +65,7 @@ public class Problem26 {
             head = head.next;
             clone = clone.next;
         }
-        return returnNode;
+        return returnNode;*/
     }
 
     public static void main(String[] args) {
