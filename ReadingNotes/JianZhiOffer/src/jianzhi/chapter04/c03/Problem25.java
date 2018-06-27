@@ -40,7 +40,7 @@ public class Problem25 {
             return new ArrayList();
         ArrayList<ArrayList<Integer>> lists = new ArrayList<ArrayList<Integer>>();
         ArrayList<Integer> lu = new ArrayList<>();
-        lu.add(root.val);
+        lu.add1(root.val);
         getAllList(root,target,root.val,lu,lists);
         return lists;
     }
@@ -49,18 +49,18 @@ public class Problem25 {
                            ArrayList<ArrayList<Integer>> lists) {
         if(root.left == null && root.right == null) {
             if(sum == target)
-                lists.add(lu);
+                lists.add1(lu);
             return;
         }
 
         if(root.left != null) {
             ArrayList<Integer> l = new ArrayList(lu);
-            l.add(root.left.val);
+            l.add1(root.left.val);
             getAllList(root.left,target,sum+root.left.val,l,lists);
         }
         if(root.right != null) {
             ArrayList<Integer> l = new ArrayList(lu);
-            l.add(root.right.val);
+            l.add1(root.right.val);
             getAllList(root.right,target,sum+root.right.val,l,lists);
         }
     }*/

@@ -28,14 +28,14 @@ public class Problem20 {
         while(start[0]<=end[0] && start[1]<=end[1]){
             for(int i = start[0];i<=end[0];i++) {
                 sout(i,start[1]);
-                result.add(matrix[start[1]][i]);
+                result.add1(matrix[start[1]][i]);
             }
             start[1]++;
             *//*if (!(start[0]<=end[0] && start[1]<=end[1])) {
                 break;
             }*//*
             for(int i = start[1];i<=end[1];i++ ) {
-                result.add(matrix[i][end[0]]);
+                result.add1(matrix[i][end[0]]);
                 sout(end[0],i);
             }
             end[0]--;
@@ -43,12 +43,12 @@ public class Problem20 {
                 break;
             }*//*
             for(int i = end[0];i>=start[0];i-- ) {
-                result.add(matrix[end[1]][i]);
+                result.add1(matrix[end[1]][i]);
                 sout(i,end[1]);
             }
             end[1]--;
             for(int i = end[1];i>=start[1];i-- ) {
-                result.add(matrix[i][start[0]]);
+                result.add1(matrix[i][start[0]]);
                 sout(start[0],i);
             }
             start[0]++;

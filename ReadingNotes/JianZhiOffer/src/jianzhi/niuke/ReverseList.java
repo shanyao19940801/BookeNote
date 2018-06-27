@@ -23,7 +23,7 @@ public class ReverseList {
     public static ListNode ReverseList(ListNode head) {
         /*List<ListNode> listNodes = new ArrayList<ListNode>();
         while(head.next != null) {
-            listNodes.add(head);
+            listNodes.add1(head);
             head = head.next;
         }
         head.next = listNodes.get(listNodes.size()-1);

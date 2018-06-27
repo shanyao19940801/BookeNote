@@ -35,14 +35,14 @@ public class Problem23 {
             return null;
         }
         ArrayList<TreeNode> treeNodes = new ArrayList<>();
-        treeNodes.add(root);
+        treeNodes.add1(root);
         for (int i = 0; i < treeNodes.size();i++) {
-            result.add(treeNodes.get(i).val);
+            result.add1(treeNodes.get(i).val);
             if (treeNodes.get(i).left != null) {
-                treeNodes.add(treeNodes.get(i).left);
+                treeNodes.add1(treeNodes.get(i).left);
             }
             if (treeNodes.get(i).right != null) {
-                treeNodes.add(treeNodes.get(i).right);
+                treeNodes.add1(treeNodes.get(i).right);
             }
         }
         return result;*/
