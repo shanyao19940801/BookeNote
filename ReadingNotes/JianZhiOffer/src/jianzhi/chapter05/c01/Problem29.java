@@ -28,7 +28,6 @@ public class Problem29 {
         }
         return 0;
     }
-
     public static void main(String[] args) {
         Problem29 p = new Problem29();
         int [] a = {1,2,3,2,2,2,5,4,2};
