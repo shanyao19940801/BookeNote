@@ -6,6 +6,7 @@ import java.util.HashMap;
  * Created by shanyao on 2018/6/27.
  */
 public class Problem29 {
+
     //解法二：基于Partition算法的O(n)算法
     public int MoreThanHalfNum_Solution2(int [] array) {
         //
