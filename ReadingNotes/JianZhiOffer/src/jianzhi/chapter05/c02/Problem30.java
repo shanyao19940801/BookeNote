@@ -1,14 +1,19 @@
 package jianzhi.chapter05.c02;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.TreeMap;
-import java.util.TreeSet;
+import java.util.*;
 
 /**
  * Created by shanyao on 2018/7/1.
  */
 public class Problem30 {
+    /*public class MyComparetor implements Comparator<Integer> {
+
+        @Override
+        public int compare(Integer o1, Integer o2) {
+            return 0;
+        }
+    }*/
+    //方法一：
     public ArrayList<Integer> GetLeastNumbers_Solution(int [] input, int k) {
         ArrayList<Integer> list = new ArrayList<>();
         if(input.length < k || k ==0) {
