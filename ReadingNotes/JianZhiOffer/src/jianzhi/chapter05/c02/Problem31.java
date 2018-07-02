@@ -23,10 +23,31 @@ public class Problem31 {
         }
         return max;
     }
+    public int FindGreatestSumOfSubArrayDiGui(int[] array) {
+        if (array.length == 0)
+            return 0;
+        return digui(0,0,array,array[0]);
+    }
+
+    public int digui(int sum,int index, int[] array, int max) {
+        if (index == array.length) {
+            return max;
+        }
+        if (sum <= 0) {
+            sum = array[index];
+        } else {
+            sum += array[index];
+        }
+        if (sum > max)
+            max = sum;
+        return digui(sum,index+1,array,max);
+    }
 
     public static void main(String[] args) {
         Problem31 p = new Problem31();
         int [] s = {-2,-8,-1,-5,-9};
-        p.FindGreatestSumOfSubArray(s);
+        int d= p.FindGreatestSumOfSubArray(s);
+        int r = p.FindGreatestSumOfSubArrayDiGui(s);
+        System.out.println(r);
     }
 }
