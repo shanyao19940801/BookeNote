@@ -12,11 +12,12 @@ public class MergeSort {
     public void mergeSort(int [] arr, int first, int last, int[] temp) {
         int mid = (first + last)/2;
         if (first < last) {
-            mergeSort(arr, first, mid, temp);
-            mergeSort(arr, mid + 1, last, temp);
-            merge(arr,first,mid,last,temp);
+            mergeSort(arr, first, mid, temp);//左边归并排序，使得左子序列有序
+            mergeSort(arr, mid + 1, last, temp);//右边归并排序，使得右子序列有序
+            merge(arr,first,mid,last,temp);//将两个有序子数组合并操作
         }
     }
+    ////将有序数组arr[]和b[]合并到temp[]中
     public void merge(int[] arr, int first, int mid, int last, int[] temp) {
         int i = first;
         int j = mid + 1;
@@ -28,12 +29,15 @@ public class MergeSort {
                 temp[t++] = arr[j++];
             }
         }
+        //将左边剩余元素填充进temp中
         while (i <= mid) {
             temp[t++] = arr[i++];
         }
+        //将右序列剩余元素填充进temp中
         while (j <= last) {
             temp[t++] = arr[j++];
         }
+        //将temp中的元素全部拷贝到原数组中
         for (int m = first; m <= last; m++) {
             arr[m] = temp[m];
         }
