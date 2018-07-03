@@ -51,7 +51,7 @@ public class Problem32 {
 
     public static void main(String[] args) {
         Problem32 p = new Problem32();
-        int i = p.NumberOf1Between1AndN_Solution(10000);
+        int i = p.NumberOf1Between1AndN_Solution(21345);
         System.out.println(i);
     }
     //方法一：比较笨时间复杂度为
