@@ -7,6 +7,23 @@ import java.util.*;
  */
 public class Problem35 {
     public int FirstNotRepeatingChar(String str) {
+        HashMap<Character,Integer> map = new HashMap<>();
+        for (int i = 0; i < str.length(); i++) {
+            char temp = str.charAt(i);
+            if (!map.containsKey(temp)) {
+                map.put(temp,1);
+            } else {
+                map.put(temp,map.get(temp)+1);
+            }
+        }
+        for (int i = 0; i < str.length(); i++) {
+            char temp = str.charAt(i);
+            if (map.get(temp) == 1)
+                return i;
+        }
+        return -1;
+    }
+    public int FirstNotRepeatingChar1(String str) {
         HashMap<Character,Node> map = new HashMap<>();
         ArrayList<Node> lists = new ArrayList<>();
         for (int i = 0; i < str.length(); i++) {
