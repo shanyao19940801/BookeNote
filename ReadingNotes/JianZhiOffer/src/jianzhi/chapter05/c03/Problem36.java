@@ -4,28 +4,29 @@ package jianzhi.chapter05.c03;
  * Created by shanyao on 2018/7/4.
  */
 public class Problem36 {
-    int num = 0;
     public int InversePairs(int [] array) {
         if (array.length <= 1)
             return 0;
         int mid = array.length/2;
-        mergeSort(array,0,array.length-1,new int[array.length]);
-        return num%1000000007;
+        return mergeSort(array,0,array.length-1,new int[array.length]);
     }
 
-    public void mergeSort(int [] array, int first,int last,int [] temp) {
+    public int mergeSort(int [] array, int first,int last,int [] temp) {
+        int left = 0;
+        int right = 0;
+        int me = 0;
         if (first < last) {
-            int mid = (first + last) / 2;
-            mergeSort(array,first,mid,temp);
-            mergeSort(array,mid+1,last,temp);
+            int mid = (first + last) >> 1;
+             left = mergeSort(array,first,mid,temp);
+             right = mergeSort(array,mid+1,last,temp);
             //左右两边都已经排序，合并
-            merge(array,first,mid,last,temp);
+            me = merge(array,first,mid,last,temp);
         }
-
+        return (left+right+me)%1000000007;
     }
 
-    private void merge(int[] array, int first, int mid, int last, int[] temp) {
-        //int num = 0;
+    private int merge(int[] array, int first, int mid, int last, int[] temp) {
+        int num = 0;
         int f= mid;
         int la = last;
         int t = last;
@@ -54,7 +55,7 @@ public class Problem36 {
             array[first] = temp[first];
             first++;
         }
-        //turn num;
+        return num;
     }
 
     public static void main(String[] args) {
