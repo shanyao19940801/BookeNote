@@ -4,8 +4,11 @@ import jianzhi.Standard.TreeNode;
 
 /**
  * Created by shanyao on 2018/7/5.
+ * 判断是否是平衡二叉树
  */
 public class Problem39_1 {
+    //解法一：判断每个左右节点深度是否相差超过一
+    //这种解法会有很多重复遍历
     public boolean judgeE(TreeNode root) {
         if (root == null)
             return true;
