@@ -28,4 +28,24 @@ public class Problem39_1 {
         int lr = TreeDepth(root.right);
         return ld > lr ? (ld + 1) : (lr + 1);
     }
+
+    //解法二：每个节点只遍历一次，利用后续遍历遍历每个节点同时记录节点深度
+    public boolean isBelace(TreeNode root, int[] dep) {
+        if (root == null) {
+            dep[0] = 0;
+            return true;
+        }
+        int left[] = new int[1],right[] = new int[1];
+        if (isBelace(root.left,left) && isBelace(root.right,right)) {
+            if (Math.abs(left[0]-right[0]) <= 1) {
+                dep[0] = 1 + (left[0] > right[0] ? left[0] : right[0]);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean IsBalanced_Solution(TreeNode root) {
+        return isBelace(root,new int[1]);
+    }
 }
