@@ -7,7 +7,7 @@ import java.util.Comparator;
 /**
  * Created by shanyao on 2018/7/5.
  */
-public class Problem42 {
+public class Problem41_01 {
     public ArrayList<ArrayList<Integer> > FindContinuousSequence(int sum) {
         ArrayList<ArrayList<Integer>> lists = new ArrayList<ArrayList<Integer>>();
         if(sum < 3)
