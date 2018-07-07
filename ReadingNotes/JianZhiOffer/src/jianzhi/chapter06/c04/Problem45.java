@@ -24,14 +24,10 @@ public class Problem45 {
                 if(num[in++%n]== -1) {
                     continue;
                 }
-
-//                num[in++%n] = -1;
                 count++;
             }
 
             num[(in-1)%n] = -1;
-//            in++;
-//            num[in++%n] = -1;
             leftNum--;
         }
         for(int i =0; i< n; i++) {
