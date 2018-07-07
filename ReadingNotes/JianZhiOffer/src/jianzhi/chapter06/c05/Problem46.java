@@ -17,6 +17,7 @@ public class Problem46 {
         int sum = p.Sum_Solution(3);
         System.out.println(sum);
 
+        Test46 [] t = new Test46[4];
 
     }
 }
