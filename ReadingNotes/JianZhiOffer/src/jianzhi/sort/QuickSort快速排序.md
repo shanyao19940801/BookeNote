@@ -10,4 +10,4 @@
 
 在初始状态下，数字6在序列的第1位。我们的目标是将6挪到序列中间的某个位置，假设这个位置是k。现在就需要寻找这个k，并且以第k位为分界点，左边的数都小于等于6，右边的数都大于等于6。
 
-实现代码请看：[快速排序]()
+实现代码请看：[快速排序](https://github.com/shanyao19940801/BookeNote/blob/master/ReadingNotes/JianZhiOffer/src/jianzhi/sort/QuickSort.java)
