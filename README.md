@@ -9,6 +9,10 @@
 
 [大话设计模式](https://github.com/shanyao19940801/BookeNote/blob/master/ReadingNotes/DaHuaSheJiMoShi/%E5%A4%A7%E5%8C%96%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.md)
 
+## 算法学习
+
+[算法](https://github.com/shanyao19940801/BookeNote/blob/master/ReadingNotes/JianZhiOffer/%E7%AE%97%E6%B3%95.md)
+
 ## 每天必须有产出，哪怕只是一行代码，半页书
 * 《我曾其次鄙视自己的灵魂》<br>
 第一次，当它本可进取时，却故作谦卑；<br>
