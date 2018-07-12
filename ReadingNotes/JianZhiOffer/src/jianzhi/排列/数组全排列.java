@@ -10,7 +10,7 @@ public class 数组全排列 {
     }
 
     private static void quanpailie(int[] a, int begin,int end){
-        print(a,end);
+//        print(a,end);
         if (begin == end) {
             System.out.println("-----");
             print(a,end);
