@@ -168,6 +168,7 @@
       <module fileurl="file://$PROJECT_DIR$/DaHuaSheJiMoShi/DaHuaSheJiMoShi.iml" filepath="$PROJECT_DIR$/DaHuaSheJiMoShi/DaHuaSheJiMoShi.iml" />
       <module fileurl="file://$PROJECT_DIR$/JianZhiOffer/JianZhiOffer.iml" filepath="$PROJECT_DIR$/JianZhiOffer/JianZhiOffer.iml" />
       <module fileurl="file://$PROJECT_DIR$/ReadingNotes.iml" filepath="$PROJECT_DIR$/ReadingNotes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SOA/SOA.iml" filepath="$PROJECT_DIR$/SOA/SOA.iml" />
     </modules>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
