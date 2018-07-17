@@ -164,6 +164,7 @@
   </component>
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Algorithm/Algorithm.iml" filepath="$PROJECT_DIR$/Algorithm/Algorithm.iml" />
       <module fileurl="file://$PROJECT_DIR$/BingFaBianChengShiZhan/BingFaBianChengShiZhan.iml" filepath="$PROJECT_DIR$/BingFaBianChengShiZhan/BingFaBianChengShiZhan.iml" />
       <module fileurl="file://$PROJECT_DIR$/DaHuaSheJiMoShi/DaHuaSheJiMoShi.iml" filepath="$PROJECT_DIR$/DaHuaSheJiMoShi/DaHuaSheJiMoShi.iml" />
       <module fileurl="file://$PROJECT_DIR$/JianZhiOffer/JianZhiOffer.iml" filepath="$PROJECT_DIR$/JianZhiOffer/JianZhiOffer.iml" />
