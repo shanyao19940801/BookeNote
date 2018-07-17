@@ -167,4 +167,19 @@ public class DFSJZ {
         g.DFSTraverse2();
     }
 
+    //邻接矩阵如下
+    /**
+     *      A  B  C  D  E  F  G  H  I
+     *   A     1           1
+     *   B  1     1           1     1
+     *   C     1     1              1
+     *   D        1     1     1  1  1
+     *   E           1     1  1
+     *   F  1           1     1
+     *   G     1     1     1     1
+     *   H           1  1     1
+     *   I     1  1  1
+     *
+     */
+
 }
