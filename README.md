@@ -11,7 +11,7 @@
 
 ## 算法学习
 
-[算法](https://github.com/shanyao19940801/BookeNote/blob/master/ReadingNotes/JianZhiOffer/%E7%AE%97%E6%B3%95.md)
+[算法学习](https://github.com/shanyao19940801/BookeNote/blob/master/ReadingNotes/Algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0.md)
 
 ## SOA
 
