@@ -74,7 +74,7 @@ public class DFSJZ {
 
     // 图的深度优先遍历（递归）
     public void DFSTraverse(){
-        // 初始化节点遍历标记
+        // 初始化节点遍历标记，false表示还未被遍历
         for (int i = 0; i < vexnum; i++) {
             visited[i] = false;
         }
