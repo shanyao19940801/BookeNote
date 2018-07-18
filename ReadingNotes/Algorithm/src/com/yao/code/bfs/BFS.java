@@ -1,5 +1,7 @@
 package com.yao.code.bfs;
 
+import java.util.LinkedList;
+
 /**
  * Created by shanyao on 2018/7/18.
  */
@@ -16,6 +18,8 @@ public class BFS {
 
     // 记录节点是否已被遍历
     private boolean[] visited;
+
+    LinkedList<Integer> list = new LinkedList<>();
 
     public BFS(int n) {
         vexnum = n;
@@ -85,20 +89,40 @@ public class BFS {
         g.addEdge(8, 2);
         g.addEdge(8, 3);
 
-        System.out.print("广度优先遍历（递归）：");
+        System.out.print("广度优先遍历：");
         g.BFSTraverse();
 
         System.out.println();
 
-        System.out.print("广度优先遍历（非递归）：");
-        g.BFSTraverse2();
     }
 
-    private void BFSTraverse2() {
-    }
-
+    //广度优先遍历
     private void BFSTraverse() {
+        for (int i = 0; i < vexnum;i++) {
+            visited[i] = false;
+        }
 
+        list.add(0);
+        traverse();
+    }
+
+    //广度优先遍历
+    private void traverse() {
+        while (!list.isEmpty()) {
+            int i = list.pop();
+            if (visited[i]) {
+                continue;
+            }
+            System.out.print(vertices[i] + " ");
+            visited[i] = true;
+            for (int j = 0; j < vexnum; j++) {
+                if (arcs[i][j] == 1) {
+                    if (!visited[j]) {
+                        list.push(j);
+                    }
+                }
+            }
+        }
     }
 
     //邻接矩阵如下
