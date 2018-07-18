@@ -118,7 +118,7 @@ public class BFS {
             for (int j = 0; j < vexnum; j++) {
                 if (arcs[i][j] == 1) {
                     if (!visited[j]) {
-                        list.push(j);
+                        list.add(j);
                     }
                 }
             }
