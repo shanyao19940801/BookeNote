@@ -2,6 +2,7 @@ package com.yao.code.bestshort;
 
 import com.yao.util.Graph;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 
 /**
@@ -33,6 +34,7 @@ public class Dijkstra {
         if (first < 0 || first > g.getVexnum()) {
             return;
         }
+        g.getPath()[first] = String.valueOf(g.getVertices()[first]);
         //设置开始节点到本身路劲为0
         g.getCurrDist()[first] = 0;
         //获取下面将要访问的节点
@@ -50,6 +52,7 @@ public class Dijkstra {
                     //nextVertice距离起始顶点的距离比当前的距离小.便更新新的距离
                     if (nextDist > currDist + weight) {
                         g.getCurrDist()[j] = currDist + weight;
+                        g.getPath()[j] = g.getPath()[curIndex] +"->"+ String.valueOf(g.getVertices()[j]);
                     }
                 }
             }
@@ -115,7 +118,7 @@ public class Dijkstra {
 
         for (int i =0; i < g.getVexnum(); i++) {
             char a = (char) ('A' + i);
-            System.out.println(a + ":" +g.getCurrDist()[i]);
+            System.out.println(g.getPath()[i] + ":" +g.getCurrDist()[i]);
         }
 
     }

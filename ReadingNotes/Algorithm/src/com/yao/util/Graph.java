@@ -17,6 +17,8 @@ public class Graph {
 
     private int[] currDist;             //最短路径算法中用来记录每个顶点距离起始顶点路径的长度.
 
+    private String[] path;
+
     public Graph(int[][] arcs, char[] vertices){
         if(arcs.length != arcs[0].length){
             throw new IllegalArgumentException("arcs is not a adjacency matrix!");
@@ -36,6 +38,7 @@ public class Graph {
         arcs = new int[n][n];
         visited = new boolean[n];
         currDist = new int[n];
+        path = new String[n];
         for (int i = 0; i < vexnum; i++) {
             for (int j = 0; j < vexnum; j++) {
                 arcs[i][j] = Integer.MAX_VALUE;
@@ -97,5 +100,13 @@ public class Graph {
         if (i == j) return;
         arcs[i][j] = weight;
         arcs[j][i] = weight;
+    }
+
+    public String[] getPath() {
+        return path;
+    }
+
+    public void setPath(String[] path) {
+        this.path = path;
     }
 }
