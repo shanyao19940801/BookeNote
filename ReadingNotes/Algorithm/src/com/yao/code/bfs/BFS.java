@@ -30,6 +30,7 @@ public class BFS {
             for (int j = 0; j < vexnum; j++) {
                 arcs[i][j] = 0;
             }
+            visited[i] = false;
         }
     }
 
