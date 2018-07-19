@@ -35,11 +35,13 @@ public class Graph {
         vertices = new char[n];
         arcs = new int[n][n];
         visited = new boolean[n];
+        currDist = new int[n];
         for (int i = 0; i < vexnum; i++) {
             for (int j = 0; j < vexnum; j++) {
                 arcs[i][j] = Integer.MAX_VALUE;
             }
         }
+
     }
 
     public int[][] getArcs() {
@@ -92,6 +94,8 @@ public class Graph {
 
     //添加邻接矩阵信息，
     public void addEdge(int i, int j, int weight) {
+        if (i == j) return;
         arcs[i][j] = weight;
+        arcs[j][i] = weight;
     }
 }
