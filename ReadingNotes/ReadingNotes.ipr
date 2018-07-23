@@ -168,6 +168,7 @@
       <module fileurl="file://$PROJECT_DIR$/BingFaBianChengShiZhan/BingFaBianChengShiZhan.iml" filepath="$PROJECT_DIR$/BingFaBianChengShiZhan/BingFaBianChengShiZhan.iml" />
       <module fileurl="file://$PROJECT_DIR$/DaHuaSheJiMoShi/DaHuaSheJiMoShi.iml" filepath="$PROJECT_DIR$/DaHuaSheJiMoShi/DaHuaSheJiMoShi.iml" />
       <module fileurl="file://$PROJECT_DIR$/JianZhiOffer/JianZhiOffer.iml" filepath="$PROJECT_DIR$/JianZhiOffer/JianZhiOffer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Other/Other.iml" filepath="$PROJECT_DIR$/Other/Other.iml" />
       <module fileurl="file://$PROJECT_DIR$/ReadingNotes.iml" filepath="$PROJECT_DIR$/ReadingNotes.iml" />
       <module fileurl="file://$PROJECT_DIR$/SOA/SOA.iml" filepath="$PROJECT_DIR$/SOA/SOA.iml" />
     </modules>
