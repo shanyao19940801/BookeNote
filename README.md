@@ -17,6 +17,10 @@
 
 [SOA](https://github.com/shanyao19940801/BookeNote/blob/master/ReadingNotes/SOA/files/SOA.md)
 
+## Java
+
+[线程池详解](https://github.com/shanyao19940801/BookeNote/blob/master/ReadingNotes/Other/src/com/yao/other/thread/%E7%BA%BF%E7%A8%8B%E6%B1%A0.md)
+
 ## 每天必须有产出，哪怕只是一行代码，半页书
 * 《我曾其次鄙视自己的灵魂》<br>
 第一次，当它本可进取时，却故作谦卑；<br>
