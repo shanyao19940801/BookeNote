@@ -9,6 +9,22 @@
 详细测试代码：[测试代码](https://github.com/shanyao19940801/BookeNote/tree/master/ReadingNotes/Other/src/com/yao/other/jvm/jvm01)
 
 
+* 输出结果
+
+		成员变量--静态==父类
+		静态代码块==父类
+		成员变量--静态===子类
+		静态代码块===子类
+		成员变量--非静态==父类
+		构造函数==父类
+		成员变量--非静态===子类
+		构造函数===子类
+
+如果想要更深入的研究请看：[参考](https://www.cnblogs.com/Fang3s/p/3970783.html#class_usage)
+
+
+<br><br><br>
+
 ## 每天必须有产出，哪怕只是一行代码，半页书
 * 《我曾其次鄙视自己的灵魂》<br>
 第一次，当它本可进取时，却故作谦卑；<br>
