@@ -106,3 +106,6 @@
 	        return instance;
 	    }
 	}
+
+* 登记式，可以继承
+
