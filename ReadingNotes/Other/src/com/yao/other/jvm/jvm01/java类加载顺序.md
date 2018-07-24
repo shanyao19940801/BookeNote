@@ -6,7 +6,7 @@
 * 继承父类后加载顺序：父类静态成员变量->父类静态代码块->子类静态成员变量->子类静态代码块->父类其他成员变量->父类构造函数->子类其他成员变量->子类构造函数
 
 
-详细测试代码：
+详细测试代码：[测试代码](https://github.com/shanyao19940801/BookeNote/tree/master/ReadingNotes/Other/src/com/yao/other/jvm/jvm01)
 
 
 ## 每天必须有产出，哪怕只是一行代码，半页书
