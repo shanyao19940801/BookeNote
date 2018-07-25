@@ -4,15 +4,15 @@
 
 * 结构图
 
-![结构图]()
+![结构图](https://github.com/shanyao19940801/BookeNote/blob/master/ReadingNotes/DaHuaSheJiMoShi/src/main/java/com/yao/chapter02strategy/image/strategy01.PNG)
 
-* 实例代码
+* 代码实现
 
-[]()
+[code](https://github.com/shanyao19940801/BookeNote/tree/master/ReadingNotes/DaHuaSheJiMoShi/src/main/java/com/yao/chapter02strategy/image/example)
 
 ### 在jdk中的应用
 
-Comparator比较器
+* Comparator比较器
 
 用过这个比较器的都知道，这个比较器本身并不会提供任何比较规则。我们需要自己创建一个类实现Comparator然后自己制定一个比较规则。就是一个典型的策略模式。
 
