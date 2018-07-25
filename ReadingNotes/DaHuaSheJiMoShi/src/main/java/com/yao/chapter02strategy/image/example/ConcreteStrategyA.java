@@ -6,7 +6,7 @@ package com.yao.chapter02strategy.image.example;
  */
 public class ConcreteStrategyA extends Strategy {
 
-    public void AlgorithmInterface(double money) {
+    public void AlgorithmInterface( ) {
         System.out.println("算法A");
     }
 }
