@@ -1,5 +1,7 @@
 package com.yao.chapter02strategy.image.example;
 
+import java.util.Comparator;
+
 /**
  * Created by shanyao on 2018/7/25.
  */
