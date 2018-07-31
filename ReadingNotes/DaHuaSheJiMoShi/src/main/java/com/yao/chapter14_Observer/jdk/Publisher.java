@@ -10,4 +10,12 @@ public class Publisher extends Observable {
     public Publisher(String name) {
         this.name = name;
     }
+    public String toString(){
+        return name;
+    }
+
+    public void notifyObservers(Object org) {
+        super.setChanged();
+        super.notifyObservers(org);
+    }
 }
