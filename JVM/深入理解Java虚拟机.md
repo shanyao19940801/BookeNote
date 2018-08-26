@@ -7,5 +7,9 @@
 
 [不同类型的OutOfMemoryError](https://github.com/shanyao19940801/BookeNote/blob/master/JVM/file/chapter02/不同类型的OutOfMemoryError.md)
 
-## 第三章
+## 第三章：垃圾收集器与内存分配策略
+
+[判断对象是否活着(是否需要回收)](https://github.com/shanyao19940801/BookeNote/blob/master/JVM/file/chapter03/%E5%88%A4%E6%96%AD%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E6%B4%BB%E7%9D%80.md)
+
+
 
