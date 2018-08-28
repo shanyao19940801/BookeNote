@@ -16,6 +16,11 @@
 1. 引用计数法
 2. 可达性分析法
 
+* 对象被回收至少要经过两次标记(p66)
+
+下面这段代码一个对象被回收的过程
+
+[FinalizeEscapeGC](https://github.com/shanyao19940801/BookeNote/blob/master/JVM/codeshow/src/com/jvm/chapter03/FinalizeEscapeGC.java)
 
 
 
