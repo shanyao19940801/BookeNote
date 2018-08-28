@@ -22,6 +22,9 @@
 
 [FinalizeEscapeGC](https://github.com/shanyao19940801/BookeNote/blob/master/JVM/codeshow/src/com/jvm/chapter03/FinalizeEscapeGC.java)
 
+[垃圾收集算法](https://github.com/shanyao19940801/BookeNote/blob/master/JVM/file/chapter03/%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E7%AE%97%E6%B3%95.md)
+
+[新生代和老年代](https://github.com/shanyao19940801/BookeNote/blob/master/JVM/file/chapter03/Java%E5%86%85%E5%AD%98%E6%96%B0%E7%94%9F%E4%BB%A3%E5%92%8C%E8%80%81%E5%B9%B4%E4%BB%A3.md)
 
 
 
