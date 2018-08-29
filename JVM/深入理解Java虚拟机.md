@@ -27,5 +27,7 @@
 [新生代和老年代](https://github.com/shanyao19940801/BookeNote/blob/master/JVM/file/chapter03/Java%E5%86%85%E5%AD%98%E6%96%B0%E7%94%9F%E4%BB%A3%E5%92%8C%E8%80%81%E5%B9%B4%E4%BB%A3.md)
 
 
+[JVM的Client与Server模式](https://github.com/shanyao19940801/BookeNote/blob/master/JVM/file/JVM%E4%B8%A4%E7%A7%8D%E5%90%AF%E5%8A%A8%E6%A8%A1%E5%BC%8F.md)
+
 
 

@@ -10,3 +10,8 @@ JVM有两种运行模式Server与Client。两种模式的区别在于，Client�
 	java version "9.0.4"
 	Java(TM) SE Runtime Environment (build 9.0.4+11)
 	Java HotSpot(TM) 64-Bit Server VM (build 9.0.4+11, mixed mode)
+
+
+* 如何切换
+
+[参考](https://www.cnblogs.com/wxw7blog/p/7221756.html)
