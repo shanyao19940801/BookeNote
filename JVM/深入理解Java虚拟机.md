@@ -29,5 +29,8 @@
 
 [JVM的Client与Server模式](https://github.com/shanyao19940801/BookeNote/blob/master/JVM/file/JVM%E4%B8%A4%E7%A7%8D%E5%90%AF%E5%8A%A8%E6%A8%A1%E5%BC%8F.md)
 
+* 3.5
+
+[垃圾收集器](https://github.com/shanyao19940801/BookeNote/blob/master/JVM/file/chapter03/%E5%90%84%E7%A7%8D%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E5%99%A8.md)
 
 
