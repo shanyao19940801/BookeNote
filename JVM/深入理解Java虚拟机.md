@@ -33,5 +33,6 @@
 
 [垃圾收集器](https://github.com/shanyao19940801/BookeNote/blob/master/JVM/file/chapter03/%E5%90%84%E7%A7%8D%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E5%99%A8.md)
 
-* 
+* 3.6
+
 
