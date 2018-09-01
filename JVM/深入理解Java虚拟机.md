@@ -35,5 +35,5 @@
 
 * 3.6
 
-[内存分配与回收策略](https://github.com/shanyao19940801/BookeNote/blob/master/JVM/file/chapter03/%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D%E4%B8%8E%E5%9B%9E%E6%94%B6%E7%AD%96%E7%95%A5.md)
+[内存分配与回收策略](https://github.com/shanyao19940801/BookeNote/blob/master/JVM/file/chapter03/3.6%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D%E4%B8%8E%E5%9B%9E%E6%94%B6%E7%AD%96%E7%95%A5.md)
 
