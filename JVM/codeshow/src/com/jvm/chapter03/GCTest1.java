@@ -1,5 +1,8 @@
 package com.jvm.chapter03;
 
+/**
+ * VM參數：-verbose:gc -Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails -XX:SurvivorRatio=8
+ */
 public class GCTest1 {
     private static final int _1MB = 1024 * 1024;
 
