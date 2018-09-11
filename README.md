@@ -29,7 +29,10 @@
 
 ### 线程
 [线程池详解](https://github.com/shanyao19940801/BookeNote/blob/master/ReadingNotes/Other/src/com/yao/other/thread/%E7%BA%BF%E7%A8%8B%E6%B1%A0.md)
-[判断线程是否执行完毕(阿里技术专家面试官提的一个问题)]()
+
+[判断线程是否执行完毕(阿里技术专家面试官提的一个问题)](https://github.com/shanyao19940801/BookeNote/blob/master/Thread/%E5%88%A4%E6%96%AD%E6%89%80%E6%9C%89%E7%BA%BF%E7%A8%8B%E6%98%AF%E5%90%A6%E6%89%A7%E8%A1%8C%E5%AE%8C%E6%AF%95.md)
+
+### 基础
 
 [类的加载顺序](https://github.com/shanyao19940801/BookeNote/blob/master/ReadingNotes/Other/src/com/yao/other/jvm/jvm01/java%E7%B1%BB%E5%8A%A0%E8%BD%BD%E9%A1%BA%E5%BA%8F.md)
 
