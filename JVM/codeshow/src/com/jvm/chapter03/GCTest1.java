@@ -9,7 +9,7 @@ public class GCTest1 {
     public static void main(String[] args) {
         testAllocation();
     }
-
+volatile
     public static void testAllocation() {
         byte[] allocation1,allocation2,allocation3,allocation4;
         allocation1 = new byte[2 * _1MB];
