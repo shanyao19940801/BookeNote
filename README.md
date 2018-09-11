@@ -9,9 +9,13 @@
 
 [大话设计模式](https://github.com/shanyao19940801/BookeNote/blob/master/ReadingNotes/DaHuaSheJiMoShi/%E5%A4%A7%E5%8C%96%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.md)
 
-## 深入理解Java虚拟机
+## 《深入理解Java虚拟机》
 
  [深入理解Java虚拟机](https://github.com/shanyao19940801/BookeNote/blob/master/JVM/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA.md)
+
+## 《Java并发编程实战》
+
+[Java并发编程实战](www.baidu.com)
 
 ## 算法学习
 
