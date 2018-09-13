@@ -13,7 +13,7 @@ class Homer {
 class Milhouse {}
 
 class Bart extends Homer {
-    
+
     void doh(Milhouse m) {
         this.doh('2');
         System.out.println("doh(Milhouse)");

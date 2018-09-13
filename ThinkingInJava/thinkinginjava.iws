@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09afc543-73b3-4ad4-a0f9-9370643a6995" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/think-first/src/com/thinkf/chapter07/Hide.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java编程思想.md" beforeDir="false" afterPath="$PROJECT_DIR$/java编程思想.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thinkinginjava.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/thinkinginjava.ipr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/think-first/src/com/thinkf/chapter07/c07/Wind.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/第七章.md" beforeDir="false" afterPath="$PROJECT_DIR$/file/第七章.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/think-first/src/com/thinkf/chapter07/Hide.java" beforeDir="false" afterPath="$PROJECT_DIR$/think-first/src/com/thinkf/chapter07/Hide.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/thinkinginjava.iws" beforeDir="false" afterPath="$PROJECT_DIR$/thinkinginjava.iws" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -77,7 +77,7 @@
         <entry file="file://$PROJECT_DIR$/think-first/src/com/thinkf/chapter07/SpaecShipDelegation.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="50">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="15" />
+              <caret line="2" selection-start-line="2" selection-end-line="15" />
               <folding>
                 <element signature="e#202#203#0" expanded="true" />
                 <element signature="e#234#235#0" expanded="true" />
@@ -94,7 +94,7 @@
         <entry file="file://$PROJECT_DIR$/think-first/src/com/thinkf/chapter07/CADSystem.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="258">
-              <caret line="78" column="12" lean-forward="true" selection-start-line="78" selection-start-column="12" selection-end-line="78" selection-end-column="12" />
+              <caret line="78" selection-start-line="78" selection-end-line="78" />
               <folding>
                 <element signature="e#139#140#0" expanded="true" />
                 <element signature="e#175#176#0" expanded="true" />
@@ -103,14 +103,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Hide.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Hide.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/think-first/src/com/thinkf/chapter07/Hide.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="25" column="30" lean-forward="true" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+            <state relative-caret-position="119">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Wind.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/think-first/src/com/thinkf/chapter07/c07/Wind.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
               <folding>
-                <element signature="e#302#303#0" expanded="true" />
-                <element signature="e#338#339#0" expanded="true" />
+                <element signature="e#114#115#0" expanded="true" />
+                <element signature="e#138#139#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -159,6 +168,7 @@
         <option value="$PROJECT_DIR$/think-first/src/com/thinkf/chapter07/CADSystem.java" />
         <option value="$PROJECT_DIR$/think-first/src/com/thinkf/chapter07/Homer.java" />
         <option value="$PROJECT_DIR$/think-first/src/com/thinkf/chapter07/Hide.java" />
+        <option value="$PROJECT_DIR$/think-first/src/com/thinkf/chapter07/c07/Wind.java" />
       </list>
     </option>
   </component>
@@ -239,18 +249,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Hide">
-    <configuration name="Bath" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.thinkf.chapter07.Bath" />
-      <module name="think-first" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.thinkf.chapter07.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
+  <component name="RunManager" selected="Application.Wind">
     <configuration name="CADSystem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.thinkf.chapter07.CADSystem" />
       <module name="think-first" />
@@ -291,6 +290,17 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.thinkf.chapter07.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="Wind" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.thinkf.chapter07.c07.Wind" />
+      <module name="think-first" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.thinkf.chapter07.c07.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -337,19 +347,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="Application.Bath" />
       <item itemvalue="Application.Cartoon" />
       <item itemvalue="Application.SpaecShipDelegation" />
       <item itemvalue="Application.CADSystem" />
       <item itemvalue="Application.Hide" />
+      <item itemvalue="Application.Wind" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Wind" />
         <item itemvalue="Application.Hide" />
         <item itemvalue="Application.CADSystem" />
         <item itemvalue="Application.SpaecShipDelegation" />
         <item itemvalue="Application.Cartoon" />
-        <item itemvalue="Application.Bath" />
       </list>
     </recent_temporary>
   </component>
@@ -364,12 +374,12 @@
       <option name="presentableId" value="Default" />
       <updated>1536845575030</updated>
       <workItem from="1536845579888" duration="2502000" />
-      <workItem from="1536848362648" duration="2306000" />
+      <workItem from="1536848362648" duration="3353000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4808000" />
+    <option name="totallyTimeSpent" value="5855000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
@@ -377,7 +387,7 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.3289689" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
@@ -385,11 +395,11 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3289689" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.22422259" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25340393" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25340393" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -537,7 +547,7 @@
     <entry file="file://$PROJECT_DIR$/think-first/src/com/thinkf/chapter07/SpaecShipDelegation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="15" />
+          <caret line="2" selection-start-line="2" selection-end-line="15" />
           <folding>
             <element signature="e#202#203#0" expanded="true" />
             <element signature="e#234#235#0" expanded="true" />
@@ -559,7 +569,7 @@
     <entry file="file://$PROJECT_DIR$/think-first/src/com/thinkf/chapter07/CADSystem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="258">
-          <caret line="78" column="12" lean-forward="true" selection-start-line="78" selection-start-column="12" selection-end-line="78" selection-end-column="12" />
+          <caret line="78" selection-start-line="78" selection-end-line="78" />
           <folding>
             <element signature="e#139#140#0" expanded="true" />
             <element signature="e#175#176#0" expanded="true" />
@@ -569,11 +579,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/think-first/src/com/thinkf/chapter07/Hide.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="25" column="30" lean-forward="true" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+        <state relative-caret-position="119">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/think-first/src/com/thinkf/chapter07/c07/Wind.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
           <folding>
-            <element signature="e#302#303#0" expanded="true" />
-            <element signature="e#338#339#0" expanded="true" />
+            <element signature="e#114#115#0" expanded="true" />
+            <element signature="e#138#139#0" expanded="true" />
           </folding>
         </state>
       </provider>
