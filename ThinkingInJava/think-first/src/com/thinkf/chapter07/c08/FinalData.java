@@ -27,10 +27,10 @@ public class FinalData {
     private final int valueOne = 9;
     private static final int VALUE_TWO = 99;
     public static final int VALUE_THREE = 39;
-    private final int i4 = rand.nextInt(20);
-    static final int INT_5 = rand.nextInt(20);
+    private final int i4 = rand.nextInt(20);//运行时背赋值然后不希望被修改
+    static final int INT_5 = rand.nextInt(20);//编译时常量
     private Value v1= new Value(11);
-    private final Value v2 = new Value(22);
+    private final Value v2 = new Value(22);//其引用不可以改变，但是对象v2可以被改变
     private static final Value VAL_3 = new Value(33);
     private final int[] a = {1,2,3,4,5,6};
 

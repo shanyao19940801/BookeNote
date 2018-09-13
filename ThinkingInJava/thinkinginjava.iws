@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09afc543-73b3-4ad4-a0f9-9370643a6995" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/think-first/src/com/thinkf/chapter07/c08/FinalData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/file/第七章.md" beforeDir="false" afterPath="$PROJECT_DIR$/file/第七章.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thinkinginjava.iws" beforeDir="false" afterPath="$PROJECT_DIR$/thinkinginjava.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/think-first/src/com/thinkf/chapter07/c08/FinalData.java" beforeDir="false" afterPath="$PROJECT_DIR$/think-first/src/com/thinkf/chapter07/c08/FinalData.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -114,8 +113,8 @@
       <file leaf-file-name="FinalData.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/think-first/src/com/thinkf/chapter07/c08/FinalData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
+            <state relative-caret-position="-152">
+              <caret line="29" selection-start-line="29" selection-end-line="30" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#83#84#0" expanded="true" />
@@ -377,12 +376,12 @@
       <option name="presentableId" value="Default" />
       <updated>1536845575030</updated>
       <workItem from="1536845579888" duration="2502000" />
-      <workItem from="1536848362648" duration="4924000" />
+      <workItem from="1536848362648" duration="5756000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7426000" />
+    <option name="totallyTimeSpent" value="8258000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
@@ -398,7 +397,7 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.22422259" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.43862522" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
@@ -600,8 +599,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/think-first/src/com/thinkf/chapter07/c08/FinalData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
+        <state relative-caret-position="-152">
+          <caret line="29" selection-start-line="29" selection-end-line="30" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#83#84#0" expanded="true" />
