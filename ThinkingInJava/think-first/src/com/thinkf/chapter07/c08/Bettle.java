@@ -26,6 +26,9 @@ public class Bettle extends A {
     static {
         System.out.println("static Bettle");
     }
+    static void method() {
+        System.out.println("static method A");
+    }
     public Bettle() {
         System.out.println("Bettle");
     }
