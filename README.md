@@ -8,6 +8,8 @@
 这里主要是一些代码，以及看书的记得一些笔记
 
 [大话设计模式](https://github.com/shanyao19940801/BookeNote/blob/master/ReadingNotes/DaHuaSheJiMoShi/%E5%A4%A7%E5%8C%96%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.md)
+## 《Java编程思想》
+[Java编程思想](https://github.com/shanyao19940801/BookeNote/blob/master/ThinkingInJava/java%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3.md)
 
 ## 《深入理解Java虚拟机》
 
