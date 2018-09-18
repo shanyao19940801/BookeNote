@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="09afc543-73b3-4ad4-a0f9-9370643a6995" name="Default" comment="" />
+    <list default="true" id="09afc543-73b3-4ad4-a0f9-9370643a6995" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/think-first/src/com/thinkf/chapter09/c03/Test29.java" beforeDir="false" afterPath="$PROJECT_DIR$/think-first/src/com/thinkf/chapter09/c03/Test29.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,21 +13,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CovariantReturn.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/think-first/src/com/thinkf/chapter08/c04/CovariantReturn.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="22" column="24" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="24" />
-              <folding>
-                <element signature="e#91#92#0" expanded="true" />
-                <element signature="e#123#124#0" expanded="true" />
-                <element signature="e#198#199#0" expanded="true" />
-                <element signature="e#230#231#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="RTTI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/think-first/src/com/thinkf/chapter08/c05/RTTI.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -72,7 +59,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FilterProcessor.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FilterProcessor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/think-first/src/com/thinkf/chapter09/c03/FilterProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="100">
@@ -85,6 +72,15 @@
                 <element signature="e#302#303#0" expanded="true" />
                 <element signature="e#329#330#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Test29.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/think-first/src/com/thinkf/chapter09/c03/Test29.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="83">
+              <caret line="45" selection-start-line="45" selection-end-line="61" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -198,6 +194,7 @@
         <option value="$PROJECT_DIR$/think-first/src/com/thinkf/chapter09/c03/Filter.java" />
         <option value="$PROJECT_DIR$/think-first/src/com/thinkf/chapter09/c03/LowPass.java" />
         <option value="$PROJECT_DIR$/think-first/src/com/thinkf/chapter09/c03/FilterProcessor.java" />
+        <option value="$PROJECT_DIR$/think-first/src/com/thinkf/chapter09/c03/Test29.java" />
       </list>
     </option>
   </component>
@@ -421,7 +418,7 @@
       <updated>1536845575030</updated>
       <workItem from="1536845579888" duration="2502000" />
       <workItem from="1536848362648" duration="12321000" />
-      <workItem from="1537277531457" duration="2321000" />
+      <workItem from="1537277531457" duration="2564000" />
     </task>
     <task id="LOCAL-00001" summary="类加载顺序">
       <created>1537106837229</created>
@@ -469,10 +466,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17144000" />
+    <option name="totallyTimeSpent" value="17387000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -484,11 +482,11 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.39443535" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.39443535" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25718608" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.25718608" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -516,13 +514,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="java编程思想" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/think-first/src/com/thinkf/chapter08/c01/Music.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/think-first/src/com/thinkf/chapter08/c02/Cicle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
@@ -966,6 +957,13 @@
             <element signature="e#302#303#0" expanded="true" />
             <element signature="e#329#330#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/think-first/src/com/thinkf/chapter09/c03/Test29.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="45" selection-start-line="45" selection-end-line="61" selection-end-column="1" />
         </state>
       </provider>
     </entry>
