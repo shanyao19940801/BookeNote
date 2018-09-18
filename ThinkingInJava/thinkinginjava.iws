@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="09afc543-73b3-4ad4-a0f9-9370643a6995" name="Default" comment="" />
+    <list default="true" id="09afc543-73b3-4ad4-a0f9-9370643a6995" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/think-first/src/com/thinkf/chapter09/c03/Apply.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/think-first/src/com/thinkf/chapter09/c03/StringProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/think-first/src/com/thinkf/chapter09/c03/Processor.java" beforeDir="false" afterPath="$PROJECT_DIR$/think-first/src/com/thinkf/chapter09/c03/Processor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinkinginjava.iws" beforeDir="false" afterPath="$PROJECT_DIR$/thinkinginjava.iws" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,39 +16,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Note.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/think-first/src/com/thinkf/chapter08/c01/Note.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Music.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/think-first/src/com/thinkf/chapter08/c01/Music.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Cicle.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/think-first/src/com/thinkf/chapter08/c02/Cicle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="2" selection-start-line="2" selection-end-line="16" selection-end-column="1" />
-              <folding>
-                <element signature="e#72#73#0" expanded="true" />
-                <element signature="e#115#116#0" expanded="true" />
-                <element signature="e#176#177#0" expanded="true" />
-                <element signature="e#219#220#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Instrument.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/think-first/src/com/thinkf/chapter08/c01/Instrument.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -115,7 +87,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RTTI.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RTTI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/think-first/src/com/thinkf/chapter08/c05/RTTI.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="334">
@@ -124,15 +96,48 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Wind.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/think-first/src/com/thinkf/chapter08/c01/Wind.java">
+      <file leaf-file-name="Processor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/think-first/src/com/thinkf/chapter09/c03/Processor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Apply.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/think-first/src/com/thinkf/chapter09/c03/Apply.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="125">
+              <caret line="5" column="41" lean-forward="true" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StringProcessor.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/think-first/src/com/thinkf/chapter09/c03/StringProcessor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="383">
+              <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+              <folding>
+                <element signature="e#126#127#0" expanded="true" />
+                <element signature="e#153#154#0" expanded="true" />
+                <element signature="e#519#520#0" expanded="true" />
+                <element signature="e#558#559#0" expanded="true" />
+                <element signature="e#672#673#0" expanded="true" />
+                <element signature="e#699#700#0" expanded="true" />
+                <element signature="e#824#825#0" expanded="true" />
+                <element signature="e#851#852#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="T.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/think-first/src/com/thinkf/chapter09/T.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="50">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-              <folding>
-                <element signature="e#103#104#0" expanded="true" />
-                <element signature="e#153#154#0" expanded="true" />
-              </folding>
+              <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -143,6 +148,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -185,6 +191,10 @@
         <option value="$PROJECT_DIR$/think-first/src/com/thinkf/chapter08/c03/PolyConstructors.java" />
         <option value="$PROJECT_DIR$/think-first/src/com/thinkf/chapter08/c04/CovariantReturn.java" />
         <option value="$PROJECT_DIR$/think-first/src/com/thinkf/chapter08/c05/RTTI.java" />
+        <option value="$PROJECT_DIR$/think-first/src/com/thinkf/chapter09/Processor.java" />
+        <option value="$PROJECT_DIR$/think-first/src/com/thinkf/chapter09/c03/Processor.java" />
+        <option value="$PROJECT_DIR$/think-first/src/com/thinkf/chapter09/c03/Apply.java" />
+        <option value="$PROJECT_DIR$/think-first/src/com/thinkf/chapter09/c03/StringProcessor.java" />
       </list>
     </option>
   </component>
@@ -228,6 +238,21 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="thinkf" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="thinkinginjava" type="b2602c69:ProjectViewProjectNode" />
+              <item name="think-first" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="thinkf" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter09" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="thinkinginjava" type="b2602c69:ProjectViewProjectNode" />
+              <item name="think-first" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="thinkf" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter09" type="462c0819:PsiDirectoryNode" />
+              <item name="c03" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -258,7 +283,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.RTTI">
+  <component name="RunManager" selected="Application.StringProcessor">
     <configuration name="CovariantReturn" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.thinkf.chapter08.c04.CovariantReturn" />
       <module name="think-first" />
@@ -292,17 +317,6 @@
         </pattern>
       </extension>
     </configuration>
-    <configuration name="PrivateOverride" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.thinkf.chapter08.c02.PrivateOverride" />
-      <module name="think-first" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.thinkf.chapter08.c02.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
     <configuration name="RTTI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.thinkf.chapter08.c05.RTTI" />
       <module name="think-first" />
@@ -310,6 +324,17 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.thinkf.chapter08.c05.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="StringProcessor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.thinkf.chapter09.c03.StringProcessor" />
+      <module name="think-first" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.thinkf.chapter09.c03.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -356,19 +381,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="Application.PrivateOverride" />
       <item itemvalue="Application.FieldAccess" />
       <item itemvalue="Application.PolyConstructors" />
       <item itemvalue="Application.CovariantReturn" />
       <item itemvalue="Application.RTTI" />
+      <item itemvalue="Application.StringProcessor" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.StringProcessor" />
         <item itemvalue="Application.RTTI" />
         <item itemvalue="Application.CovariantReturn" />
         <item itemvalue="Application.PolyConstructors" />
         <item itemvalue="Application.FieldAccess" />
-        <item itemvalue="Application.PrivateOverride" />
       </list>
     </recent_temporary>
   </component>
@@ -384,7 +409,7 @@
       <updated>1536845575030</updated>
       <workItem from="1536845579888" duration="2502000" />
       <workItem from="1536848362648" duration="12321000" />
-      <workItem from="1537277531457" duration="341000" />
+      <workItem from="1537277531457" duration="951000" />
     </task>
     <task id="LOCAL-00001" summary="类加载顺序">
       <created>1537106837229</created>
@@ -407,14 +432,22 @@
       <option name="project" value="LOCAL" />
       <updated>1537111164424</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="java编程思想">
+      <created>1537278095581</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1537278095581</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15164000" />
+    <option name="totallyTimeSpent" value="15774000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -575,6 +608,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding>
+            <element signature="e#223#224#0" expanded="true" />
+            <element signature="e#247#248#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -624,6 +661,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
           <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding>
+            <element signature="e#223#224#0" expanded="true" />
+            <element signature="e#247#248#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -817,6 +858,44 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="334">
           <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/think-first/src/com/thinkf/chapter09/T.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/think-first/src/com/thinkf/chapter09/c03/Processor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/think-first/src/com/thinkf/chapter09/c03/Apply.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="41" lean-forward="true" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/think-first/src/com/thinkf/chapter09/c03/StringProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+          <folding>
+            <element signature="e#126#127#0" expanded="true" />
+            <element signature="e#153#154#0" expanded="true" />
+            <element signature="e#519#520#0" expanded="true" />
+            <element signature="e#558#559#0" expanded="true" />
+            <element signature="e#672#673#0" expanded="true" />
+            <element signature="e#699#700#0" expanded="true" />
+            <element signature="e#824#825#0" expanded="true" />
+            <element signature="e#851#852#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
