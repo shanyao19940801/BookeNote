@@ -46,6 +46,7 @@ public class Sequence {
         for (int i =0; i < 10; i++) {
             sequence.add(Integer.toString(i));
         }
+        SequenceSelector sequenceSelector = sequence.new SequenceSelector();
         Selecor selecor = sequence.selecor();
         while (!selecor.end()) {
             System.out.println(selecor.currnet() + " ");
