@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09afc543-73b3-4ad4-a0f9-9370643a6995" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/think-first/src/com/thinkf/chapter09/c08/NestingInterfaces.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/think-first/src/com/thinkf/chapter10/T.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/think-first/src/com/thinkf/chapter10/c01/Outer.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,19 +14,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Adventure.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/think-first/src/com/thinkf/chapter09/c04/Adventure.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-              <folding>
-                <element signature="e#122#123#0" expanded="true" />
-                <element signature="e#158#159#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="C951.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/think-first/src/com/thinkf/chapter09/c04/C951.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -105,7 +93,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NestingInterfaces.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NestingInterfaces.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/think-first/src/com/thinkf/chapter09/c08/NestingInterfaces.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="408">
@@ -113,6 +101,30 @@
               <folding>
                 <element signature="e#853#854#0" expanded="true" />
                 <element signature="e#878#879#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="T.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/think-first/src/com/thinkf/chapter10/T.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="50">
+              <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Outer.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/think-first/src/com/thinkf/chapter10/c01/Outer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+              <folding>
+                <element signature="e#101#102#0" expanded="true" />
+                <element signature="e#145#146#0" expanded="true" />
+                <element signature="e#122#123#0" expanded="true" />
+                <element signature="e#156#157#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -193,6 +205,7 @@
         <option value="$PROJECT_DIR$/think-first/src/com/thinkf/chapter09/c06/AdapterRandomDOubles.java" />
         <option value="$PROJECT_DIR$/think-first/src/com/thinkf/chapter09/TestInterface.java" />
         <option value="$PROJECT_DIR$/think-first/src/com/thinkf/chapter09/c08/NestingInterfaces.java" />
+        <option value="$PROJECT_DIR$/think-first/src/com/thinkf/chapter10/c01/Outer.java" />
       </list>
     </option>
   </component>
@@ -241,48 +254,7 @@
               <item name="think-first" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="thinkf" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter09" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="thinkinginjava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="think-first" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="thinkf" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter09" type="462c0819:PsiDirectoryNode" />
-              <item name="c03" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="thinkinginjava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="think-first" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="thinkf" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter09" type="462c0819:PsiDirectoryNode" />
-              <item name="c03" type="462c0819:PsiDirectoryNode" />
-              <item name="FilterProcessor.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </path>
-            <path>
-              <item name="thinkinginjava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="think-first" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="thinkf" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter09" type="462c0819:PsiDirectoryNode" />
-              <item name="c04" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="thinkinginjava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="think-first" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="thinkf" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter09" type="462c0819:PsiDirectoryNode" />
-              <item name="c06" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="thinkinginjava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="think-first" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="thinkf" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter09" type="462c0819:PsiDirectoryNode" />
-              <item name="c08" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter10" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -314,7 +286,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TestInterface">
+  <component name="RunManager" selected="Application.Outer">
     <configuration name="AdapterRandomDOubles" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.thinkf.chapter09.c06.AdapterRandomDOubles" />
       <module name="think-first" />
@@ -326,19 +298,19 @@
         </pattern>
       </extension>
     </configuration>
-    <configuration name="RandomDoubles" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.thinkf.chapter09.c06.RandomDoubles" />
+    <configuration name="Outer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.thinkf.chapter10.c01.Outer" />
       <module name="think-first" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.thinkf.chapter09.c06.*" />
+          <option name="PATTERN" value="com.thinkf.chapter10.c01.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
     </configuration>
-    <configuration name="RandomWords" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.thinkf.chapter09.c06.RandomWords" />
+    <configuration name="RandomDoubles" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.thinkf.chapter09.c06.RandomDoubles" />
       <module name="think-first" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -412,19 +384,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="Application.RandomWords" />
       <item itemvalue="Application.TestScanner" />
       <item itemvalue="Application.RandomDoubles" />
       <item itemvalue="Application.AdapterRandomDOubles" />
       <item itemvalue="Application.TestInterface" />
+      <item itemvalue="Application.Outer" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Outer" />
         <item itemvalue="Application.TestInterface" />
         <item itemvalue="Application.AdapterRandomDOubles" />
         <item itemvalue="Application.RandomDoubles" />
         <item itemvalue="Application.TestScanner" />
-        <item itemvalue="Application.RandomWords" />
       </list>
     </recent_temporary>
   </component>
@@ -440,7 +412,7 @@
       <updated>1536845575030</updated>
       <workItem from="1536845579888" duration="2502000" />
       <workItem from="1536848362648" duration="12321000" />
-      <workItem from="1537277531457" duration="6731000" />
+      <workItem from="1537277531457" duration="7255000" />
     </task>
     <task id="LOCAL-00001" summary="类加载顺序">
       <created>1537106837229</created>
@@ -512,11 +484,18 @@
       <option name="project" value="LOCAL" />
       <updated>1537452863356</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="java编程思想">
+      <created>1537453814845</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1537453814845</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21554000" />
+    <option name="totallyTimeSpent" value="22078000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
@@ -569,20 +548,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/think-first/src/com/thinkf/chapter07/Bath.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/think-first/src/com/thinkf/chapter07/Detergent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/think-first/src/com/thinkf/chapter07/SprinklerSystem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="575">
@@ -1015,6 +980,26 @@
           <folding>
             <element signature="e#853#854#0" expanded="true" />
             <element signature="e#878#879#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/think-first/src/com/thinkf/chapter10/T.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/think-first/src/com/thinkf/chapter10/c01/Outer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+          <folding>
+            <element signature="e#101#102#0" expanded="true" />
+            <element signature="e#145#146#0" expanded="true" />
+            <element signature="e#122#123#0" expanded="true" />
+            <element signature="e#156#157#0" expanded="true" />
           </folding>
         </state>
       </provider>
