@@ -11,7 +11,7 @@ class ActionCharacter{
 }
 
 class Hero extends ActionCharacter implements CanFight {
-    
+
 }
 public class Adventure {
     public static void main(String[] args) {
