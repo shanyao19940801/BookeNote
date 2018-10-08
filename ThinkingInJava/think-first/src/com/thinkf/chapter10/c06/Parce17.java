@@ -15,4 +15,9 @@ public class Parce17 {
             }
         };
     }
+
+    public static void main(String[] args) {
+        Parce17 p = new Parce17();
+        Contents c = p.contents();
+    }
 }
