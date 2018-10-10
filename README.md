@@ -38,6 +38,10 @@
 
 [类的加载顺序](https://github.com/shanyao19940801/BookeNote/blob/master/ReadingNotes/Other/src/com/yao/other/jvm/jvm01/java%E7%B1%BB%E5%8A%A0%E8%BD%BD%E9%A1%BA%E5%BA%8F.md)
 
+### Java回调机制
+
+[Java回调机制](https://github.com/shanyao19940801/BookeNote/blob/master/java/Java%E5%9B%9E%E8%B0%83%E7%90%86%E8%A7%A3.md)
+
 ## JAVA并发编程
 
 
