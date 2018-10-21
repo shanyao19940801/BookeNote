@@ -19,6 +19,11 @@
 
 [Java并发编程实战](www.baidu.com)
 
+## 《MySQL必知必会》
+
+[MySQL必知必会](https://github.com/shanyao19940801/BookeNote/blob/master/MySqlCrashCourse/Mysql%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A.md)
+
+
 ## 算法学习
 
 [算法学习](https://github.com/shanyao19940801/BookeNote/blob/master/ReadingNotes/Algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0.md)
