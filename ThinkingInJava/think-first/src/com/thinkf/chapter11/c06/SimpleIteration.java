@@ -11,6 +11,7 @@ public class SimpleIteration {
 
         List<Pet> pets = Pets.arrayList(12);
         Iterator<Pet> it =  pets.iterator();
+        System.out.println(pets);
         while (it.hasNext()) {
             Pet p = it.next();
             System.out.println(p.id() + ":" + p + " ");
