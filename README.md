@@ -28,6 +28,10 @@
 
 [算法学习](https://github.com/shanyao19940801/BookeNote/blob/master/ReadingNotes/Algorithm/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0.md)
 
+## RabbitmQ
+
+[RabbitMQ](https://github.com/shanyao19940801/demos/blob/master/rabbitMQ/RabbitMQ.md)
+
 ## SOA
 
 [SOA](https://github.com/shanyao19940801/BookeNote/blob/master/ReadingNotes/SOA/files/SOA.md)
