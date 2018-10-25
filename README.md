@@ -70,6 +70,9 @@
 
 [手机连接Fiddler](https://jingyan.baidu.com/article/03b2f78c7b6bb05ea237aed2.html)
 
+## SQL相关
+
+[in 和 exist 区别](https://blog.csdn.net/lick4050312/article/details/4476333)
 
 
 ## 每天必须有产出，哪怕只是一行代码，半页书
