@@ -49,6 +49,7 @@
 
 ## Java
 
+[Java相关知识点](https://github.com/shanyao19940801/BookeNote/blob/master/java/Java%E7%9F%A5%E8%AF%86%E7%82%B9.md)
 ### 线程
 [线程池详解](https://github.com/shanyao19940801/BookeNote/blob/master/ReadingNotes/Other/src/com/yao/other/thread/%E7%BA%BF%E7%A8%8B%E6%B1%A0.md)
 
