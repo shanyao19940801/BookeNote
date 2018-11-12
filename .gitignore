@@ -8,3 +8,4 @@ JVM/codeshow/out/
 ThinkingInJava/out/
 ThinkingInJava/thinkinginjava.iws
 java/code/code.iws
+*.class
