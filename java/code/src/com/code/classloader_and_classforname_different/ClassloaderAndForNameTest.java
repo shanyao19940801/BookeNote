@@ -1,9 +1,9 @@
-package com.code.reflect;
+package com.code.classloader_and_classforname_different;
 
 public class ClassloaderAndForNameTest {
 
-    static String wholeNameLine = "com.code.reflect.Line";
-    static String wholeNamePoint = "com.code.reflect.Point";
+    static String wholeNameLine = "com.code.classloader_and_classforname_different.Line";
+    static String wholeNamePoint = "com.code.classloader_and_classforname_different.Point";
 
     public static void main(String[] args) {
 

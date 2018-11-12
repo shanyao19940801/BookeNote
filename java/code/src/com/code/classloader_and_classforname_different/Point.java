@@ -1,4 +1,4 @@
-package com.code.reflect;
+package com.code.classloader_and_classforname_different;
 
 public class Point {
     static {
