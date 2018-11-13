@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactManager">
+    <artifact type="jar" name="shanyao">
+      <output-path>$PROJECT_DIR$/out/artifacts/shanyao</output-path>
+      <root id="archive" name="shanyao.jar" />
+    </artifact>
+  </component>
   <component name="InspectionProjectProfileManager">
     <profile version="1.0">
       <option name="myName" value="Project Default" />
