@@ -32,7 +32,7 @@ public class Fields {
             for(Field f : fieldArray){
                 System.out.println(f);
             }
-            
+
             System.out.println("************获取所有的字段(包括私有、受保护、默认的)********************");
             fieldArray = stuClass.getDeclaredFields();
             for(Field f : fieldArray){
@@ -56,17 +56,7 @@ public class Fields {
             f.setAccessible(true);//暴力反射，解除私有限定
             f.set(obj, "18888889999");
             System.out.println("验证电话：" + stu);
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (NoSuchFieldException e) {
-            e.printStackTrace();
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();
-        } catch (NoSuchMethodException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
