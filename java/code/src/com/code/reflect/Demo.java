@@ -10,9 +10,9 @@ import java.util.Properties;
 public class Demo {
     public static void main(String[] args) throws Exception {
         Class stuClass = Class.forName(getValue("className"));
-        Method m = stuClass.getMethod(getValue("methodName"));
+        Method m = stuClass.getMethod(getValue("methodName"), String.class);
 
-        m.invoke(stuClass.getConstructor().newInstance());
+        m.invoke(stuClass.getConstructor().newInstance(),"shanyao");
 
     }
 
