@@ -6,6 +6,10 @@ import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Properties;
+/*
+ * 我们利用反射和配置文件，可以使：应用程序更新时，对源码无需进行任何修改
+ * 我们只需要将新类发送给客户端，并修改配置文件即可
+ */
 
 public class Demo {
     public static void main(String[] args) throws Exception {
