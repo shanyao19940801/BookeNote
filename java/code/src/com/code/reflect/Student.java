@@ -66,4 +66,9 @@ public class Student {
 
     //---------------成员方法-------------------
 
+    public void show(){
+        System.out.println("is show()");
+    }
+
+
 }
