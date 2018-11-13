@@ -32,6 +32,7 @@ public class Fields {
             for(Field f : fieldArray){
                 System.out.println(f);
             }
+            
             System.out.println("************获取所有的字段(包括私有、受保护、默认的)********************");
             fieldArray = stuClass.getDeclaredFields();
             for(Field f : fieldArray){
