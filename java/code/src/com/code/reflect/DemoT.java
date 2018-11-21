@@ -7,9 +7,15 @@ package com.code.reflect;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
+import java.util.List;
 
 public class DemoT {
     public static void main(String[] args) throws Exception{
+
+        List<Long> list = new ArrayList<>();
+        list.add(new Long(1));
+        list.add(new Long(2));
+        System.out.println(list.contains(new Long(1)));
         ArrayList<String> strList = new ArrayList<>();
         strList.add("aaa");
         strList.add("bbb");
