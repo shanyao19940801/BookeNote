@@ -13,3 +13,9 @@
 * ScheduleWithFixedDelay
 
 	每次执行时间为上一次任务**结束**起向后推一个时间间隔
+
+
+### ScheduledExecutorService 和 Timer 的区别
+
+Timer的**内部只有一个线程**，如果有多个任务的话就会顺序执行，这样我们的延迟时间和循环时间就会出现问题。
+ScheduledExecutorService是线程池，所以就不会出现这个情况，在对延迟任务和循环任务要求严格的时候，就需要考虑使用ScheduledExecutorService了。
