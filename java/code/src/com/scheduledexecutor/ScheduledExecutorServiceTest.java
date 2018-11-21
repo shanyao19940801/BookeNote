@@ -6,8 +6,8 @@ import java.util.concurrent.TimeUnit;
 
 public class ScheduledExecutorServiceTest {
     public static void main(String[] args) {
-//        test1();
-        testScheduledThreadPool();
+//        testScheduledThreadPool();
+        testSingleThreadScheduledExecutor();
     }
 
     public static void testScheduledThreadPool() {
@@ -18,12 +18,33 @@ public class ScheduledExecutorServiceTest {
     }
 
     public static void testSingleThreadScheduledExecutor() {
-        ScheduledExecutorService service = Executors.newSingleThreadScheduledExecutor();
-        service.scheduleAtFixedRate(new Runnable() {
+        ScheduledExecutorService service = Executors.newScheduledThreadPool(2);
+
+        //每次执行时间为上一次任务开始起向后推一个时间间隔
+        service.scheduleWithFixedDelay(new Runnable() {
             @Override
             public void run() {
                 System.out.println("a");
+                try {
+                    Thread.sleep(4000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         }, 2, 2, TimeUnit.SECONDS);
+
+        //每次执行时间为上一次任务结束起向后推一个时间间隔
+        service.scheduleAtFixedRate(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("b");
+                try {
+                    Thread.sleep(4000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }, 2, 2, TimeUnit.SECONDS);
+
     }
 }
