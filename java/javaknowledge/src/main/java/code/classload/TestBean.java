@@ -26,15 +26,15 @@ public class TestBean {
                 return super.loadClass(name);
             }
         };
-        Object obj = myClassLoader.loadClass("com.code.classload.TestBean").getDeclaredConstructor().newInstance();
-//        Object obj2 = myClassLoader.loadClass("com.code.classload.TestBean").getDeclaredConstructor().newInstance();//不可以加载两个
-        Object obj1 = Class.forName("com.code.classload.TestBean").getDeclaredConstructor().newInstance();
-        Object obj2 = Class.forName("com.code.classload.TestBean").getDeclaredConstructor().newInstance();
+        Object obj = myClassLoader.loadClass("code.classload.TestBean").getDeclaredConstructor().newInstance();
+//        Object obj2 = myClassLoader.loadClass("code.classload.TestBean").getDeclaredConstructor().newInstance();//不可以加载两个
+        Object obj1 = Class.forName("code.classload.TestBean").getDeclaredConstructor().newInstance();
+        Object obj2 = Class.forName("code.classload.TestBean").getDeclaredConstructor().newInstance();
         System.out.println(obj.getClass());
-        System.out.println(obj instanceof com.code.classload.TestBean);
+        System.out.println(obj instanceof TestBean);
         System.out.println("========================");
         System.out.println(obj1.getClass());
-        System.out.println(obj1 instanceof com.code.classload.TestBean);
+        System.out.println(obj1 instanceof TestBean);
         System.out.println("========================");
         System.out.println(obj1.equals(obj2));
     }
