@@ -11,3 +11,5 @@ java/code/code.iws
 *.class
 skillsummery/.idea/
 *.idea/
+*.out/
+*.target/
