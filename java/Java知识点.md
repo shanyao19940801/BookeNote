@@ -10,7 +10,7 @@
 * [Java中Comparable和Comparator区别](https://github.com/shanyao19940801/BookeNote/blob/master/java/file/Java%E4%B8%ADComparable%E5%92%8CComparator%E5%8C%BA%E5%88%AB.md)
 
 ---
-##JVM相关
+## JVM相关
 * [JVM类生命周期概述：加载时机与加载过程](https://blog.csdn.net/justloveyou_/article/details/72466105)
 * [深入理解Java对象的创建过程：类的初始化与实例化](https://blog.csdn.net/justloveyou_/article/details/72466416)
 * [深入理解Java类加载器(一)：Java类加载原理解析](https://blog.csdn.net/justloveyou_/article/details/72217806)
