@@ -2,6 +2,10 @@
 
 java注解是在JDK5时引入的新特性
 
+### 注解分类
+
+![p1](https://github.com/shanyao19940801/BookeNote/blob/master/java/pictures/%E6%B3%A8%E8%A7%A3%E5%88%86%E7%B1%BB.png)
+
 ### Java内置三个注解
 
 1.      @Override，表示当前的方法定义将覆盖超类中的方法。
@@ -9,7 +13,7 @@ java注解是在JDK5时引入的新特性
 1.      @SuppressWarnings，关闭不当编译器警告信息。
 
 
-### Java还提供了4中注解，专门负责新注解的创建
+### Java还提供了4中元注解，专门负责新注解的创建
 
 * **@Target**
 
@@ -39,3 +43,9 @@ java注解是在JDK5时引入的新特性
 
 	允许子类继承父类中的注解
 
+
+### 参考文档
+
+[参考一](https://www.cnblogs.com/Qian123/p/5256084.html#_label0)<br>
+[参考二](http://www.cnblogs.com/huajiezh/p/5263849.html)<br>
+[参考三](https://blog.csdn.net/javazejian/article/details/71860633#%E7%90%86%E8%A7%A3java%E6%B3%A8%E8%A7%A3)
