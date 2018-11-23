@@ -11,9 +11,9 @@
 
 * [回调机制]()
 
-* [协变类型]()
+* [协变类型](https://github.com/shanyao19940801/BookeNote/blob/master/java/file/%E5%8D%8F%E5%8F%98%E7%B1%BB%E5%9E%8B.md)
 
-* [单例为什么不会阻塞]()
+* [单例为什么不会阻塞](https://github.com/shanyao19940801/BookeNote/blob/master/java/file/%E5%8D%95%E4%BE%8B%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E4%BC%9A%E9%98%BB%E5%A1%9E.md)
 
 ---
 ## JVM相关
