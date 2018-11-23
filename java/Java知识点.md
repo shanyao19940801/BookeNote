@@ -9,6 +9,8 @@
 * [定时任务接口ScheduledExecutorService的使用](https://github.com/shanyao19940801/BookeNote/blob/master/java/file/java%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1%E6%8E%A5%E5%8F%A3ScheduledExecutorService.md)
 * [Java中Comparable和Comparator区别](https://github.com/shanyao19940801/BookeNote/blob/master/java/file/Java%E4%B8%ADComparable%E5%92%8CComparator%E5%8C%BA%E5%88%AB.md)
 
+* [回调机制]()
+
 ---
 ## JVM相关
 * [JVM类生命周期概述：加载时机与加载过程](https://blog.csdn.net/justloveyou_/article/details/72466105)
