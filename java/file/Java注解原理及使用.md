@@ -4,9 +4,11 @@ java注解是在JDK5时引入的新特性
 
 ### 注解分类
 * 按照运行机制分类
+
 ![p1](https://github.com/shanyao19940801/BookeNote/blob/master/java/pictures/%E6%B3%A8%E8%A7%A3%E5%88%86%E7%B1%BB0.png)
 ![p1](https://github.com/shanyao19940801/BookeNote/blob/master/java/pictures/%E6%B3%A8%E8%A7%A3%E5%88%86%E7%B1%BB.png)
 ![p1](https://github.com/shanyao19940801/BookeNote/blob/master/java/pictures/%E6%B3%A8%E8%A7%A3%E5%88%86%E7%B1%BB2.png)
+
 * 按照来源来分的话，有如下三类：
 
 		1：JDK自带的注解（Java目前只内置了三种标准注解：@Override、@Deprecated、@SuppressWarnings，以及四种元注解：@Target、@Retention、@Documented、@Inherited）
