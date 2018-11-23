@@ -3,14 +3,26 @@
 java注解是在JDK5时引入的新特性
 
 ### 注解分类
+* 按照运行机制分类
 
 ![p1](https://github.com/shanyao19940801/BookeNote/blob/master/java/pictures/%E6%B3%A8%E8%A7%A3%E5%88%86%E7%B1%BB.png)
 
+* 按照来源来分的话，有如下三类：
+
+		1：JDK自带的注解（Java目前只内置了三种标准注解：@Override、@Deprecated、@SuppressWarnings，以及四种元注解：@Target、@Retention、@Documented、@Inherited）
+		2：第三方的注解——这一类注解是我们接触最多和作用最大的一类
+		3：自定义注解——也可以看作是我们编写的注解，其他的都是他人编写注解
+
+ 
+
+按照功能来分的，还有，元注解——注解的注解。
+
+
 ### Java内置三个注解
 
-1.      @Override，表示当前的方法定义将覆盖超类中的方法。
-1.      @Deprecated，使用了注解为它的元素编译器将发出警告，因为注解@Deprecated是不赞成使用的代码，被弃用的代码。
-1.      @SuppressWarnings，关闭不当编译器警告信息。
+	1.      @Override，表示当前的方法定义将覆盖超类中的方法。
+	1.      @Deprecated，使用了注解为它的元素编译器将发出警告，因为注解@Deprecated是不赞成使用的代码，被弃用的代码。
+	1.      @SuppressWarnings，关闭不当编译器警告信息。
 
 
 ### Java还提供了4中元注解，专门负责新注解的创建
