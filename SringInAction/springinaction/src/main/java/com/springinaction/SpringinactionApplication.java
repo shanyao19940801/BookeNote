@@ -1,4 +1,4 @@
-package com.spring.springinaction;
+package com.springinaction;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
