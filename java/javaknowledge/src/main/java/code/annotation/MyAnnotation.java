@@ -11,5 +11,5 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 @Retention(RUNTIME)
 @Inherited
 public @interface MyAnnotation {
-    Name value() default Name.yao;
+    NameEnum value() default NameEnum.yao;
 }
