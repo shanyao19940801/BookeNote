@@ -15,7 +15,7 @@ class C{
 }
 
 class D extends C {
-
+    //类C的注解没有使用@Inherited，所以此类不会继承注解
 }
 
 public class DocumentDemo {
