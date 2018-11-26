@@ -59,6 +59,13 @@ java注解是在JDK5时引入的新特性
 
 ### 自定义一个注解
 
+	@Target({ElementType.TYPE, ElementType.METHOD})
+	@Retention(RUNTIME)
+	@Inherited
+	public @interface MyAnnotation {
+	    NameEnum value() default NameEnum.yao;
+	}
+
 
 ### Java8注解新特性
 [Java8注解](http://ifeve.com/java-annotations-tutorial/)
