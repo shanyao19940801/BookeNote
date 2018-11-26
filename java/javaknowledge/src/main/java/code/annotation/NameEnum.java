@@ -25,8 +25,8 @@ public enum NameEnum {
         return this.name;
     }
 
-    public static NameEnum valueOf(Integer num) throws Exception {
-        NameEnum[] var1 = values();
+    public static NameEnum valueOf(Integer num) {
+        /*NameEnum[] var1 = values();
         int var2 = var1.length;
 
         for (int var3 = 0; var3 < var2; ++var3) {
@@ -34,8 +34,13 @@ public enum NameEnum {
             if (nameEnum.getNum().equals(num)) {
                 return nameEnum;
             }
+        }*/
+        for (NameEnum nameEnum : NameEnum.values()) {
+            if (nameEnum.getNum().equals(num)) {
+                return nameEnum;
+            }
         }
-        throw new Exception("miss");
+        return null;
     }
 
 }
