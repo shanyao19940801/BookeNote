@@ -76,6 +76,10 @@ java注解是在JDK5时引入的新特性
 	Method：代表类的方法定义 　 
 	Package：代表类的包定义
 
+下面是AnnotatedElement中相关的API方法，以上5个类都实现以下的方法:
+
+![图片](https://github.com/shanyao19940801/BookeNote/blob/master/java/pictures/%E6%B3%A8%E8%A7%A3%E5%8F%8D%E5%B0%84_1.PNG)
+
 
 ### Java8注解新特性
 [Java8注解](http://ifeve.com/java-annotations-tutorial/)
