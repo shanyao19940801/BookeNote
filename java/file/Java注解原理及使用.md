@@ -56,7 +56,7 @@ java注解是在JDK5时引入的新特性
 * **@Inherited**
 
 	允许子类继承父类中的注解<br>
-	**但这并不是真的继承，只是通过使用@Inherited，可以让子类Class对象使用getAnnotations()获取父,[测试代码]()**
+	**但这并不是真的继承，只是通过使用@Inherited，可以让子类Class对象使用getAnnotations()获取父,[测试代码](https://github.com/shanyao19940801/BookeNote/blob/master/java/javaknowledge/src/main/java/code/annotation/DocumentDemo.java)**
 
 ### 自定义一个注解
 
@@ -66,6 +66,15 @@ java注解是在JDK5时引入的新特性
 	public @interface MyAnnotation {
 	    NameEnum value() default NameEnum.yao;
 	}
+
+### 注解与反射机制
+我们知道Java所有注解都继承了Annotation接口，也就是说　Java使用Annotation接口代表注解元素，该接口是所有Annotation类型的父接口。同时为了运行时能准确获取到注解的相关信息，Java在java.lang.reflect 反射包下新增了AnnotatedElement接口，它主要用于表示目前正在 VM 中运行的程序中已使用注解的元素，通过该接口提供的方法可以利用反射技术地读取注解的信息，如反射包的Constructor类、Field类、Method类、Package类和Class类都实现了AnnotatedElement接口，它简要含义如下（更多详细介绍可以看 [Java反射](https://github.com/shanyao19940801/BookeNote/blob/master/java/file/Java%E5%8F%8D%E5%B0%84.md)）
+
+	Class：类的Class对象定义 　 
+	Constructor：代表类的构造器定义 　 
+	Field：代表类的成员变量定义 
+	Method：代表类的方法定义 　 
+	Package：代表类的包定义
 
 
 ### Java8注解新特性
