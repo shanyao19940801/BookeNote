@@ -55,7 +55,8 @@ java注解是在JDK5时引入的新特性
 
 * **@Inherited**
 
-	允许子类继承父类中的注解
+	允许子类继承父类中的注解<br>
+	**但这并不是真的继承，只是通过使用@Inherited，可以让子类Class对象使用getAnnotations()获取父,[测试代码]()**
 
 ### 自定义一个注解
 
@@ -74,4 +75,4 @@ java注解是在JDK5时引入的新特性
 
 [参考一](https://www.cnblogs.com/Qian123/p/5256084.html#_label0)<br>
 [参考二](http://www.cnblogs.com/huajiezh/p/5263849.html)<br>
-[参考三](https://blog.csdn.net/javazejian/article/details/71860633#%E7%90%86%E8%A7%A3java%E6%B3%A8%E8%A7%A3)
+[参考三(推介阅读)](https://blog.csdn.net/javazejian/article/details/71860633#%E7%90%86%E8%A7%A3java%E6%B3%A8%E8%A7%A3)
