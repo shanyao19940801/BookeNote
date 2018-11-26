@@ -60,7 +60,8 @@ java注解是在JDK5时引入的新特性
 ### 自定义一个注解
 
 
-
+### Java8注解新特性
+[Java8注解](http://ifeve.com/java-annotations-tutorial/)
 
 ### 参考文档
 
