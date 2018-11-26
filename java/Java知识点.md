@@ -17,6 +17,7 @@
 
 * [Java注解原理以及使用](https://github.com/shanyao19940801/BookeNote/blob/master/java/file/Java%E6%B3%A8%E8%A7%A3%E5%8E%9F%E7%90%86%E5%8F%8A%E4%BD%BF%E7%94%A8.md)
 
+* [枚举的使用](https://blog.csdn.net/qq_27093465/article/details/52180865)
 ---
 ## JVM相关
 * [JVM类生命周期概述：加载时机与加载过程](https://blog.csdn.net/justloveyou_/article/details/72466105)
