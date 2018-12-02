@@ -51,3 +51,4 @@
 
 ### 使用javaConfig实现
 
+[实例](https://github.com/shanyao19940801/BookeNote/blob/master/SringInAction/springinaction/chapter02/src/main/java/chapter02/c03/config/JavaConfig.java)
