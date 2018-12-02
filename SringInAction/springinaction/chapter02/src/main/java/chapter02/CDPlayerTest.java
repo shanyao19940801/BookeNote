@@ -26,6 +26,7 @@ public class CDPlayerTest {
     public void cdShouldNotBeNull() {
         assertNotNull(cd);
         assertNotNull(dvd);
+        dvd.play();
         assertNotNull(vcd);
     }
 }
