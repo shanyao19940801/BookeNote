@@ -1,4 +1,4 @@
-package com.springinaction.knights;
+package com.springinaction.chapter01.knights;
 
 import java.io.PrintStream;
 
