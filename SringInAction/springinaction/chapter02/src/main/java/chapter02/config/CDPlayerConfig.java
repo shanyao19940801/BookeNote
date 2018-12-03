@@ -1,8 +1,10 @@
 package chapter02.config;
 
 import chapter02.CompactDisc;
+import chapter02.SgtPeppers;
 import chapter02.page_1.DVDPlayer;
 import chapter02.page_2.VCDPlayer;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
@@ -13,4 +15,8 @@ import org.springframework.context.annotation.Configuration;
 //通过指定包中包含的类或接口
 @ComponentScan(basePackageClasses = {DVDPlayer.class, VCDPlayer.class, CompactDisc.class})
 public class CDPlayerConfig {
+    @Bean
+    public SgtPeppers sgtPeppers(){
+        return new SgtPeppers();
+    }
 }
