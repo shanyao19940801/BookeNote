@@ -7,6 +7,6 @@ import org.springframework.stereotype.Component;
 @Component
 public class MyMessageListener implements MessageListener {
     public void onMessage(Message message) {
-        
+
     }
 }
