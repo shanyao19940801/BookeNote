@@ -49,3 +49,13 @@
     public Dessert iceCream(Dessert dessert) {
         this.dessert = dessert;
     }
+
+* 自定义一个限定符注解
+
+当你想在一个bean加多个@Qualifier注解时会报错，这时候可以用下面这个方式创建一个限定符注解
+
+		@Target({ElementType.METHOD,ElementType.TYPE,ElementType.CONSTRUCTOR,ElementType.FIELD})
+		@Retention(RetentionPolicy.RUNTIME)
+		@Qualifier
+		public @interface Cold {
+		}
