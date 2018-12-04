@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
 public class BeanConfig {
     private Dessert dessert;
     @Autowired
-    @Qualifier("iceCream")
+    @Qualifier("132")
     public void iceCream(Dessert dessert) {
         this.dessert = dessert;
     }
