@@ -4,29 +4,48 @@
 
 利用profile来实现根据环境来确定创建哪个bean不创建哪个bean
 
-### 条件化的bean
+### 3,2条件化的bean
 
 利用@Conditional注解实现达到某个条件才会去创建这个Bean
 
-### 处理自动装配的歧义性
+### 3.3处理自动装配的歧义性
 
 * 使用场景
 
-	我当我们想要把一个bean引用注入到构造参数和属性中时，只有一个bean匹配时自动装配才是有效的否则会报错。**如果确实就是有多个bean匹配该怎么办呢？**下面几种方式可以解决这个问题
+	我当我们想要把一个bean引用注入到构造参数和属性中时，只有一个bean匹配时自动装配才是有效的否则会报错。**如果确实就是有多个bean匹配该怎么办呢？**下面几种方式可以解决这个问题，
 
-* 1.标示首选的bean
+#### 1.标示首选的bean
 
-声明bean的时候将其中一个可选的bean设置为首选，这样自动装配就会选择这个bean
+声明bean的时候将其中一个可选的bean设置为首选，这样自动装配就会选择这个bean，**注意只能在一个bean标识首选**
 
 
 
 1. 隐式装配：
 
-	@Primary
-	@Component
-	public class IceCream implements Dessert {
-	}
+		@Primary
+		@Component
+		public class IceCream implements Dessert {
+		}
 
 
 1. 显示装配
 
+	    @Bean
+	    @Primary
+	    public Dessert iceCream() {
+	        return new IceCream();
+	    }
+
+#### 2.限定自动装配的bean
+
+	标识首选方法只能选择一个优先的方案，当首选数量超过一个没有其他方法缩小范围，而**Spring的限定符能实现缩小范围操作最终只有一个bean满足限定条件**
+
+* @Qualifier注解
+
+@Qualifier注解是使用限定符的主要方式
+
+    @Autowired
+    @Qualifier("iceCrem")//将指定ID的bean注入其中
+    public Dessert iceCream(Dessert dessert) {
+        this.dessert = dessert;
+    }
