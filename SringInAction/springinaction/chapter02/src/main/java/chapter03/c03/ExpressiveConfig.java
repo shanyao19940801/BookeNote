@@ -8,11 +8,13 @@ import org.springframework.core.env.Environment;
 
 @Configuration
 //声明属性源
-@PropertySource("classpath:/resources/app.properties")
+@PropertySource("classpath:app.properties")
 public class ExpressiveConfig {
     @Autowired
     Environment environment;
 
     @Bean
-    public BlankDisc disc()
+    public BlankDisc disc() {
+        return new BlankDisc(environment.getProperty("disc.title"));
+    }
 }
