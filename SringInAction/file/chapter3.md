@@ -97,7 +97,7 @@
 
 ##### 解析属性占位符
 
-属性占位符：${}这种方式直接从源中获取值，如下面代码实例，但是如果要是用属性占位符就必须
+属性占位符：${}这种方式直接从源中获取值，如下面代码实例，[测试代码](https://github.com/shanyao19940801/BookeNote/blob/master/SringInAction/springinaction/chapter02/src/main/java/chapter03/c03/ExpressiveConfigV1Test.java)
 
 	@Configuration
 	//声明属性源
