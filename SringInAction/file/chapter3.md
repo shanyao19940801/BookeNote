@@ -97,6 +97,21 @@
 
 ##### 解析属性占位符
 
-属性占位符：${}这种方式直接从源中获取值
+属性占位符：${}这种方式直接从源中获取值，如下面代码实例
 
+	@Configuration
+	//声明属性源
+	@PropertySource("classpath:app.properties")
+	public class ExpressiveConfigV1 {
+	    @Bean
+	    public static PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer() {
+	        return new PropertySourcesPlaceholderConfigurer();
+	    }
+	    @Value(value = "${disc.title}")
+	    String title;
+	    @Bean
+	    public BlankDisc blankDisc(){
+	        return new BlankDisc(title);
+	    }
+	}
 
