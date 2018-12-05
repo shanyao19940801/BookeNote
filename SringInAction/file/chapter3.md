@@ -79,8 +79,21 @@
 
 #### 3.5.1注入外部的值
 
-使用@PropertySource注解和Environment
 
+使用@PropertySource注解和Environment，[测试代码](https://github.com/shanyao19940801/BookeNote/blob/master/SringInAction/springinaction/chapter02/src/main/java/chapter03/c03/MainTest.java)
+
+	@Configuration
+	//声明属性源
+	@PropertySource("classpath:app.properties")
+	public class ExpressiveConfig {
+	    @Autowired
+	    Environment environment;
+	
+	    @Bean
+	    public BlankDisc disc() {
+	        return new BlankDisc(environment.getProperty("disc.title"));
+	    }
+	}
 
 
 
