@@ -7,7 +7,7 @@ import org.aspectj.lang.annotation.*;
 public class Audience {
     //定义一个可重用的切点
     //该方法内容应该是一个空的，本身只是一个标识
-    @Pointcut("execution(** chapter04.Performance.perform(..))")
+    @Pointcut("execution(* chapter04.Performance.perform(..))")
     public void performance(){}
     //前置通知
     @Before("performance()")

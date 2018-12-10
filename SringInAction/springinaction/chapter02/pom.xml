@@ -36,12 +36,7 @@
       <version>5.1.1.RELEASE</version>
     </dependency>
 
-    <!-- https://mvnrepository.com/artifact/aspectj/aspectjrt -->
-    <dependency>
-      <groupId>aspectj</groupId>
-      <artifactId>aspectjrt</artifactId>
-      <version>1.5.3</version>
-    </dependency>
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -57,14 +52,20 @@
       <artifactId>spring-context</artifactId>
       <version>5.0.7.RELEASE</version>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/aspectj/aspectjweaver -->
+    <!--切面-->
+    <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
     <dependency>
-      <groupId>aspectj</groupId>
+      <groupId>org.aspectj</groupId>
       <artifactId>aspectjweaver</artifactId>
-      <version>1.5.4</version>
+      <version>1.8.13</version>
     </dependency>
-
-
+    <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjrt -->
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjrt</artifactId>
+      <version>1.8.13</version>
+    </dependency>
+    <!--切面-->
   </dependencies>
 
   <build>
