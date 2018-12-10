@@ -1,7 +1,7 @@
 package chapter04;
 
+import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
-import org.springframework.context.annotation.Bean;
 
 @Aspect
 public class Audience {
@@ -28,5 +28,17 @@ public class Audience {
     @AfterThrowing("performance()")
     public void demandRefund() {
         System.out.println("失败了，没关系，重新开始！");
+    }
+
+    @Around("performance()")
+    public void watchPerformance(ProceedingJoinPoint jp) {
+        try {
+            System.out.println("手机静音");
+            System.out.println("坐好");
+            jp.proceed();
+            System.out.println("鼓掌");
+        } catch (Throwable throwable) {
+            System.out.println("异常");
+        }
     }
 }

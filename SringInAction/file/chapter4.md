@@ -128,3 +128,39 @@ Spring支持方法级别的连接点
 		        System.out.println("失败了，没关系，重新开始！");
 		    }
 		}
+
+* 启动切面
+
+通过上面我们定义了一个切面，但目前为止该类并不会视为一个切面，需要做一下配置
+
+	@Configuration
+	@EnableAspectJAutoProxy//启用AspectJ自动代理
+	@ComponentScan
+	public class ChapterConfig {
+	
+	    @Bean
+	    public Audience audience() {
+	        return new Audience();
+	    }
+	}
+
+### 4.3.2 创建环绕通知
+
+	@Aspect
+	public class Audience {
+	    //定义一个可重用的切点
+	    //该方法内容应该是一个空的，本身只是一个标识
+	    @Pointcut("execution(** chapter04.Performance.perform(..))")
+	    public void performance(){}
+	    @Around("performance()")
+	    public void watchPerformance(ProceedingJoinPoint jp) {
+	        try {
+	            System.out.println("手机静音");
+	            System.out.println("坐好");
+	            jp.proceed();
+	            System.out.println("鼓掌");
+	        } catch (Throwable throwable) {
+	            System.out.println("异常");
+	        }
+	    }
+	}
