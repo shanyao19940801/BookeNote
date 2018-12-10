@@ -62,4 +62,6 @@ Spring支持方法级别的连接点
 
 * 切点表达式
 
+		execution(** chapter04.Performance.perform(..))
 
+上面是一个切点表达式，该表示设置当perform()方法执行时触发通知的调用。
