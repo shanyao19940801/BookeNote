@@ -164,3 +164,7 @@ Spring支持方法级别的连接点
 	        }
 	    }
 	}
+
+* 测试类
+
+[MainTest](https://github.com/shanyao19940801/BookeNote/blob/master/SringInAction/springinaction/chapter02/src/main/java/chapter04/MainTest.java)
