@@ -6,7 +6,7 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 
 @Aspect
-public class Audience {
+public class Audience_old {
     //前置通知
     @Before("execution(** chapter04.Performance.perform(..))")
     public void silenceCellPhone() {

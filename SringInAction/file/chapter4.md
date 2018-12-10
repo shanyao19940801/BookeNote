@@ -65,3 +65,39 @@ Spring支持方法级别的连接点
 		execution(** chapter04.Performance.perform(..))
 
 上面是一个切点表达式，该表示设置当perform()方法执行时触发通知的调用。
+
+### 4.2.2 定义一个切面
+
+	//注解定义切面
+	@Aspect
+	public class Audience {
+	    //前置通知
+	    //使用切点表达式指定切点
+		@Before("execution(** chapter04.Performance.perform(..))")
+	    public void silenceCellPhone() {
+	        System.out.println("关闭手机");
+	    }
+	    //前置通知
+	    //使用切点表达式指定切点
+		@Before("execution(** chapter04.Performance.perform(..))")
+	    public void takeSeats() {
+	        System.out.println("坐好");
+	    }
+	    //后置通知
+	    //使用切点表达式指定切点
+		@AfterReturning("execution(** chapter04.Performance.perform(..))")
+	    public void applause() {
+	        System.out.println("鼓掌");
+	    }
+	    //异常通知
+		//使用切点表达式指定切点
+	    @AfterThrowing("execution(** chapter04.Performance.perform(..))")
+	    public void demandRefund() {
+	        System.out.println("失败了，没关系，重新开始！");
+	    }
+	}
+
+可以看到上面是定义的一个切面，使用切点表达式指定了切点，使用注解定义了几个通知，前置通知，后置统治，异常通知。**但是从代码中我们可以看到，相同的切点表达式我们使用了多次，这非常不好**
+
+* 使用@Pointcut定义一个可重用的切点
+
