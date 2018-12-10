@@ -48,3 +48,18 @@
 ### 4.1.2Spring对AOP的支持
 
 Spring支持方法级别的连接点
+
+## 4.2 通过切点来选择连接点
+
+###4.2.1 编写切点
+
+	public interface Performance {
+	    /**
+	     * 一个切点
+	     */
+	    public void perform();
+	}
+
+* 切点表达式
+
+
