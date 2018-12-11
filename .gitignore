@@ -15,3 +15,6 @@ skillsummery/.idea/
 *.target/
 java/javaknowledge/target/
 delete/
+spring/spring_code/spring_mvc/.mvn/
+spring/spring_code/spring_mvc/mvnw.cmd
+spring/spring_code/spring_mvc/mvnw
