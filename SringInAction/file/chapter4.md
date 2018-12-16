@@ -168,3 +168,38 @@ Spring支持方法级别的连接点
 * 测试类
 
 [MainTest](https://github.com/shanyao19940801/BookeNote/blob/master/SringInAction/springinaction/chapter02/src/main/java/chapter04/MainTest.java)
+
+### 4.3.3 处理通知中的参数
+
+如下一个切点,我想要记录playTrack中播放的次数，但又不想在这个方法中去记录，因记录次数并不是业务关注点，这就可以通过通知来记录次数
+
+	public class BlankDisc implements CompactDisc{
+	    private String title;
+	    private String artist;
+	    private List<String> tracks;
+	
+		public void playTrack(int number) {
+		    System.out.println("music="+tracks.get(number)+"playTrack="+ number);
+		}
+	}
+
+
+切面如下："execution(* chapter04.BlankDisc.playTrack(int)) && args(trackNumber)"，args(trackNumber)这个限定符表明了，
+
+	@Aspect
+	public class TrackCounter {
+	    private Map<Integer, Integer> trackCounts = new HashMap<>();
+		//
+	    @Pointcut("execution(* chapter04.BlankDisc.playTrack(int)) && args(trackNumber)")
+	    public void trackPlayed(int trackNumber) {
+	    }
+	    @Before("trackPlayed(trackNumber)")
+	    public void countTrack(int trackNumber) {
+	        int currentCont = getPlayCount(trackNumber);
+	        trackCounts.put(trackNumber, currentCont + 1);
+	    }
+	
+	    public int getPlayCount(int trackNumber) {
+	        return trackCounts.containsKey(trackNumber) ? trackCounts.get(trackNumber) : 0;
+	    }
+	}
