@@ -184,7 +184,7 @@ Spring支持方法级别的连接点
 	}
 
 
-切面如下："execution(* chapter04.BlankDisc.playTrack(int)) && args(trackNumber)"，args(trackNumber)这个限定符表明了，
+切面如下："execution(* chapter04.BlankDisc.playTrack(int)) && args(trackNumber)"，**args(trackNumber)**这个限定符表明了传递给传递给playTrack方法的参数也会传递到通知中，这样就可以记录每首歌播放次数
 
 	@Aspect
 	public class TrackCounter {
