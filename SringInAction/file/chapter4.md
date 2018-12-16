@@ -203,3 +203,7 @@ Spring支持方法级别的连接点
 	        return trackCounts.containsKey(trackNumber) ? trackCounts.get(trackNumber) : 0;
 	    }
 	}
+
+### 4.3.4 通过注解引入新的功能
+
+就是给bean添加新的方法，通过注解@DeclareParents
