@@ -7,7 +7,7 @@ public class SpittrWebAppInitializer extends AbstractAnnotationConfigDispatcherS
     @Override
     protected Class<?>[] getRootConfigClasses() {
         return new Class<?>[] {
-
+            RootConfig.class
         };
     }
 
