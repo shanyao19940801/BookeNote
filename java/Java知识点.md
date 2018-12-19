@@ -24,3 +24,14 @@
 * [深入理解Java对象的创建过程：类的初始化与实例化](https://blog.csdn.net/justloveyou_/article/details/72466416)
 * [深入理解Java类加载器(一)：Java类加载原理解析](https://blog.csdn.net/justloveyou_/article/details/72217806)
 * [深入理解Java类加载器(二)：线程上下文类加载器](https://blog.csdn.net/justloveyou_/article/details/72231425)
+
+## 好的文章
+
+[JDK1.7版本HashMap多线程下导致死循环](https://blog.csdn.net/pange1991/article/details/82377980)
+
+## 设计模式相关
+
+[责任链模式再实际项目中的应用](http://ifeve.com/%E5%AE%9E%E9%99%85%E9%A1%B9%E7%9B%AE%E4%B8%AD%E8%BF%90%E7%94%A8%E8%B4%A3%E4%BB%BB%E9%93%BE%E6%A8%A1%E5%BC%8F/)
+
+## Java问题排查相关
+
