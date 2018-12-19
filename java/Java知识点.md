@@ -25,7 +25,7 @@
 * [深入理解Java类加载器(一)：Java类加载原理解析](https://blog.csdn.net/justloveyou_/article/details/72217806)
 * [深入理解Java类加载器(二)：线程上下文类加载器](https://blog.csdn.net/justloveyou_/article/details/72231425)
 
-## 好的文章
+## 集合相关 
 
 [JDK1.7版本HashMap多线程下导致死循环](https://blog.csdn.net/pange1991/article/details/82377980)
 
@@ -35,3 +35,4 @@
 
 ## Java问题排查相关
 
+[一次 HashSet 所引起的并发问题](http://ifeve.com/%E4%B8%80%E6%AC%A1-hashset-%E6%89%80%E5%BC%95%E8%B5%B7%E7%9A%84%E5%B9%B6%E5%8F%91%E9%97%AE%E9%A2%98/)
