@@ -1,7 +1,9 @@
 # RabbitMQ
 
 [学习参考文档](https://blog.csdn.net/phker/article/details/71211895)
+
 [很不错的一篇文章](https://mp.weixin.qq.com/s/r8L-Nz_457xdsww2DdlqJw)
+
 * 消费者down了，信息会丢失吗？
 
 不会，只要queue存在消息就一直存在
