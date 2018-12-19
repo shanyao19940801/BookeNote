@@ -51,7 +51,7 @@
 
 ## RabbitmQ
 
-[RabbitMQ](https://github.com/shanyao19940801/demos/blob/master/rabbitMQ/RabbitMQ.md)
+[RabbitMQ](https://github.com/shanyao19940801/BookeNote/blob/master/rabbit/RabbitMQ.md)
 
 ----------
 
