@@ -1,0 +1,9 @@
+
+其实就是一个加载顺序的问题 
+首先使用了spring MVC的项目是不需要配置Controller bean  而是通过spring mvc的配置文件进行扫描注解加载的 
+spring事务配置文件还有上下文都是通过org.springframework.web.context.ContextLoaderListener加载的， 
+而spring MVC的Controller是通过org.springframework.web.servlet.DispatcherServlet加载的 
+这样就有个优先级的问题了  
+web是先启动ContextLoaderListener后启动DispatcherServlet 
+在ContextLoaderListener加载的时候action并没在容器中，所以现在使用AOP添加事务或者扫描注解都是无用的。 
+那么解决办法就是在DispatcherServlet 加载spring-MVC配置文件后再进行一次AOP事务扫描和注解事务扫描就OK了 
