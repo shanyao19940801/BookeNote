@@ -14,6 +14,9 @@
 * 如何将将消息放松到多个Queue
 RabbitMQ消息队列-通过fanout模式将消息推送到多个Queue中
 
+### 基本信息
+
+![图1](https://github.com/shanyao19940801/BookeNote/blob/master/rabbit/pictures/r_1.jpg)
 
 几个名词概念:
 
