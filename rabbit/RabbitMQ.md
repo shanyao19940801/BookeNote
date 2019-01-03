@@ -30,6 +30,8 @@ RabbitMQ消息队列-通过fanout模式将消息推送到多个Queue中
 3. Virtual host：出于多租户和安全因素设计的，把 AMQP 的基本组件划分到一个虚拟的分组中，类似于网络中的 namespace 概念。当多个不同的用户使用同一个RabbitMQ server 提供的服务时，可以划分出多个 vhost，每个用户在自己的 vhost 创建 exchange／queue 等
 4. Binding：exchange 和 queue 之间的虚拟连接，binding 中可以包含 routing key。Binding 信息被保存到 exchange 中的查询表中，用于 message 的分发依据
 
+<font color=red size=3>简而言之，Publisher 发送的消息通过 Connection 中的 Channel 到达 Broker 的某个 Virtual Host，消息经过指定的 Exchange，根据 Binding 提供的分发依据，分发到 0~n 个 Queue 中；Queue 中的消息等待 Consumer 消费。</font>
+
 ### 三种Exchange
 
 [参考地址](https://www.cnblogs.com/hz04022016/p/6519445.html)
