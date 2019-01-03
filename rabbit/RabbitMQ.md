@@ -25,7 +25,7 @@ RabbitMQ消息队列-通过fanout模式将消息推送到多个Queue中
 1. queue: 就是邮箱接收软件，但是可以接收多个地址的邮件，通过bind实现。 
 1. producer： 消息生产者，就是投递消息的程序。 
 1. consumer：消息消费者，就是接受消息的程序。 
-1. channel：消息通道，在客户端的每个连接里，可建立多个channel，每个channel代表一个会话任务。
+1. Channel：如果每一次访问 RabbitMQ 都建立一个Connection，在消息量大的时候建立 TCP Connection 的开销将是巨大的，效率也较低。Channel 是在 connection 内部建立的逻辑连接，如果应用程序支持多线程，通常每个 thread 创建单独的 channel 进行通讯，AMQP method 包含了 channel id 帮助客户端和 message broker 识别 channel，所以 channel 之间是完全隔离的。Channel 作为轻量级的 Connection 极大减少了操作系统建立 TCP connection 的开销
 2. Broker：接收和分发消息的应用，RabbitMQ Server 就是 Message Broker
 3. Virtual host：出于多租户和安全因素设计的，把 AMQP 的基本组件划分到一个虚拟的分组中，类似于网络中的 namespace 概念。当多个不同的用户使用同一个RabbitMQ server 提供的服务时，可以划分出多个 vhost，每个用户在自己的 vhost 创建 exchange／queue 等
 4. Binding：exchange 和 queue 之间的虚拟连接，binding 中可以包含 routing key。Binding 信息被保存到 exchange 中的查询表中，用于 message 的分发依据
