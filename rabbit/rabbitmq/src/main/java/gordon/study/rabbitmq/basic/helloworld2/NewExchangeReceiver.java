@@ -10,6 +10,7 @@ import com.rabbitmq.client.ConnectionFactory;
 import com.rabbitmq.client.Consumer;
 import com.rabbitmq.client.DefaultConsumer;
 import com.rabbitmq.client.Envelope;
+import gordon.study.rabbitmq.util.FactoryUtil;
 
 public class NewExchangeReceiver {
 
@@ -28,7 +29,7 @@ public class NewExchangeReceiver {
     }
 
     public void work() throws Exception {
-        ConnectionFactory factory = new ConnectionFactory();
+        ConnectionFactory factory = FactoryUtil.getConnectionFactory();
         factory.setHost("localhost");
         final Connection connection = factory.newConnection();
         Channel channel = connection.createChannel();

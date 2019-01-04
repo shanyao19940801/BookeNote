@@ -5,14 +5,14 @@ import java.util.concurrent.TimeUnit;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
-import gordon.study.rabbitmq.util.ConnectionFactoryUtil;
+import gordon.study.rabbitmq.util.FactoryUtil;
 
 public class Sender {
 
     private static final String QUEUE_NAME = "hello";
 
     public static void main(String[] argv) throws Exception {
-        ConnectionFactory factory = ConnectionFactoryUtil.getConnectionFactory();
+        ConnectionFactory factory = FactoryUtil.getConnectionFactory();
         factory.setHost("localhost");
         Connection connection = factory.newConnection();
         Channel channel = connection.createChannel();

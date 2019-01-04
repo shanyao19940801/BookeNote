@@ -2,7 +2,7 @@ package gordon.study.rabbitmq.util;
 
 import com.rabbitmq.client.ConnectionFactory;
 
-public class ConnectionFactoryUtil {
+public class FactoryUtil {
     public static ConnectionFactory getConnectionFactory() {
         ConnectionFactory factory = new ConnectionFactory();
         factory.setHost("47.100.211.121");
