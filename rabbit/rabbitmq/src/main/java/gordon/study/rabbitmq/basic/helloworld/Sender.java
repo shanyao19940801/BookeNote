@@ -5,7 +5,7 @@ import java.util.concurrent.TimeUnit;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
-import gordon.study.rabbitmq.basic.util.ConnectionFactoryUtil;
+import gordon.study.rabbitmq.util.ConnectionFactoryUtil;
 
 public class Sender {
 
