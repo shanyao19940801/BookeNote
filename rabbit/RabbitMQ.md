@@ -17,7 +17,14 @@
 * 如何将将消息放松到多个Queue
 RabbitMQ消息队列-通过fanout模式将消息推送到多个Queue中
 
+---
 
+[基础知识](https://github.com/shanyao19940801/BookeNote/blob/master/rabbit/files/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86.md)
+
+## 
+[推拉模式](https://github.com/shanyao19940801/BookeNote/blob/master/rabbit/files/%E6%8E%A8%E6%8B%89%E6%A8%A1%E5%BC%8F.md)
+
+---
 ## AMQP协议
 * MessageListener源码分析
 [MessageListener](https://github.com/shanyao19940801/BookeNote/blob/master/rabbit/files/MessageListener.md)
