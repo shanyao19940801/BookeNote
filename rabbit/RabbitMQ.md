@@ -1,6 +1,9 @@
 # RabbitMQ
 
 ## RabbitMQ基础知识
+
+[很不错的系列文章](https://www.cnblogs.com/gordonkong/p/6939043.html)
+
 [学习参考文档](https://blog.csdn.net/phker/article/details/71211895)
 
 [很不错的一篇文章](https://mp.weixin.qq.com/s/r8L-Nz_457xdsww2DdlqJw)
