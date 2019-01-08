@@ -1,11 +1,11 @@
 package com.rabbitmq.workqueue;
 
-public class Test01 {
+public class Test03FairDispatch {
 
     public static void main(String[] args) throws Exception {
-        Receiver recv1 = new Receiver("A", 200);
+        QosAcknowledgeReceiver recv1 = new QosAcknowledgeReceiver("A", 200);
         recv1.work();
-        Receiver recv2 = new Receiver("B", 200);
+        QosAcknowledgeReceiver recv2 = new QosAcknowledgeReceiver("B", 800);
         recv2.work();
         Sender sender = new Sender("S");
         sender.work();

@@ -1,13 +1,11 @@
 package com.rabbitmq.workqueue;
 
-public class Test02SlowConsumer {
-
+public class ReceiverTest {
     public static void main(String[] args) throws Exception {
+
         Receiver recv1 = new Receiver("A", 200);
         recv1.work();
-        Receiver recv2 = new Receiver("B", 1000);
+        Receiver recv2 = new Receiver("B", 200);
         recv2.work();
-        Sender sender = new Sender("S");
-        sender.work();
     }
 }
