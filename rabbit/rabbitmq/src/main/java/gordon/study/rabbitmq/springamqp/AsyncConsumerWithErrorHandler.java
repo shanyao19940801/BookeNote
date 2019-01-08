@@ -39,14 +39,14 @@ public class AsyncConsumerWithErrorHandler {
                 }
             }
         });
-        container.setErrorHandler(new ConditionalRejectingErrorHandler(new DefaultExceptionStrategy() {
+        /*container.setErrorHandler(new ConditionalRejectingErrorHandler(new DefaultExceptionStrategy() {
             protected boolean isUserCauseFatal(Throwable cause) {
                 if (cause instanceof UserDefineException) {
                     return true;
                 }
                 return false;
             }
-        }));
+        }));*/
         container.start();
 
         AmqpTemplate template = new RabbitTemplate(connectionFactory);

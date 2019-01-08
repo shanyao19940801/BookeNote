@@ -24,7 +24,7 @@ public class AsyncConsumer {
             }
         });
         container.start();
-
+        NodeCache
         AmqpTemplate template = new RabbitTemplate(connectionFactory);
         template.convertAndSend("spring", "foo");
         template.convertAndSend("spring", "bar");
