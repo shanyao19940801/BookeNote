@@ -8,7 +8,7 @@ import java.io.Serializable;
 public class Producer_f extends EndPoint_f {
 
     public Producer_f(String exchangeName) throws Exception {
-        super("",exchangeName);
+        super("tasks",exchangeName);
 
     }
 

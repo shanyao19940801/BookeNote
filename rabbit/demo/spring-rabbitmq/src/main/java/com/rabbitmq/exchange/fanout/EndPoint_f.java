@@ -34,7 +34,7 @@ public class EndPoint_f {
         channel.exchangeDeclare(exchangeName,"fanout");
 
 
-//        channel.queueBind(QueueName,"exchangeName","routingKey");
+        channel.queueBind(QueueName,"exchangeName","routingKey");
     }
 
     /**

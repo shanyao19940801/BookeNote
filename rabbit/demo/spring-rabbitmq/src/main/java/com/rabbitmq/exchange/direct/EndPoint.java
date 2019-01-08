@@ -3,6 +3,7 @@ package com.rabbitmq.exchange.direct;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
+import com.rabbitmq.util.FactoryUtil;
 
 public class EndPoint {
     protected Channel channel;
@@ -14,14 +15,15 @@ public class EndPoint {
         this.QueueName = QueueName;
 
         //创建一个连接工厂 connection factory
-        ConnectionFactory factory = new ConnectionFactory();
+        ConnectionFactory factory = FactoryUtil.getConnectionFactory();
+        /*ConnectionFactory factory = new ConnectionFactory();
 
         //设置rabbitmq-server服务IP地址
         factory.setHost("47.100.211.121");
         factory.setUsername("shanyao");
         factory.setPassword("123456");
         factory.setPort(5672);
-        factory.setVirtualHost("/");
+        factory.setVirtualHost("/");*/
 
         //得到 连接
         connection = factory.newConnection();
