@@ -9,5 +9,6 @@ public class Test03FairDispatch {
         recv2.work();
         Sender sender = new Sender("S");
         sender.work();
+
     }
 }
