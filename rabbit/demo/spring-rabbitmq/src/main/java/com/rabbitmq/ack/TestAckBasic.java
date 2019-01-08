@@ -6,6 +6,8 @@ import com.rabbitmq.util.FactoryUtil;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import static com.rabbitmq.util.Constants.EXCHANGE_ACK;
+
 public class TestAckBasic {
 
     private static final String QUEUE_NAME = "hello";
@@ -29,6 +31,18 @@ public class TestAckBasic {
                 consumerChannel1.basicAck(envelope.getDeliveryTag(), false);
             }
         };
+
+        /*
+            basicConsume
+            方法：启动一个消费者。
+            queue：队列名
+            autoAck:true表示服务器等消息一次性交付过来，false表示服务器期望等到消息
+            consumerTag：客户端生成的用户标签来建立上下文
+            noLocal:如果服务器不应传递到此通道连接上发布的消费者消息
+            exclusive:这是否是一个专有的消费
+            argumnets:队列其他参数设置
+            callback:与消费者对接的接口
+         */
         consumerChannel1.basicConsume(QUEUE_NAME, false, consumer1);
 
         final Channel consumerChannel2 = connection.createChannel();
