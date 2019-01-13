@@ -1,0 +1,7 @@
+# 公平分发（fair dispatch）
+
+正常情况下，rabbitmq server（broker）会盲目地，按照message数目平均地分发message给consumer，而不考虑有的message处理起来比较耗时，有的处理起来很快
+
+**有一种机制可以避免这种情况，这种机制使得，使得每个消费者发送确认信号前，消息队列不会发送消息，也就是一个消费者发送确认前一次只处理一条消息，同时消息会在消息队列堆积**
+
+[参考文章](https://blog.csdn.net/u013985664/article/details/79478353)
