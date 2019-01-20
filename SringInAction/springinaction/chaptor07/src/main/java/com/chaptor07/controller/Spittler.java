@@ -1,12 +1,13 @@
 package com.chaptor07.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/spittle/")
+@ControllerAdvice
 public class Spittler {
 
     @PostMapping("execption_test")
@@ -17,8 +18,8 @@ public class Spittler {
         return "yes";
     }
 
-    @ExceptionHandler(ArithmeticException.class)
+    /*@ExceptionHandler(ArithmeticException.class)
     public String handleArithmeticException() {
         return "exceptionhandle";
-    }
+    }*/
 }
