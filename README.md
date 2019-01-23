@@ -28,6 +28,9 @@
 
 [MySQL必知必会](https://github.com/shanyao19940801/BookeNote/blob/master/MySqlCrashCourse/Mysql%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A.md)
 
+## 《RabbitMQ实战指南》
+
+[MySQL必知必会](https://github.com/shanyao19940801/BookeNote/blob/master/ReadingNotes/RabbitMQ%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/RabbitMQ%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97.md)
 
 ----------
 ## Java
