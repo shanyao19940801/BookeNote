@@ -19,6 +19,9 @@
 
 * [枚举的使用](https://blog.csdn.net/qq_27093465/article/details/52180865)
 ---
+## Java技巧
+
+
 ## JVM相关
 * [JVM类生命周期概述：加载时机与加载过程](https://blog.csdn.net/justloveyou_/article/details/72466105)
 * [深入理解Java对象的创建过程：类的初始化与实例化](https://blog.csdn.net/justloveyou_/article/details/72466416)
