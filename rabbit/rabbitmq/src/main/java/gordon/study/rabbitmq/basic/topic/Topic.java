@@ -25,7 +25,6 @@ public class Topic {
         senderChannel.exchangeDeclare(EXCHANGE_NAME, "topic");
         final CountDownLatch latch = new CountDownLatch(1);
         new Thread(new Runnable() {
-            @Override
             public void run() {
                 try {
                     for (int i = 0; i < 10;) {

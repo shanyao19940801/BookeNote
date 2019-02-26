@@ -23,7 +23,6 @@ public class TestQueueTtl {
         args.put("x-expires", 3000);
         senderChannel.queueDeclare(QUEUE_NAME, false, false, true, args);
         new Thread(new Runnable() {
-            @Override
             public void run() {
                 try {
                     for (int i = 0; i < Integer.MAX_VALUE;) {
@@ -52,5 +51,8 @@ public class TestQueueTtl {
         System.out.println("stop get from queue for 4 seconds...");
         TimeUnit.MILLISECONDS.sleep(4000);
         consumerChannel.basicGet(QUEUE_NAME, true);
+
+
+
     }
 }
