@@ -41,4 +41,14 @@ public class FactoryParam {
     public void setPasspword(String passpword) {
         this.passpword = passpword;
     }
+
+    @Override
+    public String toString() {
+        return "FactoryParam{" +
+                "url='" + url + '\'' +
+                ", vhost='" + vhost + '\'' +
+                ", username='" + username + '\'' +
+                ", passpword='" + passpword + '\'' +
+                '}';
+    }
 }
