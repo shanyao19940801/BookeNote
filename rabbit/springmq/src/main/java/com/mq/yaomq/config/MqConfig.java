@@ -5,6 +5,7 @@ import com.mq.yaomq.params.FactoryParam;
 import com.mq.yaomq.params.MqListenParam;
 import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
+import org.springframework.amqp.rabbit.core.RabbitAdmin;
 import org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer;
 import org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -12,7 +13,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.DependsOn;
-import org.springframework.context.annotation.PropertySource;
 
 @Configuration
 @DependsOn(value = CommonConfig.COMMON_CONFIG_DEPENDSON)
@@ -25,12 +25,14 @@ public class MqConfig {
     public FactoryParam apiMqConfigParam(
             @Value("${rabbitmq.url}") String url,
             @Value("${rabbitmq.username}") String username,
-            @Value("${rabbitmq.password}") String password
+            @Value("${rabbitmq.password}") String password,
+            @Value("${rabbitmq.vhost}") String virtualHost
     ){
         FactoryParam configParam = new FactoryParam();
         configParam.setUrl(url);
         configParam.setUsername(username);
         configParam.setPasspword(password);
+        configParam.setVhost(virtualHost);
         return configParam;
     }
 
@@ -41,6 +43,13 @@ public class MqConfig {
     ) {
         System.out.println(mqConfigParam);
         return MqConfigHelper.newCachingConnectionFactory(mqConfigParam, virtualHost);
+    }
+
+    @Bean
+    public RabbitAdmin rabbitAdmin(ConnectionFactory connectionFactory) {
+        RabbitAdmin rabbitAdmin = new RabbitAdmin(connectionFactory);
+        rabbitAdmin.setAutoStartup(true);
+        return rabbitAdmin;
     }
 
     @Bean

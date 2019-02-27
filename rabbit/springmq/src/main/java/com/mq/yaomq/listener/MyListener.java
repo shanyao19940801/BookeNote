@@ -11,6 +11,6 @@ public class MyListener implements MessageListener {
     @Override
     public void onMessage(Message message) {
         MessageProperties messageProperties = message.getMessageProperties();
-
+        System.out.println("received============: " + message);
     }
 }
