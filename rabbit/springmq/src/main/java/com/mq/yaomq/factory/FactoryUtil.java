@@ -11,7 +11,7 @@ public class FactoryUtil {
         configParam.setUrl("47.100.211.121:5672");
         configParam.setUsername("shanyao");
         configParam.setPasspword("123456");
-        return MqConfigHelper.newCachingConnectionFactory(configParam, "shanyao_001_vhost");
+        return MqConfigHelper.newCachingConnectionFactory(configParam, "/");
         /*ConnectionFactory factory = new ConnectionFactory();
         factory.setHost("47.100.211.121");
         factory.setUsername("shanyao");

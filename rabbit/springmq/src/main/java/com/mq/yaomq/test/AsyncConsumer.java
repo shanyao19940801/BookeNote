@@ -31,8 +31,8 @@ public class AsyncConsumer {
         container.start();
 
         AmqpTemplate template = new RabbitTemplate(connectionFactory);
-        template.convertAndSend("queue", "foo");
-        template.convertAndSend("queue", "bar");
-        template.convertAndSend("queue", "tui");
+        template.convertAndSend("yao_rabbitmq_queue", "foo");
+        template.convertAndSend("yao_rabbitmq_queue", "bar");
+        template.convertAndSend("yao_rabbitmq_queue", "tui");
     }
 }
