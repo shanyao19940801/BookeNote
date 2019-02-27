@@ -35,3 +35,7 @@ RabbitMQ消息队列-通过fanout模式将消息推送到多个Queue中
 
 	[MessageListener](https://github.com/shanyao19940801/BookeNote/blob/master/rabbit/files/MessageListener.md)<br>
 	[SimpleMessageListenerContainer](https://blog.csdn.net/yangbo10086/article/details/81322139)``
+
+### RabbitMq高级应用
+[RabbitAdmin，RabbitTemplate，SimpleMessageListenerContailer](https://github.com/shanyao19940801/BookeNote/blob/master/rabbit/files/springampq/rabbitmq%E9%AB%98%E7%BA%A7%E5%BA%94%E7%94%A8.md)
+
