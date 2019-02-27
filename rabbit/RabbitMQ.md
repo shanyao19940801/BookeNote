@@ -29,6 +29,9 @@ RabbitMQ消息队列-通过fanout模式将消息推送到多个Queue中
 
 [消息确认Ack](https://github.com/shanyao19940801/BookeNote/blob/master/rabbit/files/%E6%B6%88%E6%81%AF%E7%A1%AE%E8%AE%A4Ack.md)
 
+## 
+[方法说明](https://github.com/shanyao19940801/BookeNote/blob/master/rabbit/files/%E6%96%B9%E6%B3%95%E8%AF%B4%E6%98%8E.md)
+
 ---
 ## AMQP协议
 * MessageListener源码分析
