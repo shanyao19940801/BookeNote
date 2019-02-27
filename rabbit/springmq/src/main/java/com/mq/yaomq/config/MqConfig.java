@@ -1,6 +1,7 @@
 package com.mq.yaomq.config;
 
 import com.mq.yaomq.listener.MyListener;
+import com.mq.yaomq.listener.YourListener;
 import com.mq.yaomq.params.FactoryParam;
 import com.mq.yaomq.params.MqListenParam;
 import org.springframework.amqp.core.Binding;
@@ -60,7 +61,7 @@ public class MqConfig {
         return MqConfigHelper.newCachingConnectionFactory(mqConfigParam, virtualHost);
     }
 
-    @Bean
+//    @Bean("myadmin")
     public RabbitAdmin rabbitAdmin(ConnectionFactory connectionFactory,
                                    @Qualifier(MQ_LISTEN_PARAM)MqListenParam mqListenParam
     ) {
@@ -70,6 +71,22 @@ public class MqConfig {
         TopicExchange topicExchange = new TopicExchange(mqListenParam.getTopicExchange(), true, false);
         rabbitAdmin.declareExchange(topicExchange);
         Binding binding = BindingBuilder.bind(queue).to(topicExchange).with(mqListenParam.getRoutingKey());
+        rabbitAdmin.declareBinding(binding);
+        return rabbitAdmin;
+    }
+
+    //第二个
+//    @Bean("youradmin")
+    public RabbitAdmin yourRabbitAdmin(ConnectionFactory connectionFactory,
+                                       @Value("${shan.rabbitmq.queue}") String queueName,
+                                       @Value("${yao.rabbitmq.exchange}") String exchange
+    ) {
+        RabbitAdmin rabbitAdmin = new RabbitAdmin(connectionFactory);
+        Queue myQueue = new Queue(queueName);
+        rabbitAdmin.declareQueue(myQueue);
+        TopicExchange topicExchange = new TopicExchange(exchange, true, false);
+        rabbitAdmin.declareExchange(topicExchange);
+        Binding binding = BindingBuilder.bind(myQueue).to(topicExchange).with("yao_mq_v1.#");
         rabbitAdmin.declareBinding(binding);
         return rabbitAdmin;
     }
@@ -90,5 +107,24 @@ public class MqConfig {
         listenerContainer.setQueues(new Queue[]{queue});
         listenerContainer.setMessageListener(myListener);
         return listenerContainer;
+    }
+
+    //第二个
+    @Bean("your")
+    public AbstractMessageListenerContainer yourListener (
+            @Value("${shan.rabbitmq.queue}") String queueName,
+            YourListener yourListener,
+            @Qualifier(CONNECTION_FACTORY) ConnectionFactory connectionFactory
+    ) {
+
+        Queue queue = new Queue(queueName);
+
+        SimpleMessageListenerContainer listenerContainerYour = new SimpleMessageListenerContainer();
+        listenerContainerYour.setConnectionFactory(connectionFactory);
+        listenerContainerYour.setConcurrentConsumers(1);
+        listenerContainerYour.setChannelTransacted(true);
+        listenerContainerYour.setQueues(new Queue[]{queue});
+        listenerContainerYour.setMessageListener(yourListener);
+        return listenerContainerYour;
     }
 }

@@ -11,8 +11,9 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
 public class AsyncProducer {
     public static void main(String[] args) {
         AmqpTemplate template = new RabbitTemplate(FactoryUtil.getConnectionFactory());
-        template.convertAndSend("yao_rabbitmq_queue", "foo");
+        template.convertAndSend("yao.rabbitmq.exchange", "yao_mq_v1.amqp", "hello object message send!");
+        /*template.convertAndSend("yao_rabbitmq_queue", "foo");
         template.convertAndSend("yao_rabbitmq_queue", "bar");
-        template.convertAndSend("yao_rabbitmq_queue", "tui");
+        template.convertAndSend("yao_rabbitmq_queue", "tui");*/
     }
 }
