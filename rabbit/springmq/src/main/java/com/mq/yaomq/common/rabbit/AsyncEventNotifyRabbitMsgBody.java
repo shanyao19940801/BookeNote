@@ -39,4 +39,8 @@ public class AsyncEventNotifyRabbitMsgBody implements RabbitMessageBody {
     public void setEvent_type(Integer event_type) {
         this.event_type = event_type;
     }
+
+    public String getRouteKey(String prefix) {
+        return prefix + this.getVersion() + "." + this.event_type;
+    }
 }

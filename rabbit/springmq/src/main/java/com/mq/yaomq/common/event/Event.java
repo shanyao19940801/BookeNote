@@ -7,24 +7,24 @@ import com.mq.yaomq.common.domain.AsyncEventType;
  * @create date  2019/2/28
  */
 public class Event {
-    private Long eventId;
-    private AsyncEventType asyncEventType;
+    private Long id;
+    private AsyncEventType eventType;
     private String refId;
 
-    public Long getEventId() {
-        return eventId;
+    public Long getId() {
+        return id;
     }
 
-    public void setEventId(Long eventId) {
-        this.eventId = eventId;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public AsyncEventType getAsyncEventType() {
-        return asyncEventType;
+    public AsyncEventType getEventType() {
+        return eventType;
     }
 
-    public void setAsyncEventType(AsyncEventType asyncEventType) {
-        this.asyncEventType = asyncEventType;
+    public void setEventType(AsyncEventType eventType) {
+        this.eventType = eventType;
     }
 
     public String getRefId() {
