@@ -61,7 +61,7 @@ public class MqConfig {
 
     @Bean(name = NEW_ASYNC_EVENT_MSG_ASYNCSENDER, initMethod = "start", destroyMethod = "stop")
     public AsyncRabbitRouteSender asyncEventRabbitSenderNew(
-            @Value("${api.async.event.rabbitmq.exchange}") String exchange,
+            @Value("${yao.async.event.rabbitmq.exchange}") String exchange,
             @Qualifier(CONNECTION_FACTORY) ConnectionFactory connectionFactory) {
         MqTopicExchangeSendBundleBuilder builder = new MqTopicExchangeSendBundleBuilder(
                 exchange, new AsyncEventMsgConvert(), connectionFactory
@@ -87,7 +87,7 @@ public class MqConfig {
 
         MqListenParam listenParam = new MqListenParam();
         listenParam.setQueueName(queueName);
-        listenParam.setRoutingKey("yao_async_event_v1.#");
+        listenParam.setRoutingKey("shan_mq_v1.#");
         listenParam.setExchangeName(exchange);
         MqTopicQueueListenBundleBuilder bundleBuilder = new MqTopicQueueListenBundleBuilder(listenParam, myListener, connectionFactory);
         MqTopicQueueListenBundleBuilder.MqTopicQueueListenBundle bundle = bundleBuilder.initBundle();
@@ -95,16 +95,16 @@ public class MqConfig {
 
     }
 
-    @Bean("your")
+    @Bean("event")
     public AbstractMessageListenerContainer yourListener (
-            @Value("${shan.rabbitmq.queue}") String queueName,
-            @Value("${yao.rabbitmq.exchange}") String exchange,
+            @Value("${yao.async.event.rabbitmq.queue}") String queueName,
+            @Value("${yao.async.event.rabbitmq.exchange}") String exchange,
             ShanListener yourListener,
             @Qualifier(CONNECTION_FACTORY) ConnectionFactory connectionFactory
     ) {
         MqListenParam listenParam = new MqListenParam();
         listenParam.setQueueName(queueName);
-        listenParam.setRoutingKey("shan_mq_v1.#");
+        listenParam.setRoutingKey("yao_async_event_v1.#");
         listenParam.setExchangeName(exchange);
         MqTopicQueueListenBundleBuilder bundleBuilder = new MqTopicQueueListenBundleBuilder(listenParam, yourListener, connectionFactory);
         MqTopicQueueListenBundleBuilder.MqTopicQueueListenBundle bundle = bundleBuilder.initBundle();

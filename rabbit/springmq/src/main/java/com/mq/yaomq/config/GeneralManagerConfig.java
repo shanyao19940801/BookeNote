@@ -2,6 +2,7 @@ package com.mq.yaomq.config;
 
 import com.mq.yaomq.common.event.impl.AsynEventMqNotifyManager;
 import com.mq.yaomq.common.rabbit.AsyncRabbitRouteSender;
+import com.mq.yaomq.manager.EventManager;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
@@ -25,5 +26,13 @@ public class GeneralManagerConfig {
         asynEventMqNotifyManager.setAsyncEventMsgAsyncSender(asyncRabbitRouteSender);
         asynEventMqNotifyManager.setAysncEventPrefix("yao_async_event_v");
         return asynEventMqNotifyManager;
+    }
+
+    @Bean
+    public EventManager eventManager(
+            AsynEventMqNotifyManager asynEventMqNotifyManager
+    ) {
+        EventManager eventManager = new EventManager(asynEventMqNotifyManager);
+        return eventManager;
     }
 }

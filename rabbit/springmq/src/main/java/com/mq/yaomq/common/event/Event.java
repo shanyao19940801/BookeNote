@@ -11,6 +11,17 @@ public class Event {
     private AsyncEventType eventType;
     private String refId;
 
+    public Event(AsyncEventType eventType, String refId) {
+        this.eventType = eventType;
+        this.refId = refId;
+    }
+
+    public Event(Long id, AsyncEventType eventType, String refId) {
+        this.id = id;
+        this.eventType = eventType;
+        this.refId = refId;
+    }
+
     public Long getId() {
         return id;
     }
