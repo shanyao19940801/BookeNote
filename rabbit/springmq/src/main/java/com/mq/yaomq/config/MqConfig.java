@@ -1,17 +1,12 @@
 package com.mq.yaomq.config;
 
-import com.mq.yaomq.listener.MyListener;
-import com.mq.yaomq.listener.YourListener;
+import com.mq.yaomq.listener.YaoListener;
+import com.mq.yaomq.listener.ShanListener;
 import com.mq.yaomq.params.FactoryParam;
 import com.mq.yaomq.params.MqListenParam;
-import org.springframework.amqp.core.Binding;
-import org.springframework.amqp.core.BindingBuilder;
-import org.springframework.amqp.core.Queue;
-import org.springframework.amqp.core.TopicExchange;
+import com.mq.yaomq.rabbit.MqTopicQueueListenBundleBuilder;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
-import org.springframework.amqp.rabbit.core.RabbitAdmin;
 import org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer;
-import org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -20,7 +15,6 @@ import org.springframework.context.annotation.DependsOn;
 
 @Configuration
 @DependsOn(value = CommonConfig.COMMON_CONFIG_DEPENDSON)
-//@PropertySource("classpath:local/config.properties")
 public class MqConfig {
     private final static String CONNECTION_FACTORY = "connectionFactory";
     private static final String MQ_CONFIG_PARAM = "mqConfigParam";
@@ -48,7 +42,7 @@ public class MqConfig {
         MqListenParam listenParam = new MqListenParam();
         listenParam.setQueueName(queueName);
         listenParam.setRoutingKey("yao_mq_v1.#");
-        listenParam.setTopicExchange(exchange);
+        listenParam.setExchangeName(exchange);
         return listenParam;
     }
 
@@ -61,70 +55,39 @@ public class MqConfig {
         return MqConfigHelper.newCachingConnectionFactory(mqConfigParam, virtualHost);
     }
 
-//    @Bean("myadmin")
-    public RabbitAdmin rabbitAdmin(ConnectionFactory connectionFactory,
-                                   @Qualifier(MQ_LISTEN_PARAM)MqListenParam mqListenParam
-    ) {
-        RabbitAdmin rabbitAdmin = new RabbitAdmin(connectionFactory);
-        Queue queue = new Queue(mqListenParam.getQueueName());
-        rabbitAdmin.declareQueue(queue);
-        TopicExchange topicExchange = new TopicExchange(mqListenParam.getTopicExchange(), true, false);
-        rabbitAdmin.declareExchange(topicExchange);
-        Binding binding = BindingBuilder.bind(queue).to(topicExchange).with(mqListenParam.getRoutingKey());
-        rabbitAdmin.declareBinding(binding);
-        return rabbitAdmin;
-    }
-
-    //第二个
-//    @Bean("youradmin")
-    public RabbitAdmin yourRabbitAdmin(ConnectionFactory connectionFactory,
-                                       @Value("${shan.rabbitmq.queue}") String queueName,
-                                       @Value("${yao.rabbitmq.exchange}") String exchange
-    ) {
-        RabbitAdmin rabbitAdmin = new RabbitAdmin(connectionFactory);
-        Queue myQueue = new Queue(queueName);
-        rabbitAdmin.declareQueue(myQueue);
-        TopicExchange topicExchange = new TopicExchange(exchange, true, false);
-        rabbitAdmin.declareExchange(topicExchange);
-        Binding binding = BindingBuilder.bind(myQueue).to(topicExchange).with("yao_mq_v1.#");
-        rabbitAdmin.declareBinding(binding);
-        return rabbitAdmin;
-    }
 
     @Bean
     public AbstractMessageListenerContainer commonListenerContainer (
-            @Qualifier(MQ_LISTEN_PARAM)MqListenParam mqListenParam,
-            MyListener myListener,
+            YaoListener myListener,
+            @Value("${yao.rabbitmq.queue}") String queueName,
+            @Value("${yao.rabbitmq.exchange}") String exchange,
             @Qualifier(CONNECTION_FACTORY) ConnectionFactory connectionFactory
     ) {
 
-        Queue queue = new Queue(mqListenParam.getQueueName());
+        MqListenParam listenParam = new MqListenParam();
+        listenParam.setQueueName(queueName);
+        listenParam.setRoutingKey("yao_mq_v1.#");
+        listenParam.setExchangeName(exchange);
+        MqTopicQueueListenBundleBuilder bundleBuilder = new MqTopicQueueListenBundleBuilder(listenParam, myListener, connectionFactory);
+        MqTopicQueueListenBundleBuilder.MqTopicQueueListenBundle bundle = bundleBuilder.initBundle();
+        return bundle.getListenerContainer();
 
-        SimpleMessageListenerContainer listenerContainer = new SimpleMessageListenerContainer();
-        listenerContainer.setConnectionFactory(connectionFactory);
-        listenerContainer.setConcurrentConsumers(1);
-        listenerContainer.setChannelTransacted(true);
-        listenerContainer.setQueues(new Queue[]{queue});
-        listenerContainer.setMessageListener(myListener);
-        return listenerContainer;
     }
 
     //第二个
     @Bean("your")
     public AbstractMessageListenerContainer yourListener (
             @Value("${shan.rabbitmq.queue}") String queueName,
-            YourListener yourListener,
+            @Value("${yao.rabbitmq.exchange}") String exchange,
+            ShanListener yourListener,
             @Qualifier(CONNECTION_FACTORY) ConnectionFactory connectionFactory
     ) {
-
-        Queue queue = new Queue(queueName);
-
-        SimpleMessageListenerContainer listenerContainerYour = new SimpleMessageListenerContainer();
-        listenerContainerYour.setConnectionFactory(connectionFactory);
-        listenerContainerYour.setConcurrentConsumers(1);
-        listenerContainerYour.setChannelTransacted(true);
-        listenerContainerYour.setQueues(new Queue[]{queue});
-        listenerContainerYour.setMessageListener(yourListener);
-        return listenerContainerYour;
+        MqListenParam listenParam = new MqListenParam();
+        listenParam.setQueueName(queueName);
+        listenParam.setRoutingKey("shan_mq_v1.#");
+        listenParam.setExchangeName(exchange);
+        MqTopicQueueListenBundleBuilder bundleBuilder = new MqTopicQueueListenBundleBuilder(listenParam, yourListener, connectionFactory);
+        MqTopicQueueListenBundleBuilder.MqTopicQueueListenBundle bundle = bundleBuilder.initBundle();
+        return bundle.getListenerContainer();
     }
 }

@@ -7,7 +7,7 @@ package com.mq.yaomq.params;
 public class MqListenParam {
     private String queueName;
     private String routingKey;
-    private String topicExchange;
+    private String exchangeName;
 
     public String getQueueName() {
         return queueName;
@@ -25,11 +25,11 @@ public class MqListenParam {
         this.routingKey = routingKey;
     }
 
-    public String getTopicExchange() {
-        return topicExchange;
+    public String getExchangeName() {
+        return exchangeName;
     }
 
-    public void setTopicExchange(String topicExchange) {
-        this.topicExchange = topicExchange;
+    public void setExchangeName(String exchangeName) {
+        this.exchangeName = exchangeName;
     }
 }
