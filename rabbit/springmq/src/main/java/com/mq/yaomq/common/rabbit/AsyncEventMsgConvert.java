@@ -3,13 +3,14 @@ package com.mq.yaomq.common.rabbit;
 import com.mq.yaomq.common.rabbit.bean.RabbitMessageHeader;
 import com.mq.yaomq.common.rabbit.bean.RabbitMsgHeaderBase;
 
+import java.lang.reflect.Type;
 import java.util.UUID;
 
 /**
  * @create by  单耀
  * @create date  2019/2/28
  */
-public class AsyncEventMsgConvert {
+public class AsyncEventMsgConvert extends RabbitMQMsgConvert{
 
     public static final String API_ASYNC_EVENT_PREFIX = "api_async_event_v";
 
@@ -20,4 +21,6 @@ public class AsyncEventMsgConvert {
         header.setType(API_ASYNC_EVENT_PREFIX + version);
         return header;
     }
+
+
 }

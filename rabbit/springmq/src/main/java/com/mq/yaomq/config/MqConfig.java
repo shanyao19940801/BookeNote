@@ -1,17 +1,21 @@
 package com.mq.yaomq.config;
 
+import com.mq.yaomq.common.rabbit.AsyncEventMsgConvert;
+import com.mq.yaomq.common.rabbit.AsyncRabbitRouteSender;
+import com.mq.yaomq.common.rabbit.MqTopicExchangeSendBundleBuilder;
 import com.mq.yaomq.listener.YaoListener;
 import com.mq.yaomq.listener.ShanListener;
 import com.mq.yaomq.params.FactoryParam;
 import com.mq.yaomq.params.MqListenParam;
-import com.mq.yaomq.rabbit.MqTopicQueueListenBundleBuilder;
+import com.mq.yaomq.common.rabbit.MqTopicQueueListenBundleBuilder;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.DependsOn;
+
+import static com.mq.yaomq.config.GeneralManagerConfig.NEW_ASYNC_EVENT_MSG_ASYNCSENDER;
 
 @Configuration
 //@DependsOn(value = CommonConfig.COMMON_CONFIG_DEPENDSON)
@@ -55,6 +59,23 @@ public class MqConfig {
         return MqConfigHelper.newCachingConnectionFactory(mqConfigParam, virtualHost);
     }
 
+    @Bean(name = NEW_ASYNC_EVENT_MSG_ASYNCSENDER, initMethod = "start", destroyMethod = "stop")
+    public AsyncRabbitRouteSender asyncEventRabbitSenderNew(
+            @Value("${api.async.event.rabbitmq.exchange}") String exchange,
+            @Qualifier(CONNECTION_FACTORY) ConnectionFactory connectionFactory) {
+        MqTopicExchangeSendBundleBuilder builder = new MqTopicExchangeSendBundleBuilder(
+                exchange, new AsyncEventMsgConvert(), connectionFactory
+        );
+        MqTopicExchangeSendBundleBuilder.MqTopicExchangeSendBundle bundle = builder.buildBundle();
+
+        AsyncRabbitRouteSender sender = new AsyncRabbitRouteSender();
+        sender.setSenderName("asyncEventSender");
+        sender.setThreadCount(3);
+        sender.setAmqpTemplate(bundle.getRabbitTemplate());
+        return sender;
+    }
+
+
 
     @Bean
     public AbstractMessageListenerContainer commonListenerContainer (
@@ -66,7 +87,7 @@ public class MqConfig {
 
         MqListenParam listenParam = new MqListenParam();
         listenParam.setQueueName(queueName);
-        listenParam.setRoutingKey("yao_mq_v1.#");
+        listenParam.setRoutingKey("yao_async_event_v1.#");
         listenParam.setExchangeName(exchange);
         MqTopicQueueListenBundleBuilder bundleBuilder = new MqTopicQueueListenBundleBuilder(listenParam, myListener, connectionFactory);
         MqTopicQueueListenBundleBuilder.MqTopicQueueListenBundle bundle = bundleBuilder.initBundle();

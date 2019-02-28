@@ -16,9 +16,6 @@ public class AsynEventMqNotifyManager {
     private static Logger logger = LoggerFactory.getLogger(AsynEventMqNotifyManager.class);
     public String aysncEventPrefix;
     private AsyncRabbitRouteSender asyncEventMsgAsyncSender;
-    public AsynEventMqNotifyManager(String aysncEventPrefix) {
-        this.aysncEventPrefix = aysncEventPrefix;
-    }
 
     public void fireEvent(Event event) {
         try {

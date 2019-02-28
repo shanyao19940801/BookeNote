@@ -1,4 +1,4 @@
-package com.mq.yaomq.rabbit;
+package com.mq.yaomq.common.rabbit;
 
 import com.mq.yaomq.params.MqListenParam;
 import org.springframework.amqp.core.*;
