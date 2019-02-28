@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.DependsOn;
 
 @Configuration
-@DependsOn(value = CommonConfig.COMMON_CONFIG_DEPENDSON)
+//@DependsOn(value = CommonConfig.COMMON_CONFIG_DEPENDSON)
 public class MqConfig {
     private final static String CONNECTION_FACTORY = "connectionFactory";
     private static final String MQ_CONFIG_PARAM = "mqConfigParam";
@@ -74,7 +74,6 @@ public class MqConfig {
 
     }
 
-    //第二个
     @Bean("your")
     public AbstractMessageListenerContainer yourListener (
             @Value("${shan.rabbitmq.queue}") String queueName,
