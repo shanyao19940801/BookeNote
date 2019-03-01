@@ -21,4 +21,13 @@ public enum AsyncEventType {
     public void setValue(Integer value) {
         this.value = value;
     }
+
+    public static AsyncEventType valueOf(Integer value) {
+        AsyncEventType[] eventTypes = values();
+        for (AsyncEventType type : eventTypes) {
+            if (type.value.equals(value))
+                return type;
+        }
+        return AsyncEventType.unknown;
+    }
 }
