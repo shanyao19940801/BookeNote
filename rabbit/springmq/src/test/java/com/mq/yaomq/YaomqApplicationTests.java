@@ -29,7 +29,7 @@ public class YaomqApplicationTests {
 
     @Test
     public void testAdmin() throws Exception {
-        Event event = new Event(AsyncEventType.unknown, "111");
+        Event event = new Event(AsyncEventType.shan, "111");
         eventManager.fireEvent(event);
     }
 

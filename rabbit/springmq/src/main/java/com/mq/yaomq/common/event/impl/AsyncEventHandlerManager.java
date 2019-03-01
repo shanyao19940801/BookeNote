@@ -56,6 +56,7 @@ public class AsyncEventHandlerManager {
     }
 
     public void registerHander(Set<AsyncEventType> eventTypes, AsyncEventHandler handler) {
+        logger.info("eventType" + eventTypes + handler);
         for (AsyncEventType eventType : eventTypes) {
             handlerMap.put(eventType, handler);
         }
