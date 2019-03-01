@@ -6,6 +6,8 @@ package com.mq.yaomq.common.domain;
  */
 public enum AsyncEventType {
     unknown(-1),
+    shan(1),
+    yao(2),
     ;
 
     private Integer value;

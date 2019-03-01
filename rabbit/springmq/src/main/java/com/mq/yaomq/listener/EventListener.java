@@ -37,6 +37,7 @@ public class EventListener implements MessageListener {
         try {
             logger.debug("received {}", JSON.toJSONString(content));
             AsyncEventNotifyRabbitMsgEntity rabbitMessageEntity = JSONObject.parseObject(content, AsyncEventNotifyRabbitMsgEntity.class);
+
         } catch (Exception e){
             logger.error("failed to handle mq message:{}, content:{} ", encoding, content, e);
         }

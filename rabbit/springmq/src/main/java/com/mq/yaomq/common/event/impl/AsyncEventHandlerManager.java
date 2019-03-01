@@ -9,7 +9,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
@@ -25,6 +27,7 @@ public class AsyncEventHandlerManager {
     ExecutorService threadPoolExecutor;
 
     public void init() {
+        logger.info("AsyncEventHandlerManager init()");
         threadPoolExecutor = Executors.newFixedThreadPool(threadCount);
     }
 
@@ -33,7 +36,7 @@ public class AsyncEventHandlerManager {
         eventType = AsyncEventType.valueOf(body.getEvent_type());
         AsyncEventHandler handler = handlerMap.get(eventType);
         if (handler == null) {
-            logger.warn("no handle");
+            logger.warn("no handle. EventType:" + eventType);
             return;
         }
         Event event = new Event(eventType, body.getRef_id());
@@ -41,7 +44,7 @@ public class AsyncEventHandlerManager {
         threadPoolExecutor.submit(runnable);
     }
 
-    public Runnable getRunnable(Event event, AsyncEventHandler handler) {
+    private Runnable getRunnable(Event event, AsyncEventHandler handler) {
         return new Runnable(){
             @Override
             public void run() {
@@ -50,5 +53,19 @@ public class AsyncEventHandlerManager {
                 logger.debug("Event eventType:{} refId:{} eventId:{} handled succ:{}", event.getEventType(), event.getRefId(), event.getId(), result);
             }
         };
+    }
+
+    public void registerHander(Set<AsyncEventType> eventTypes, AsyncEventHandler handler) {
+        for (AsyncEventType eventType : eventTypes) {
+            handlerMap.put(eventType, handler);
+        }
+    }
+
+    public static Integer getThreadCount() {
+        return threadCount;
+    }
+
+    public static void setThreadCount(Integer threadCount) {
+        AsyncEventHandlerManager.threadCount = threadCount;
     }
 }

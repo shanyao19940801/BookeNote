@@ -1,6 +1,7 @@
 package com.mq.yaomq.config;
 
 import com.mq.yaomq.common.event.impl.AsynEventMqNotifyManager;
+import com.mq.yaomq.common.event.impl.AsyncEventHandlerManager;
 import com.mq.yaomq.common.rabbit.AsyncRabbitRouteSender;
 import com.mq.yaomq.manager.EventManager;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
@@ -34,5 +35,12 @@ public class GeneralManagerConfig {
     ) {
         EventManager eventManager = new EventManager(asynEventMqNotifyManager);
         return eventManager;
+    }
+
+    @Bean(initMethod = "init")
+    public AsyncEventHandlerManager asyncEventHandlerManager() {
+        AsyncEventHandlerManager asyncEventHandlerManager = new AsyncEventHandlerManager();
+        asyncEventHandlerManager.setThreadCount(3);
+        return asyncEventHandlerManager;
     }
 }
