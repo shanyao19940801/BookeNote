@@ -24,10 +24,14 @@ public abstract class RabbitMQMsgConvert implements MessageConverter {
     public Message toMessage(Object object, MessageProperties messageProperties) throws MessageConversionException {
         RabbitMessageBody body = (RabbitMessageBody)object;
         RabbitMessageHeader header = formMsgHeader(body.getVersion());
-        RabbitMessageEntity entity = new RabbitMessageEntity(header, body);
+        RabbitMessageEntity entity = new RabbitMessageEntity();
+        entity.setBody(body);
+        entity.setHeader(header);
         byte[] bytes = null;
         try {
             bytes = JSON.toJSONString(entity).getBytes(CHATSET);
+            //TODO delete
+//            RabbitMessageEntity test = JSON.parseObject(JSON.toJSONString(entity), RabbitMessageEntity.class);
         } catch (UnsupportedEncodingException e) {
             throw new MessageConversionException("failed to convert to program msg content", e);
         }

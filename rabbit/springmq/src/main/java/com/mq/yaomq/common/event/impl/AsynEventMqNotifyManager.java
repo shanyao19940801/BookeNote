@@ -2,8 +2,9 @@ package com.mq.yaomq.common.event.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.mq.yaomq.common.event.Event;
-import com.mq.yaomq.common.rabbit.AsyncEventNotifyRabbitMsgBody;
 import com.mq.yaomq.common.rabbit.AsyncRabbitRouteSender;
+import com.mq.yaomq.common.rabbit.bean.AsyncEventNotifyRabbitMsgEntity;
+import com.mq.yaomq.common.rabbit.bean.AsyncEventNotifyRabbitMsgEntity.AsyncEventNotifyRabbitMsgBody;
 import com.mq.yaomq.common.rabbit.bean.RabbitMsgEntityRouteWarpper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,7 +21,7 @@ public class AsynEventMqNotifyManager {
     public void fireEvent(Event event) {
         try {
             RabbitMsgEntityRouteWarpper warp = new RabbitMsgEntityRouteWarpper();
-            AsyncEventNotifyRabbitMsgBody body = new AsyncEventNotifyRabbitMsgBody();
+            AsyncEventNotifyRabbitMsgEntity.AsyncEventNotifyRabbitMsgBody body = new AsyncEventNotifyRabbitMsgBody();
             warp.setMsgBody(body);
             body.setEvent_type(event.getEventType().getValue());
             body.setEvent_id(event.getId());

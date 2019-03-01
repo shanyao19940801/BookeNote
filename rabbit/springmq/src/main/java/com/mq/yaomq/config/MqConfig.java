@@ -4,7 +4,7 @@ import com.mq.yaomq.common.rabbit.AsyncEventMsgConvert;
 import com.mq.yaomq.common.rabbit.AsyncRabbitRouteSender;
 import com.mq.yaomq.common.rabbit.MqTopicExchangeSendBundleBuilder;
 import com.mq.yaomq.listener.YaoListener;
-import com.mq.yaomq.listener.ShanListener;
+import com.mq.yaomq.listener.EventListener;
 import com.mq.yaomq.params.FactoryParam;
 import com.mq.yaomq.params.MqListenParam;
 import com.mq.yaomq.common.rabbit.MqTopicQueueListenBundleBuilder;
@@ -99,7 +99,7 @@ public class MqConfig {
     public AbstractMessageListenerContainer yourListener (
             @Value("${yao.async.event.rabbitmq.queue}") String queueName,
             @Value("${yao.async.event.rabbitmq.exchange}") String exchange,
-            ShanListener yourListener,
+            EventListener yourListener,
             @Qualifier(CONNECTION_FACTORY) ConnectionFactory connectionFactory
     ) {
         MqListenParam listenParam = new MqListenParam();

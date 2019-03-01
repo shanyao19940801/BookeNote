@@ -1,10 +1,6 @@
 package com.mq.yaomq.test;
 
-import com.mq.yaomq.common.domain.AsyncEventType;
-import com.mq.yaomq.common.event.Event;
 import com.mq.yaomq.common.rabbit.AsyncEventMsgConvert;
-import com.mq.yaomq.common.rabbit.AsyncEventNotifyRabbitMsgBody;
-import com.mq.yaomq.common.rabbit.bean.RabbitMsgEntityRouteWarpper;
 import com.mq.yaomq.factory.FactoryUtil;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
