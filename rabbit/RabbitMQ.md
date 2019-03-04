@@ -24,7 +24,7 @@ RabbitMQ消息队列-通过fanout模式将消息推送到多个Queue中
 ##
 [推拉模式](https://github.com/shanyao19940801/BookeNote/blob/master/rabbit/files/%E6%8E%A8%E6%8B%89%E6%A8%A1%E5%BC%8F.md)
 ##
-[公平分发（fair dispatch）](https://github.com/shanyao19940801/BookeNote/blob/master/rabbit/files/%E5%85%AC%E5%B9%B3%E5%88%86%E5%8F%91%EF%BC%88fair%20dispatch%EF%BC%89.md)
+[消息的分发）](https://github.com/shanyao19940801/BookeNote/blob/master/rabbit/files/%E6%B6%88%E6%81%AF%E7%9A%84%E5%88%86%E5%8F%91.md)
 ##
 
 [消息确认Ack](https://github.com/shanyao19940801/BookeNote/blob/master/rabbit/files/%E6%B6%88%E6%81%AF%E7%A1%AE%E8%AE%A4Ack.md)
