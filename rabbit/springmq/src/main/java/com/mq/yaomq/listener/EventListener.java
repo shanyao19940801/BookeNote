@@ -45,6 +45,6 @@ public class EventListener implements MessageListener {
         } catch (Exception e){
             logger.error("failed to handle mq message:{}, content:{} ", encoding, content, e);
         }
-        System.out.println("Shan============:"+message);
+        /*System.out.println("Shan============:"+message);*/
     }
 }

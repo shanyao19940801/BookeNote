@@ -2,7 +2,7 @@ package com.rabbitmq.exchange.topic;
 
 public class ConsumerTest {
     public static void main(String[] args) throws Exception {
-        String exchangeName = "exchangeName_topic_1";
+        String exchangeName = "amq.topic";
         String queueName = "queue_topic";
         ConsumerWithKey consumer_1 = new ConsumerWithKey(queueName, exchangeName, "kernal.*");
         Thread thread_1 = new Thread(consumer_1);

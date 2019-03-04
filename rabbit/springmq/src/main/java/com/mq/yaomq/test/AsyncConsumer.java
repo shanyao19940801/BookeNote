@@ -22,7 +22,7 @@ public class AsyncConsumer {
         ConnectionFactory connectionFactory = new CachingConnectionFactory(uri);
         SimpleMessageListenerContainer container = new SimpleMessageListenerContainer(connectionFactory);
         container.setConcurrentConsumers(1);
-        container.setQueueNames("queue");
+        container.setQueueNames("shan_rabbitmq_queue");
         container.setMessageListener(new MessageListener() {
             public void onMessage(Message message) {
                 System.out.println("received: " + message);
@@ -30,9 +30,9 @@ public class AsyncConsumer {
         });
         container.start();
 
-        AmqpTemplate template = new RabbitTemplate(connectionFactory);
+        /*AmqpTemplate template = new RabbitTemplate(connectionFactory);
         template.convertAndSend("yao_rabbitmq_queue", "foo");
         template.convertAndSend("yao_rabbitmq_queue", "bar");
-        template.convertAndSend("yao_rabbitmq_queue", "tui");
+        template.convertAndSend("yao_rabbitmq_queue", "tui");*/
     }
 }
