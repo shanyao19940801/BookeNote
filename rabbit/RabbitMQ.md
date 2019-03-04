@@ -36,6 +36,9 @@ RabbitMQ消息队列-通过fanout模式将消息推送到多个Queue中
 
 [死信队列](https://blog.csdn.net/qq_29778131/article/details/52536965)
 
+## 
+[如何确保消息发送和消费]()
+
 ---
 ## AMQP协议
 * MessageListener源码分析
