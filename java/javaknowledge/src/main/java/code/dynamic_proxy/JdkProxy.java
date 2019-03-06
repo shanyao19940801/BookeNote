@@ -17,8 +17,13 @@ public class JdkProxy implements InvocationHandler {
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        System.out.println("jdk代理，监听开始");
         //    当代理对象调用真实对象的方法时，其会自动的跳转到代理对象关联的handler对象的invoke方法来进行调用
+        if ("addUser".equals(method.getName())) {
+            System.out.println("日志：添加新的user");
+        }
+        if ("delete".equals(method.getName())) {
+            System.out.println("日志：删除user");
+        }
         Object result = method.invoke(target, args);
         return result;
     }

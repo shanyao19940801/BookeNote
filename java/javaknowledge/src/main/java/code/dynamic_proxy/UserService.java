@@ -6,4 +6,5 @@ package code.dynamic_proxy;
  */
 public interface UserService {
     public void addUser(User user);
+    public void delete(User user);
 }

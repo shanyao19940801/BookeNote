@@ -12,5 +12,6 @@ public class Main {
         user.setAge(1);
         user.setName("shan");
         userService.addUser(user);
+        userService.delete(user);
     }
 }

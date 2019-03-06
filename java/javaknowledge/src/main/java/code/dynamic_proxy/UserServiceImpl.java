@@ -9,4 +9,9 @@ public class UserServiceImpl implements UserService {
     public void addUser(User user) {
         System.out.println("添加新的user ：" + user.toString());
     }
+
+    @Override
+    public void delete(User user) {
+        System.out.println("删除user：" + user.toString());
+    }
 }
