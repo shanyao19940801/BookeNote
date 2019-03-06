@@ -62,6 +62,13 @@
 
 	上面还应用了[Java的反射](https://github.com/shanyao19940801/BookeNote/blob/master/java/file/Java%E5%8F%8D%E5%B0%84.md)
 
+	<font color = red>注意，通过 Proxy.newProxyInstance 创建的代理对象是在jvm运行时动态生成的一个对象，它并不是我们的InvocationHandler类型，也不是我们定义的那组接口的类型，而是在运行是动态生成的一个对象，并且命名方式都是这样的形式，以$开头，proxy为中，最后一个数字表示对象的标号。</font>下面查看一下生成的动态代理类
+
+* 查看动态代理类
+
+
+
+
 ### 拓展
 
 jdk动态代理和cglib动态代理的区别
