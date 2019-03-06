@@ -23,7 +23,7 @@ public class JdkProxy implements InvocationHandler {
         return result;
     }
     //获得代理对象
-    private Object getProxy(){
+    public Object getProxy(){
         /*
          * 通过Proxy的newProxyInstance方法来创建我们的代理对象，我们来看看其三个参数
          * 第一个参数 handler.getClass().getClassLoader() ，我们这里使用handler这个类的ClassLoader对象来加载我们的代理对象

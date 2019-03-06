@@ -6,6 +6,11 @@ package code.dynamic_proxy;
  */
 public class Main {
     public static void main(String[] args) {
-
+        JdkProxy proxy = new JdkProxy(new UserServiceImpl());
+        UserService userService = (UserService) proxy.getProxy();
+        User user = new User();
+        user.setAge(1);
+        user.setName("shan");
+        userService.addUser(user);
     }
 }
