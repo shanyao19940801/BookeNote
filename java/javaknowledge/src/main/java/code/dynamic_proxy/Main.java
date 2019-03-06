@@ -21,12 +21,8 @@ public class Main {
         user.setName("shan");
         userService.addUser(user);
         userService.delete(user);
-
-//        System.getProperties().put("sun.misc.ProxyGenerator.saveGeneratedFiles", "true");
-//        System.out.println("$Proxy0.class全名: "+Proxy.getProxyClass(JdkProxy.class.getClassLoader(), JdkProxy.class.getInterfaces()));
         byte[] classFile = ProxyGenerator.generateProxyClass("$Proxy0", target.getClass().getInterfaces());
-//        byte[] classFile = ProxyGenerator.generateProxyClass("$Proxy0", UserService.class.getInterfaces());
-        String path = "E:/my_git/UserServiceProxy.class";
+        String path = "E:/my_git/$Proxy0.class";
         try(FileOutputStream fos = new FileOutputStream(path)) {
             fos.write(classFile);
             fos.flush();

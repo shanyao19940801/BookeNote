@@ -28,6 +28,8 @@ public class JdkProxy implements InvocationHandler {
         Object result = method.invoke(target, args);
         return result;
     }
+
+
     //获得代理对象
     public Object getProxy(){
         /*

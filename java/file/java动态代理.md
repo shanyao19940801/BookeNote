@@ -66,9 +66,105 @@
 
 * 查看动态代理类
 
+首先在[测试类](https://github.com/shanyao19940801/BookeNote/blob/master/java/javaknowledge/src/main/java/code/dynamic_proxy/Main.java)的main中添加如下几行代码,这样就会生成对应的代理类的class文件(<font color=bule>这几行代码只能在jdk9之前的版本中</font>)
+
+	byte[] classFile = ProxyGenerator.generateProxyClass("$Proxy0", target.getClass().getInterfaces());
+	        String path = "E:/my_git/UserServiceProxy.class";
+	        try(FileOutputStream fos = new FileOutputStream(path)) {
+	            fos.write(classFile);
+	            fos.flush();
+	            System.out.println("代理类class文件写入成功");
+	        } catch (Exception e) {
+	            System.out.println("写文件错误");
+	        }
+
+代理类内容如下：
 
 
+	import code.dynamic_proxy.User;
+	import code.dynamic_proxy.UserService;
+	import java.lang.reflect.InvocationHandler;
+	import java.lang.reflect.Method;
+	import java.lang.reflect.Proxy;
+	import java.lang.reflect.UndeclaredThrowableException;
+	
+	public final class $Proxy0 extends Proxy implements UserService {
+	    private static Method m1;
+	    private static Method m3;
+	    private static Method m0;
+	    private static Method m4;
+	    private static Method m2;
+		//可以看到这个构造函数的参数时InvocationHandler，这就可以理解为什么每次调用都会通过InvocationHandler的invoke来执行的了
+	    public $Proxy0(InvocationHandler var1) throws  {
+		//将InvocationHandler对象赋值到父类
+	        super(var1);
+	    }
+	
+	    public final boolean equals(Object var1) throws  {
+	        try {
+	            return (Boolean)super.h.invoke(this, m1, new Object[]{var1});
+	        } catch (RuntimeException | Error var3) {
+	            throw var3;
+	        } catch (Throwable var4) {
+	            throw new UndeclaredThrowableException(var4);
+	        }
+	    }
+	
+	    public final void delete(User var1) throws  {
+	        try {
+	            super.h.invoke(this, m3, new Object[]{var1});
+	        } catch (RuntimeException | Error var3) {
+	            throw var3;
+	        } catch (Throwable var4) {
+	            throw new UndeclaredThrowableException(var4);
+	        }
+	    }
+	
+	    public final int hashCode() throws  {
+	        try {
+	            return (Integer)super.h.invoke(this, m0, (Object[])null);
+	        } catch (RuntimeException | Error var2) {
+	            throw var2;
+	        } catch (Throwable var3) {
+	            throw new UndeclaredThrowableException(var3);
+	        }
+	    }
+	
+	    public final void addUser(User var1) throws  {
+	        try {
+	            super.h.invoke(this, m4, new Object[]{var1});
+	        } catch (RuntimeException | Error var3) {
+	            throw var3;
+	        } catch (Throwable var4) {
+	            throw new UndeclaredThrowableException(var4);
+	        }
+	    }
+	
+	    public final String toString() throws  {
+	        try {
+	            return (String)super.h.invoke(this, m2, (Object[])null);
+	        } catch (RuntimeException | Error var2) {
+	            throw var2;
+	        } catch (Throwable var3) {
+	            throw new UndeclaredThrowableException(var3);
+	        }
+	    }
+	
+	    static {
+	        try {
+	            m1 = Class.forName("java.lang.Object").getMethod("equals", Class.forName("java.lang.Object"));
+	            m3 = Class.forName("code.dynamic_proxy.UserService").getMethod("delete", Class.forName("code.dynamic_proxy.User"));
+	            m0 = Class.forName("java.lang.Object").getMethod("hashCode");
+	            m4 = Class.forName("code.dynamic_proxy.UserService").getMethod("addUser", Class.forName("code.dynamic_proxy.User"));
+	            m2 = Class.forName("java.lang.Object").getMethod("toString");
+	        } catch (NoSuchMethodException var2) {
+	            throw new NoSuchMethodError(var2.getMessage());
+	        } catch (ClassNotFoundException var3) {
+	            throw new NoClassDefFoundError(var3.getMessage());
+	        }
+	    }
+	}
 
 ### 拓展
-
-jdk动态代理和cglib动态代理的区别
+这里留个坑<br>
+jdk动态代理和cglib动态代理的区别，Spring的Aop功能主要借助的就是动态代理实现的，不过aop用了jdk和cglib两中动态代理

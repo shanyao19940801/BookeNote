@@ -3,6 +3,7 @@ package code.dynamic_proxy;
 /**
  * @create by  单耀
  * @create date  2019/3/6
+ * 被代理的类
  */
 public class UserServiceImpl implements UserService {
     @Override
@@ -14,4 +15,5 @@ public class UserServiceImpl implements UserService {
     public void delete(User user) {
         System.out.println("删除user：" + user.toString());
     }
+
 }
