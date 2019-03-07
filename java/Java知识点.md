@@ -22,6 +22,7 @@
 ## Java技巧
 
 * [代码瘦身优化实践](http://ifeve.com/good-code/)
+* [生成hashcode值相同的字符串工具](https://github.com/shanyao19940801/BookeNote/blob/master/java/file/hashcode%E7%9B%B8%E5%85%B3.md)
 
 ## JVM相关
 * [JVM类生命周期概述：加载时机与加载过程](https://blog.csdn.net/justloveyou_/article/details/72466105)
