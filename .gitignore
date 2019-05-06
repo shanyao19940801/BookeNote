@@ -22,3 +22,6 @@ SringInAction/springinaction/chapter05/target/
 SringInAction/springinaction/chaptor07/mvnw.cmd
 SringInAction/springinaction/chaptor07/.mvn/
 SringInAction/springinaction/chaptor07/mvnw
+Hystrix/demo/mvnw.cmd
+Hystrix/demo/mvnw
+Hystrix/demo/.mvn/
