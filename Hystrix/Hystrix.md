@@ -53,6 +53,9 @@ Hystrix主要就是做了**Command**这一块的工作，它把用户的请求�
 
 ### Hystrix的断路器设计
 
+### Hystrix隔离策略
+
+[Hystrix资源隔离策略](https://github.com/shanyao19940801/BookeNote/blob/master/Hystrix/files/%E8%B5%84%E6%BA%90%E9%9A%94%E7%A6%BB.md)
 
 #### 两种请求命令
 
@@ -70,6 +73,8 @@ Hystrix有两个请求命令 **HystrixCommand**、**HystrixObservableCommand**�
 　　  -observe():返回Obervable对象，他代表了操作的多个结果，他是一个HotObservable
 
 　　  -toObservable():同样返回Observable对象，也代表了操作多个结果，但它返回的是一个Cold Observable。
+
+
 
 参考链接：
 
