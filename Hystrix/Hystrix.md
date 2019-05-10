@@ -85,7 +85,9 @@ Hystrix有两个请求命令 **HystrixCommand**、**HystrixObservableCommand**�
 
 [参考6(断路器讲的比较好)](https://blog.csdn.net/manzhizhen/article/details/80296655)
 
+[参考7(资源隔离)](https://blog.csdn.net/xuxian6823091/article/details/81546235)
 
+[参考8(资源隔离)](https://blog.csdn.net/liuchuanhong1/article/details/73718794)
 
 
 
