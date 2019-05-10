@@ -51,6 +51,8 @@ Hystrix主要就是做了**Command**这一块的工作，它把用户的请求�
 		8c:降级逻辑调用失败抛出异常
 		9:返回执行成功结果
 
+### Hystrix的断路器设计
+
 
 #### 两种请求命令
 
@@ -73,7 +75,7 @@ Hystrix有两个请求命令 **HystrixCommand**、**HystrixObservableCommand**�
 
 [参考1](https://www.jianshu.com/p/138f92aa83dc)
 
-[参考2](https://blog.csdn.net/harris135/article/details/77879148?locationNum=3&fps=1)
+[参考2(参数详解)](https://blog.csdn.net/harris135/article/details/77879148?locationNum=3&fps=1)
 
 [参考3](https://blog.csdn.net/hry2015/article/details/78554846)
 
@@ -81,7 +83,7 @@ Hystrix有两个请求命令 **HystrixCommand**、**HystrixObservableCommand**�
 
 [参考5](http://hwood.lofter.com/post/1cc7fbdc_e8c5c96)
 
-[参考6](https://blog.csdn.net/manzhizhen/article/details/80296655)
+[参考6(断路器讲的比较好)](https://blog.csdn.net/manzhizhen/article/details/80296655)
 
 
 
