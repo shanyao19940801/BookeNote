@@ -1,4 +1,4 @@
-package com.eureka.eureka;
+package com.eureka;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
