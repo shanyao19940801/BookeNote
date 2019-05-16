@@ -19,6 +19,10 @@
 	#扫描失效服务的间隔时间（缺省为60*1000ms）
 	eureka.server.eviction-interval-timer-in-ms=5000
 [更多配置](https://blog.csdn.net/asdfsadfasdfsa/article/details/79282036)
+
+### 高可用注册中心
+
+
 ## Eureka客户端
 
 ### 客户端常用配置
@@ -34,7 +38,7 @@
 	eureka.instance.lease-expiration-duration-in-seconds=10
 	# 开启健康检查（依赖spring-boot-starter-actuator）
 	eureka.client.healthcheck.enabled=true
-
+[更多配置](https://blog.csdn.net/asdfsadfasdfsa/article/details/79282036)
 
 # # eureka分区的深入讲解
 
