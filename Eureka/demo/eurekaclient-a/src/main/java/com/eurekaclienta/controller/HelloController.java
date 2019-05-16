@@ -10,9 +10,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * Created by shanyao on 2019/5/16
  */
 public class HelloController {
+
     private final Logger logger = LoggerFactory.getLogger(HelloController.class);
-
-
 
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
     public String hello() {
