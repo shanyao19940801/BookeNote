@@ -25,3 +25,14 @@ SringInAction/springinaction/chaptor07/mvnw
 Hystrix/demo/mvnw.cmd
 Hystrix/demo/mvnw
 Hystrix/demo/.mvn/
+Eureka/demo/eureka-server-c/.mvn/
+Eureka/demo/eureka-server/.mvn/
+Eureka/demo/eureka-server-b/.mvn/
+Eureka/demo/eureka-server-c/mvnw
+*.cmd
+Eureka/demo/eurekaclient-a/.mvn/
+Eureka/demo/eureka-server-a/.mvn/
+Eureka/demo/eureka-server-b/mvnw
+Eureka/demo/eureka-server-a/mvnw
+Eureka/demo/eureka-server/mvnw
+Eureka/demo/eurekaclient-a/mvnw
