@@ -50,7 +50,8 @@
 ![chai](https://github.com/shanyao19940801/BookeNote/blob/master/ServiceMesh/file/microservice-6.png)
 
 <br>
-> * 一个进程实现业务逻辑，即上面的白色方块
+> 
+* 一个进程实现业务逻辑，即上面的白色方块
 * 一个进程实现底层技术体系，上面的蓝色方块
 
 这样就实现了<font color=red >**业务归业务，技术归技术** </font>，如果所有的服务都实现解耦，最终整个架构就会变成：
