@@ -58,8 +58,7 @@
 这种模式也被形象的成为SideCar模式：
 
 <figure class="half">
-    <img src="https://github.com/shanyao19940801/BookeNote/blob/master/ServiceMesh/file/microservice-9.png">
-    <img src="https://github.com/shanyao19940801/BookeNote/blob/master/ServiceMesh/file/microservice-8.png">
+    <img src="https://github.com/shanyao19940801/BookeNote/blob/master/ServiceMesh/file/microservice-9.png"><img src="https://github.com/shanyao19940801/BookeNote/blob/master/ServiceMesh/file/microservice-8.png">
 </figure>
 
 
