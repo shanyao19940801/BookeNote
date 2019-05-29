@@ -20,17 +20,27 @@
 
 	关键点：复杂度可控，独立按需扩展，技术选型灵活，容错，可用性高
 
-### 微服务带来的问题
+### 微服务组件使用
 
 ![图2](https://github.com/shanyao19940801/BookeNote/blob/master/ServiceMesh/file/microservice-2.png)
 
 上面的图中可以得到一个结论：在微服务架构下，核心都在网关服务、支撑服务两个层面。
 
-当然目前的Spring Cloud以及Dubbo都有完成套件来实现，如果需要直接拿来用就可以了，很爽也很方便，使用方式就是在每一个服务器加上相应的组件就ok了
+目前的Spring Cloud以及Dubbo都有完整套件来实现，如果需要直接拿来用就可以了，很爽也很方便，使用方式就是在每一个服务器加上相应的组件就ok了
 
 ![数据收集](https://github.com/shanyao19940801/BookeNote/blob/master/ServiceMesh/file/microservice-3.png)
 
 ![服务注册与发现](https://github.com/shanyao19940801/BookeNote/blob/master/ServiceMesh/file/microservice-4.png)
 
 
-## 解决方式
+#####这样就会带来几个问题：
+1. 业务技术团队需要花时间精力去学习这些组件，
+2. 只要增加一个服务就必须要引入所有的组件
+3. 组件升级周期长
+4. 多版本语言需要开发多个版本的Client
+
+### 如何解决？
+
+问题是有了，下面就要想办法解决问题了
+
+
