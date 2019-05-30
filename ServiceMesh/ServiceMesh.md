@@ -33,7 +33,7 @@
 ![服务注册与发现](https://github.com/shanyao19940801/BookeNote/blob/master/ServiceMesh/file/microservice-4.png)
 
 
-#####这样就会带来几个问题：
+##### 微服务的痛点：
 1. 业务技术团队需要花时间精力去学习这些组件，
 2. 只要增加一个服务就必须要引入所有的组件
 3. 组件升级周期长
@@ -64,3 +64,5 @@
 [企业应用架构演化探讨：从微服务到Service Mesh](https://www.kubernetes.org.cn/5349.html)
 
 [ServiceMesh究竟解决什么问题？](https://mp.weixin.qq.com/s?__biz=MjM5ODYxMDA5OQ==&mid=2651962194&idx=2&sn=7a2d8305181a394e1d01e885286a7dde&chksm=bd2d0e8e8a5a8798c17b6dcbbd0fb87ed519b685856bc480437b9ca03a665e5536d03264d91b&scene=21#wechat_redirect)
+
+[使用 Istio治理微服务入门](https://mp.weixin.qq.com/s?__biz=MzU0MTMyMDg1NQ==&mid=2247483756&idx=1&sn=ee475f20b9900aec7e56ae03313bf149&chksm=fb2af294cc5d7b82509ef23d7268370588b997d1b169970bbbce08810488f098024a5a84cb78&scene=21#wechat_redirect)
