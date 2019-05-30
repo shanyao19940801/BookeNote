@@ -68,7 +68,7 @@ ServiceMesh本质上只是一概念，目前页已经有开源框架真正做到
 ### Istio是什么？
 Istio是谷歌、IBM、Lyft等公司贡献的开源Service Mesh组件。它实现的目标就是让业务开发不再关注微服务之间如何调用、管理、监控等非功能性需求，而是让Istio来处理这些问题。Istio和Kubernetes有天然的支持。
 ### Istio做了什么？
-
+先来看一下一个常规的微服务需要用到的组件
 ![tu11](https://github.com/shanyao19940801/BookeNote/blob/master/ServiceMesh/file/microservice-12.png)
 ### 怎么做的？
 
