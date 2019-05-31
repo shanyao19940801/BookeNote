@@ -75,6 +75,9 @@ Istio是谷歌、IBM、Lyft等公司贡献的开源Service Mesh组件。它实�
 ![tu12](https://github.com/shanyao19940801/BookeNote/blob/master/ServiceMesh/file/microservice-13.png)
 使用Istio之后，再来看我们的微服务组件架构图，你会发现，之前的API网关、服务注册中心、负载均衡、熔断等组件都不需要了，这些都由Istio来处理。
 
+最后，微服务会只剩下服务本身和一个代理（SideCar）。Istio使用Envoy作为代理实现服务的动态发现、负载均衡、熔断等等。Envoy是基于C++开发的4/7层代理。
+
+![tu14](https://github.com/shanyao19940801/BookeNote/blob/master/ServiceMesh/file/microservice-14.png)
 ### 怎么做的？
 
 # 参考
