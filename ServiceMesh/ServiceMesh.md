@@ -76,9 +76,27 @@ Istio是谷歌、IBM、Lyft等公司贡献的开源Service Mesh组件。它实�
 
 使用Istio之后，再来看我们的微服务组件架构图，你会发现，之前的API网关、服务注册中心、负载均衡、熔断等组件都不需要了，这些都由Istio来处理。
 
-最后，微服务会只剩下服务本身和一个代理（SideCar）。Istio使用Envoy作为代理实现服务的动态发现、负载均衡、熔断等等。Envoy是基于C++开发的代理。
+最后微服务会只剩下服务本身和一个代理（SideCar）。Istio使用Envoy作为代理实现服务的动态发现、负载均衡、熔断等等。Envoy是基于C++开发的代理。
 
 ![tu14](https://github.com/shanyao19940801/BookeNote/blob/master/ServiceMesh/file/microservice-14.png)
+
+在Kubernetes集群里，你可以为每个微服务通过一个Policy文件描述代理服务，Istio Pilot会统一收集所有的代理注册信息，用来进行服务之间的请求调度。Istio的调度机制如下：
+
+ 
+
+
+
+- Service Mesh解析所有的请求，并把这些请求发送到本地的代理；
+
+- 负载均衡会将请求分发到某个代理实例；
+
+- 代理实例会进行检查，例如ACL、Quota等等；
+
+- 如果成功，目标服务返回结果给请求调用者。
+
+![tu14](https://github.com/shanyao19940801/BookeNote/blob/master/ServiceMesh/file/microservice-15.png)
+
+所有的服务追踪信息可以统一通过Istio Mixer进行收集，并发送到Prometheus，用Grafana进行数据可视化展示。
 
 
 ### 怎么做的？
