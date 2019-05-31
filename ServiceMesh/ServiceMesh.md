@@ -72,7 +72,8 @@ Istio是谷歌、IBM、Lyft等公司贡献的开源Service Mesh组件。它实�
 ![tu11](https://github.com/shanyao19940801/BookeNote/blob/master/ServiceMesh/file/microservice-12.png)
 
 前面也说到过，ServiceMesh的理念就是把技术层与业务分开，让业务技术人员专注于业务开发，Istio就要替代一些组件。如下：
-
+![tu12](https://github.com/shanyao19940801/BookeNote/blob/master/ServiceMesh/file/microservice-13.png)
+使用Istio之后，再来看我们的微服务组件架构图，你会发现，之前的API网关、服务注册中心、负载均衡、熔断等组件都不需要了，这些都由Istio来处理。
 
 ### 怎么做的？
 
