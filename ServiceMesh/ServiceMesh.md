@@ -70,7 +70,9 @@ Istio是谷歌、IBM、Lyft等公司贡献的开源Service Mesh组件。它实�
 ### Istio做了什么？
 先来看一下一个常规的微服务需要用到的组件
 ![tu11](https://github.com/shanyao19940801/BookeNote/blob/master/ServiceMesh/file/microservice-12.png)
-这样带来的
+
+前面也说到过，ServiceMesh的理念就是把技术层与业务分开，让业务技术人员专注于业务开发，Istio就要替代一些组件。如下：
+
 
 ### 怎么做的？
 
