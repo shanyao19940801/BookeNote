@@ -116,3 +116,5 @@ Istio是谷歌、IBM、Lyft等公司贡献的开源Service Mesh组件。它实�
 [四层代理和七层代理](http://www.voidcn.com/article/p-oifzqzvk-bnz.html)
 
 [服务器发布几种方式](https://www.cnblogs.com/apanly/p/8784096.html)
+
+[十分钟带你理解Kubernetes核心概念](http://www.dockone.io/article/932)
