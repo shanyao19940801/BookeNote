@@ -1,0 +1,16 @@
+1.切换到root  
+   sudo -i
+2.然后编辑ssh配置文件
+   vi /etc/ssh/sshd_config
+
+3.找到下面的内容，并修改
+ PermitRootLogin yes
+PasswordAuthentication yes
+(no改为yes，如果前面有#注释的去掉#)
+
+4. 最后，重启ssh
+service sshd restart
+
+5.修改root密码
+
+  passwd root

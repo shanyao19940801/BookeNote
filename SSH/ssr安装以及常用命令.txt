@@ -1,0 +1,21 @@
+1.下载一键搭建ssr脚本（只需要执行一次，卸载ssr后也不需要重新执行）
+   git clone -b master https://github.com/flyzy2005/ss-fly，此步骤与一键搭建ss一致，就是clone一键脚本代码。
+
+2.运行搭建ssr脚本代码
+   ss-fly/ss-fly.sh -ssr
+
+3.输入对应的参数
+   执行完上述的脚本代码后，会进入到输入参数的界面，包括服务器端口，密码，加密方式，协议，混淆。可以直接输入回车选择默认值，也可以输入相应的值选择对应的选项：
+
+4.相关操作ssr命令.
+启动：/etc/init.d/shadowsocks start
+停止：/etc/init.d/shadowsocks stop
+重启：/etc/init.d/shadowsocks restart
+状态：/etc/init.d/shadowsocks status
+ 
+配置文件路径：/etc/shadowsocks.json
+日志文件路径：/var/log/shadowsocks.log
+代码安装目录：/usr/local/shadowsocks
+
+5.卸载ssr服务
+./shadowsocksR.sh uninstall
