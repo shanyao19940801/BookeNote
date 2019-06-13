@@ -174,6 +174,7 @@ Galley 将担任 Istio 的配置验证，获取配置，处理和分配组件的
 > 
 1. 控制面板采用的是集中式管理，统一负责请求的合法性校验、流控、遥测数据的收集与统计，而这要求Sidecar每转发一个请求，都需要与控制面板通讯，例如对应到Istio的架构中，这部分工作是由Mixer组件负责，那么可想而知这里必然会成为性能瓶颈之一，针对这个问题Istio官方给出了解决方案，即将Mixer的大部分工作下放到Sidecar中，对应到Envoy中就是新增一个MixerFilter来承担请求校验、流控、数据收集与统计工作，MixerFilter需要定时与Istio通讯以批量上报数据与拉取最新配置数据。这种方式在Istio之前微博的Motan、华为Mesher、唯品会的OSP中已经这么做了。
 
+
 # 参考
 
 [企业应用架构演化探讨：从微服务到Service Mesh](https://www.kubernetes.org.cn/5349.html)
@@ -191,3 +192,5 @@ Galley 将担任 Istio 的配置验证，获取配置，处理和分配组件的
 [服务器发布几种方式](https://www.cnblogs.com/apanly/p/8784096.html)
 
 [十分钟带你理解Kubernetes核心概念](http://www.dockone.io/article/932)
+
+[浅谈Service Mesh体系中的Envoy](https://yq.aliyun.com/articles/606655)
