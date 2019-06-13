@@ -109,7 +109,11 @@ Istio 提供一种简单的方式来为已部署的服务建立网络，该网�
 
 所有的服务追踪信息可以统一通过Istio Mixer进行收集，并发送到Prometheus，用Grafana进行数据可视化展示。
 
-### Istio组成模块
+### Istio架构
+
+Istio基本架构图如下图所示，网格东西向及南北向的流量控制，核心思路是由Pilot维护管理策略，并通过标准接口下发到Envoy Proxy中，由Envoy最终实现流量的转发。
+
+![架构图](https://github.com/shanyao19940801/BookeNote/blob/master/ServiceMesh/file/istio-1.png)
 
 Istio 服务网格逻辑上分为数据平面和控制平面。
 
@@ -117,9 +121,8 @@ Istio 服务网格逻辑上分为数据平面和控制平面。
 
 > 控制平面负责管理和配置代理来路由流量。此外控制平面配置 Mixer 以实施策略和收集遥测数据。
 
-下图显示了构成每个面板的不同组件：
 
-![架构图](https://github.com/shanyao19940801/BookeNote/blob/master/ServiceMesh/file/istio-1.png)
+
 
 ### Envoy
 
