@@ -111,7 +111,15 @@ Istio 提供一种简单的方式来为已部署的服务建立网络，该网�
 
 ### Istio组成模块
 
+Istio 服务网格逻辑上分为数据平面和控制平面。
 
+> 数据平面由一组以 sidecar 方式部署的智能代理（Envoy）组成。这些代理可以调节和控制微服务及 Mixer 之间所有的网络通信。
+
+> 控制平面负责管理和配置代理来路由流量。此外控制平面配置 Mixer 以实施策略和收集遥测数据。
+
+下图显示了构成每个面板的不同组件：
+
+![架构图](https://github.com/shanyao19940801/BookeNote/blob/master/ServiceMesh/file/istio-1.png)
 
 ### 怎么做的？
 
