@@ -183,8 +183,24 @@ Sidecar 代理模型还可以将 Istio 的功能添加到现有部署中，而�
 
 ### 控制面Pilot
 
+Pilot是Istio中的一个核心组件，它管理和配置部署在特定 Istio 服务网格中的所有 Envoy 代理实例。
+
 ![pilot1](https://github.com/shanyao19940801/BookeNote/blob/master/ServiceMesh/file/pilot-1.jpg)
 
+上面图片就是pilot的架构，
+
+* 数据面API
+
+	最下面一层是envoy的API，就是提供Discovery Service的API，这个API的规则由envoy定，但是不是Pilot调用Envoy，而是Envoy去主动调用Pilot的这个API。
+ 
+
+Pilot最上面一层称为Platform Adapter，这一层是干什么的呢？这一层不是Kubernetes, Mesos调用Pilot，而是Pilot通过调用Kubernetes来发现服务之间的关系。
+
+
+这是理解Istio比较绕的一个点。也即pilot使用Kubernetes的Service，仅仅使用它的服务发现功能，而不使用它的转发功能，pilot通过在kubernetes里面注册一个controller来监听事件，从而获取Service和Kubernetes的Endpoint以及Pod的关系，但是在转发层面，就不会再使用kube-proxy根据service下发的iptables规则进行转发了，而是将这些映射关系转换成为pilot自己的转发模型，下发到envoy进行转发，envoy不会使用kube-proxy的那些iptables规则。这样就把控制面和数据面彻底分离开来，服务之间的相互关系是管理面的事情，不要和真正的转发绑定在一起，而是绕到pilot后方。
+
+* 所谓的pilot包含两个组件：pilot-agent和pilot-discovery
+[参考](https://www.kubernetes.org.cn/4308.html) 
 
 ### Mixer
 
@@ -220,6 +236,8 @@ Galley 将担任 Istio 的配置验证，获取配置，处理和分配组件的
 1. 控制面板采用的是集中式管理，统一负责请求的合法性校验、流控、遥测数据的收集与统计，而这要求Sidecar每转发一个请求，都需要与控制面板通讯，例如对应到Istio的架构中，这部分工作是由Mixer组件负责，那么可想而知这里必然会成为性能瓶颈之一，针对这个问题Istio官方给出了解决方案，即将Mixer的大部分工作下放到Sidecar中，对应到Envoy中就是新增一个MixerFilter来承担请求校验、流控、数据收集与统计工作，MixerFilter需要定时与Istio通讯以批量上报数据与拉取最新配置数据。这种方式在Istio之前微博的Motan、华为Mesher、唯品会的OSP中已经这么做了。
 
 
+
+
 # 参考
 
 [企业应用架构演化探讨：从微服务到Service Mesh](https://www.kubernetes.org.cn/5349.html)
@@ -241,3 +259,7 @@ Galley 将担任 Istio 的配置验证，获取配置，处理和分配组件的
 [浅谈Service Mesh体系中的Envoy](https://yq.aliyun.com/articles/606655)
 
 [iptables详解:图文并茂理解iptables](http://www.zsythink.net/archives/1199/)
+
+# 号外
+
+[为什么 kubernetes 天然适合微服务](https://www.cnblogs.com/163yun/p/8855360.html)
