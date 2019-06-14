@@ -131,6 +131,23 @@ Istio 使用 Envoy 代理的扩展版本，Envoy 是以 C++ 开发的高性能�
 <br>
 Envoy规则配置主要下面四个东西。
 
+![架构图](https://github.com/shanyao19940801/BookeNote/blob/master/ServiceMesh/file/envoy_1.png)
+
+* listener
+
+	  envoy既然是proxy，专门做转发，那肯定就得监听一个端口，接入请求，然后才能够根据策略转发，这个监听的端口称为listener
+
+* endpoint
+
+	这个是目标的ip地址和端口，这个是proxy最终将请求转发到的地方。
+
+* cluster
+
+	当我们集群部署时，会有多个相同的服务，这样就会有三个Ip和端口，他们三个组在一起就是cluster，从这里就可推测出来，Envoy肯定是可以支持负载均衡
+
+* route
+
+	这个大家应该明白什么作用了，其实就是和RabbitMQ的routing功能类似，有时候多个cluster具有类似的功能，但是是不同的版本号，可以通过route规则，选择将请求路由到某一个版本号，也即某一个cluster。
 
 
 
