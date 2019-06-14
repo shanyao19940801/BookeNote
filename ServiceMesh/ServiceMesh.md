@@ -183,6 +183,8 @@ Sidecar 代理模型还可以将 Istio 的功能添加到现有部署中，而�
 
 ### 控制面Pilot
 
+![pilot1](https://github.com/shanyao19940801/BookeNote/blob/master/ServiceMesh/file/pilot-1.jpg)
+
 
 ### Mixer
 
