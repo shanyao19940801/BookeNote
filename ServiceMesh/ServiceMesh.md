@@ -150,7 +150,14 @@ Envoy规则配置主要下面四个东西。
 	这个大家应该明白什么作用了，其实就是和RabbitMQ的routing功能类似，有时候多个cluster具有类似的功能，但是是不同的版本号，可以通过route规则，选择将请求路由到某一个版本号，也即某一个cluster。
 
 
+下面是一个配置的简单例子
 
+
+![架构图](https://github.com/shanyao19940801/BookeNote/blob/master/ServiceMesh/file/envoy-2.jpg)
+
+> 如图所示，LISTENER被配置为监听本地127.0.0.1的10000接口，ROUTE配置为某个URL的前缀转发到哪个CLUSTER，CLUSTER里面配置负载均衡策略，HOSTS里面是所有的ENDPOINT。
+
+当然这些配置也可以是动态的，把所有配置放在统一的地方维护，也就是放在Discovery Service中，过一段时间去这里拿一下配置，就修改了转发策略。对应控制面的Envoy API。
 
 Envoy 的许多内置功能被 Istio 发扬光大，例如：
 
