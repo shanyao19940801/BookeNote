@@ -69,7 +69,7 @@
 ## 落地
 
 ServiceMesh本质上只是一概念，目前页已经有开源框架真正做到了落地，如Linkerd和Istio。
-下面主要说一说Istio，它是由Google和IBM合作开发
+下面主要说一说Istio,，它是由Google和IBM合作开发,算是目前把ServiceMesh这个概念落实的最好的一个开源框架了
 
 ## Istio
 
