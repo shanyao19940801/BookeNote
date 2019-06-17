@@ -191,6 +191,14 @@ Sidecar 代理模型还可以将 Istio 的功能添加到现有部署中，而�
 
 ### 控制面Pilot
 
+* Pilot的主要功能
+	- 请求路由
+	- 服务发现和负载均衡
+	- 故障处理
+	- 故障注入
+	- 规则配置 
+
+
 Pilot是Istio中的一个核心组件，它管理和配置部署在特定 Istio 服务网格中的所有 Envoy 代理实例。
 
 ![pilot1](https://github.com/shanyao19940801/BookeNote/blob/master/ServiceMesh/file/pilot-1.jpg)
@@ -203,6 +211,7 @@ Pilot是Istio中的一个核心组件，它管理和配置部署在特定 Istio 
  
 
 Pilot最上面一层称为Platform Adapter，这一层是干什么的呢？这一层不是Kubernetes, Mesos调用Pilot，而是Pilot通过调用Kubernetes来发现服务之间的关系。
+
 
 [参考](https://www.cnblogs.com/163yun/p/8962278.html)
 
@@ -217,7 +226,7 @@ Mixer 是一个独立于平台的组件，负责在服务网格上执行访问�
 
 Mixer 中包括一个灵活的插件模型，使其能够接入到各种主机环境和基础设施后端，从这些细节中抽象出 Envoy 代理和 Istio 管理的服务。
 [参考](https://www.yunforum.net/group-topic-id-1893.html)
-
+    
 ### Pilot
 
 Pilot 为 Envoy sidecar 提供服务发现功能，为智能路由（例如 A/B 测试、金丝雀部署等）和弹性（超时、重试、熔断器等）提供流量管理功能。它将控制流量行为的高级路由规则转换为特定于 Envoy 的配置，并在运行时将它们传播到 sidecar。
