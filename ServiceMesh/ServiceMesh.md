@@ -204,6 +204,7 @@ Pilot是Istio中的一个核心组件，它管理和配置部署在特定 Istio 
 
 Pilot最上面一层称为Platform Adapter，这一层是干什么的呢？这一层不是Kubernetes, Mesos调用Pilot，而是Pilot通过调用Kubernetes来发现服务之间的关系。
 
+[参考](https://www.cnblogs.com/163yun/p/8962278.html)
 
 这是理解Istio比较绕的一个点。也即pilot使用Kubernetes的Service，仅仅使用它的服务发现功能，而不使用它的转发功能，pilot通过在kubernetes里面注册一个controller来监听事件，从而获取Service和Kubernetes的Endpoint以及Pod的关系，但是在转发层面，就不会再使用kube-proxy根据service下发的iptables规则进行转发了，而是将这些映射关系转换成为pilot自己的转发模型，下发到envoy进行转发，envoy不会使用kube-proxy的那些iptables规则。这样就把控制面和数据面彻底分离开来，服务之间的相互关系是管理面的事情，不要和真正的转发绑定在一起，而是绕到pilot后方。
 
