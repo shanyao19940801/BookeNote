@@ -6,6 +6,7 @@
 * 用一张经典的图来看一下微服务和传统的单体架构区别
 <br>
 图中左边是单体架构的集群，右边是微服务集群。
+
 ![微服务](https://github.com/shanyao19940801/BookeNote/blob/master/ServiceMesh/file/microservice.jpg)
 
 #### 微服务有点
