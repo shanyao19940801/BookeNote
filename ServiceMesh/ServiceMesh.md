@@ -216,6 +216,7 @@ Pilot最上面一层称为Platform Adapter，这一层是干什么的呢？这�
 Mixer 是一个独立于平台的组件，负责在服务网格上执行访问控制和使用策略，并从 Envoy 代理和其他服务收集遥测数据。代理提取请求级属性，发送到 Mixer 进行评估。有关属性提取和策略评估的更多信息，请参见 Mixer 配置。
 
 Mixer 中包括一个灵活的插件模型，使其能够接入到各种主机环境和基础设施后端，从这些细节中抽象出 Envoy 代理和 Istio 管理的服务。
+[参考](https://www.yunforum.net/group-topic-id-1893.html)
 
 ### Pilot
 
