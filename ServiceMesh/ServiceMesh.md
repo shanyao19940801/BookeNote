@@ -132,7 +132,7 @@ Istio 服务网格逻辑上分为数据平面和控制平面。
 
 
 
-### 数据面Envoy
+### 数据面
 
 Istio 使用 Envoy 代理的扩展版本，Envoy 是以 C++ 开发的高性能代理，其实就是一个proxy转发器，用于调解服务网格中所有服务的所有入站和出站流量。
 服务间的所有请求都会经过Envoy然后由Envoy转发，那Envoy如何转发请求呢？当然是需要一些规则的，然后按照这些规则转发。
@@ -191,34 +191,35 @@ Sidecar 代理模型还可以将 Istio 的功能添加到现有部署中，而�
 
 ### 控制面Pilot
 
-* Pilot的主要功能
-	- 请求路由
-	- 服务发现和负载均衡
-	- 故障处理
-	- 故障注入
-	- 规则配置 
 
-
-Pilot是Istio中的一个核心组件，它管理和配置部署在特定 Istio 服务网格中的所有 Envoy 代理实例。
+Pilot是Istio中的一个核心组件，它为整个mesh提供了标准的服务模型, 该标准服务模型独立于各种底层平台, Pilot以插件方式对接不同的服务发现平台, 解析用户输入的流控配置, 转换为统一的服务发现和流量控制模型, 并以xDS方式下发到数据面。
 
 ![pilot1](https://github.com/shanyao19940801/BookeNote/blob/master/ServiceMesh/file/pilot-1.jpg)
 
 上面图片就是pilot的架构，
 
-* 数据面API
+* Platform Adapter
 
-	最下面一层是envoy的API，就是提供Discovery Service的API，这个API的规则由envoy定，但是不是Pilot调用Envoy，而是Envoy去主动调用Pilot的这个API。
- 
+   这个可以理解为适配器，可以对接多种不同的平台获取服务注册信息，并转换成Istio通用的抽象模型。
 
-Pilot最上面一层称为Platform Adapter，这一层是干什么的呢？这一层不是Kubernetes, Mesos调用Pilot，而是Pilot通过调用Kubernetes来发现服务之间的关系。
+* Abstract Model(统一的服务模型)
+
+   Pilot 定义了网格中服务的标准模型，这个标准模型独立于各种底层平台。由于有了该标准模型，各个不同的平台可以通过适配器和 Pilot 对接，将自己特有的服务数据格式转换为标准格式，填充到 Pilot 的标准模型中。例如：可以通过Kubernetes API 服务器得到 kubernetes 中 service 和 pod 的相关信息，然后翻译为标准模型提供给 Pilot 使用。当然也可以通过适配器从Mesos, Cloud Foundry, Consul 等平台中获取服务信息。
+
+* 标准的数据面API
+
+	Pilot 使用了一套起源于 Envoy 项目的标准数据平面 API 来将服务信息和流量规则下发到数据平面的 sidecar 中。可以想象，有了这个标准API后，数据平面和控制平面实现解耦。为多种数据平面 sidecar 实现提供了可能性
 
 
 [参考](https://www.cnblogs.com/163yun/p/8962278.html)
 
-这是理解Istio比较绕的一个点。也即pilot使用Kubernetes的Service，仅仅使用它的服务发现功能，而不使用它的转发功能，pilot通过在kubernetes里面注册一个controller来监听事件，从而获取Service和Kubernetes的Endpoint以及Pod的关系，但是在转发层面，就不会再使用kube-proxy根据service下发的iptables规则进行转发了，而是将这些映射关系转换成为pilot自己的转发模型，下发到envoy进行转发，envoy不会使用kube-proxy的那些iptables规则。这样就把控制面和数据面彻底分离开来，服务之间的相互关系是管理面的事情，不要和真正的转发绑定在一起，而是绕到pilot后方。
 
 * 所谓的pilot包含两个组件：pilot-agent和pilot-discovery
 [参考](https://www.kubernetes.org.cn/4308.html) 
+
+# GetWay
+
+[GetWay](https://www.yangcs.net/posts/istio-ingress/)
 
 ### Mixer
 
@@ -227,11 +228,6 @@ Mixer 是一个独立于平台的组件，负责在服务网格上执行访问�
 Mixer 中包括一个灵活的插件模型，使其能够接入到各种主机环境和基础设施后端，从这些细节中抽象出 Envoy 代理和 Istio 管理的服务。
 [参考](https://www.yunforum.net/group-topic-id-1893.html)
     
-### Pilot
-
-Pilot 为 Envoy sidecar 提供服务发现功能，为智能路由（例如 A/B 测试、金丝雀部署等）和弹性（超时、重试、熔断器等）提供流量管理功能。它将控制流量行为的高级路由规则转换为特定于 Envoy 的配置，并在运行时将它们传播到 sidecar。
-
-Pilot 将平台特定的服务发现机制抽象化并将其合成为符合 Envoy 数据平面 API 的任何 sidecar 都可以使用的标准格式。这种松散耦合使得 Istio 能够在多种环境下运行（例如，Kubernetes、Consul、Nomad），同时保持用于流量管理的相同操作界面。
 
 ### Citadel
 
