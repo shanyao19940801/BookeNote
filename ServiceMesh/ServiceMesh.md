@@ -213,7 +213,7 @@ Pilot是Istio中的一个核心组件，它为整个mesh提供了标准的服务
 * 业务 DSL 语言<br>
 	Pilot 还定义了一套 DSL（Domain Specific Language）语言，DSL 语言提供了面向业务的高层抽象，可以被运维人员理解和使用。运维人员使用该 DSL 定义流量规则并下发到 Pilot，这些规则被 Pilot 翻译成数据平面的配置，再通过标准 API 分发到 Envoy 实例，可以在运行期对微服务的流量进行控制和调整。
 
-	Pilot 的规则 DSL 是采用 K8S API Server 中的 Custom Resource (CRD) 实现的，因此和其他资源类型如 Service，Pod 和 Deployment 的创建和使用方法类似，都可以用 Kubectl 进行创建。
+	Pilot 的规则 DSL 是采用 K8S API Server 中的 Custom Resource (CRD) 实现的。
 
 	通过运用不同的流量规则，可以对网格中微服务进行精细化的流量控制，如按版本分流，断路器，故障注入，灰度发布等。
 
@@ -225,11 +225,30 @@ Pilot是Istio中的一个核心组件，它为整个mesh提供了标准的服务
 
 * Discovery Services
 
-> 从 Service provider（如kubernetes或者consul）中获取服务信息<br>
-> 将服务信息和流量规则转化为数据平面可以理解的格式，通过标准的数据平面 API 下发到网格中的各个 sidecar 中
+	 从 Service provider（如kubernetes或者consul）中获取服务信息<br>
+将服务信息和流量规则转化为数据平面可以理解的格式，通过标准的数据平面 API 下发到网格中的各个 sidecar 中
 
-* 所谓的pilot包含两个组件：pilot-agent和pilot-discovery
-[参考](https://www.kubernetes.org.cn/4308.html) 
+* Pilot-agent
+
+	该进程根据 K8S API Server 中的配置信息生成 Envoy 的配置文件，并负责启动 Envoy 进程。不过Envoy 的大部分配置信息都是通过 xDS 接口从 Pilot 中动态获取的，因此 Agent 生成的只是用于初始化 Envoy 的少量静态配置。
+
+	热更新envoy：<br>
+	因为有些静态资源，如果TLS的证书，envoy还不支持动态下发，因而需要重新静态配置，然后pilot-agent负责将envoy进行热重启加载。
+
+从下面的图可以看出所谓热重启的主要步骤
+<br>
+
+> 启动另外一个envoy2进程（Secondary process）
+<br> envoy2通知envoy1（Primary process）关闭其管理的端口，由envoy2接管
+<br> 通过UDS把envoy1可用的listen sockets拿过来
+<br>envoy2初始化成功，通知envoy1在一段时间内（drain-time-s）优雅关闭正在工作的请求
+<br> 到了时间（parent-shutdown-time-s），envoy2通知envoy1自行关闭
+<br> envoy2升级为envoy1
+<br>
+
+![envory4](https://github.com/shanyao19940801/BookeNote/blob/master/ServiceMesh/file/envoy-4.png)
+<br>
+重启的时候，会先启动一个备用进程，将转发的统计数据通过shared memory在两个进程间共享。
 
 # GetWay
 
@@ -287,6 +306,8 @@ Galley 将担任 Istio 的配置验证，获取配置，处理和分配组件的
 [浅谈Service Mesh体系中的Envoy](https://yq.aliyun.com/articles/606655)
 
 [iptables详解:图文并茂理解iptables](http://www.zsythink.net/archives/1199/)
+
+[pilot-agent和pilot-discovery](https://www.kubernetes.org.cn/4308.html) 
 
 # 号外
 
