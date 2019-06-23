@@ -246,7 +246,7 @@ Pilot是Istio中的一个核心组件，它为整个mesh提供了标准的服务
 <br> envoy2升级为envoy1
 <br>
 
-![envory4](https://github.com/shanyao19940801/BookeNote/blob/master/ServiceMesh/file/envoy-4.png)
+![envory4](https://github.com/shanyao19940801/BookeNote/blob/master/ServiceMesh/file/envoy_4.png)
 <br>
 重启的时候，会先启动一个备用进程，将转发的统计数据通过shared memory在两个进程间共享。
 
