@@ -210,9 +210,23 @@ Pilot是Istio中的一个核心组件，它为整个mesh提供了标准的服务
 
 	Pilot 使用了一套起源于 Envoy 项目的标准数据平面 API 来将服务信息和流量规则下发到数据平面的 sidecar 中。可以想象，有了这个标准API后，数据平面和控制平面实现解耦。为多种数据平面 sidecar 实现提供了可能性
 
+* 业务 DSL 语言<br>
+	Pilot 还定义了一套 DSL（Domain Specific Language）语言，DSL 语言提供了面向业务的高层抽象，可以被运维人员理解和使用。运维人员使用该 DSL 定义流量规则并下发到 Pilot，这些规则被 Pilot 翻译成数据平面的配置，再通过标准 API 分发到 Envoy 实例，可以在运行期对微服务的流量进行控制和调整。
 
-[参考](https://www.cnblogs.com/163yun/p/8962278.html)
+	Pilot 的规则 DSL 是采用 K8S API Server 中的 Custom Resource (CRD) 实现的，因此和其他资源类型如 Service，Pod 和 Deployment 的创建和使用方法类似，都可以用 Kubectl 进行创建。
 
+	通过运用不同的流量规则，可以对网格中微服务进行精细化的流量控制，如按版本分流，断路器，故障注入，灰度发布等。
+
+### Isti 的流量管理
+
+我们可以通过下图了解Istio 流量管理的基本流程涉及到的相关组件。图中红色的线表示控制流，黑色的线表示数据流。蓝色部分为相关的组件。
+
+![liuliang](https://github.com/shanyao19940801/BookeNote/blob/master/ServiceMesh/file/pilot-2.jpg)
+
+* Discovery Services
+
+> 从 Service provider（如kubernetes或者consul）中获取服务信息<br>
+> 将服务信息和流量规则转化为数据平面可以理解的格式，通过标准的数据平面 API 下发到网格中的各个 sidecar 中
 
 * 所谓的pilot包含两个组件：pilot-agent和pilot-discovery
 [参考](https://www.kubernetes.org.cn/4308.html) 
