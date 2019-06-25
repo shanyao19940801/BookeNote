@@ -224,6 +224,8 @@ Pilot是Istio中的一个核心组件，它为整个mesh提供了标准的服务
 
 ### Isti 的流量管理
 
+(demo实例演示Istio如何实现控制流量)
+
 我们可以通过下图了解Istio 流量管理的基本流程涉及到的相关组件。图中红色的线表示控制流，黑色的线表示数据流。蓝色部分为相关的组件。
 
 ![liuliang](https://github.com/shanyao19940801/BookeNote/blob/master/ServiceMesh/file/pilot-2.jpg)
