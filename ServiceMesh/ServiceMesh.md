@@ -184,7 +184,7 @@ Envoy 的许多内置功能被 Istio 发扬光大，例如：
 
 前面我们有说过在ServerMesh中非常重要的一点的就是SideCar的不熟模式，在Istio中的SideCar就是基于Envory不熟到整个环境中的，Sidecars负责拦截服务之间的网络通信。
 
-![envoy4](https://github.com/shanyao19940801/BookeNote/blob/master/ServiceMesh/file/envoy-4.jpg)
+![envoy4](https://github.com/shanyao19940801/BookeNote/blob/master/ServiceMesh/file/envory-4.jpg)
 
 从上面图展示了不带sidecar和带了sidecar的区别<br>
 Envoy是以“进程外”的方式部署，这意味着它和服务进程相互独立，由此带来了好处前面也有说过，无代码侵入，可以跨语言跨平台，开发人员可以专注于业务开发
