@@ -250,7 +250,11 @@ Pilot是Istio中的一个核心组件，它为整个mesh提供了标准的服务
 <br>
 重启的时候，会先启动一个备用进程，将转发的统计数据通过shared memory在两个进程间共享。
 
-# GetWay
+# Istio中的网关
+
+在一个典型的网格中，通常有一个或多个用于接受外部请求，将流量引入网格的负载均衡器（我们称之为 gateway）。 然后流量通过边车网关（sidecar gateway）流经内部服务。 应用程序使用外部服务的情况也很常见（例如访问 Google Maps API），一些情况下，这些外部服务可能被直接调用；但在某些部署中，网格中所有访问外部服务的流量可能被要求强制通过专用的出口网关（Egress gateway）。 下图描绘了网关在网格中的使用情况。
+
+![getway-1](https://github.com/shanyao19940801/BookeNote/blob/master/ServiceMesh/file/gateway-1.png)
 
 [GetWay](https://www.yangcs.net/posts/istio-ingress/)
 
