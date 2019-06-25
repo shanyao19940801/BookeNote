@@ -182,6 +182,10 @@ Envoy 的许多内置功能被 Istio 发扬光大，例如：
 
 ![envoy3](https://github.com/shanyao19940801/BookeNote/blob/master/ServiceMesh/file/envoy-3.jpg)
 
+前面我们有说过在ServerMesh中非常重要的一点的就是SideCar的不熟模式，在Istio中的SideCar就是基于Envory不熟到整个环境中的，Sidecars负责拦截服务之间的网络通信。
+
+![envoy3](https://github.com/shanyao19940801/BookeNote/blob/master/ServiceMesh/file/envoy-4.jpg)
+
 Envoy 被部署为 sidecar，和对应服务在同一个 Kubernetes pod 中。这允许 Istio 将大量关于流量行为的信号作为属性提取出来，而这些属性又可以在 Mixer 中用于执行策略决策，并发送给监控系统，以提供整个网格行为的信息。
 
 Sidecar 代理模型还可以将 Istio 的功能添加到现有部署中，而无需重新构建或重写代码。可以阅读更多来了解为什么我们在设计目标中选择这种
@@ -252,11 +256,14 @@ Pilot是Istio中的一个核心组件，它为整个mesh提供了标准的服务
 
 # Istio中的网关
 
-在一个典型的网格中，通常有一个或多个用于接受外部请求，将流量引入网格的负载均衡器（我们称之为 gateway）。 然后流量通过边车网关（sidecar gateway）流经内部服务。 应用程序使用外部服务的情况也很常见（例如访问 Google Maps API），一些情况下，这些外部服务可能被直接调用；但在某些部署中，网格中所有访问外部服务的流量可能被要求强制通过专用的出口网关（Egress gateway）。 下图描绘了网关在网格中的使用情况。
+在一个典型的网格中，通常有一个或多个用于接受外部请求，将流量引入网格的负载均衡器（我们称之为 gateway）。 然后流量通过边车网关（sidecar gateway）流经内部服务。 
+<br>
+下图描绘了网关在网格中的使用情况。
 
-![getway-1](https://github.com/shanyao19940801/BookeNote/blob/master/ServiceMesh/file/gateway-1.png)
 ![getway-1](https://github.com/shanyao19940801/BookeNote/blob/master/ServiceMesh/file/gateway-1.svg)
-[GetWay](https://www.yangcs.net/posts/istio-ingress/)
+
+
+
 
 ### Mixer
 
@@ -312,6 +319,8 @@ Galley 将担任 Istio 的配置验证，获取配置，处理和分配组件的
 [iptables详解:图文并茂理解iptables](http://www.zsythink.net/archives/1199/)
 
 [pilot-agent和pilot-discovery](https://www.kubernetes.org.cn/4308.html) 
+
+[GetWay](https://www.yangcs.net/posts/istio-ingress/)
 
 # 号外
 
