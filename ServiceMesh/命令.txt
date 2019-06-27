@@ -27,3 +27,27 @@ kubectl get pods
 export INGRESS_HOST=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.status.loadBalancer.ingress[0].ip}')
 export INGRESS_PORT=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.ports[?(@.name=="http2")].port}')
 export SECURE_INGRESS_PORT=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.ports[?(@.name=="https")].port}')
+
+金丝雀部署：
+首先将所有微服务的默认路由设置为 v1。
+istioctl create -f samples/bookinfo/networking/virtual-service-all-v1.yaml
+istioctl create -f samples/bookinfo/networking/destination-rule-all.yaml
+
+可以通过下面的命令来显示已创建的路由规则：
+
+istioctl get virtualservices -o yaml
+
+
+
+
+##############删除
+删除路由规则，并终结应用的 Pod
+samples/bookinfo/platform/kube/cleanup.sh
+
+
+
+
+
+istioctl -n istio-system pc listeners istio-ingressgateway-b6db8c46f-qcfks --port 80 -o json
+istioctl -n istio-system pc clusters istio-ingressgateway-b6db8c46f-qcfks --fqdn productpage.default.svc.cluster.local --port 9080 -o json
+
