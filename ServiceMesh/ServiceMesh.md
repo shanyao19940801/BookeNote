@@ -295,6 +295,38 @@ Galley 将担任 Istio 的配置验证，获取配置，处理和分配组件的
 2.控制面板采用的是集中式管理，统一负责请求的合法性校验、流控、遥测数据的收集与统计，而这要求Sidecar每转发一个请求，都需要与控制面板通讯，例如对应到Istio的架构中，这部分工作是由Mixer组件负责，那么可想而知这里必然会成为性能瓶颈之一，针对这个问题Istio官方给出了解决方案，即将Mixer的大部分工作下放到Sidecar中，对应到Envoy中就是新增一个MixerFilter来承担请求校验、流控、数据收集与统计工作，MixerFilter需要定时与Istio通讯以批量上报数据与拉取最新配置数据。
 
 
+# Docker
+
+Docker 是一个开源的应用容器引擎，基于 Go 语言 并遵从Apache2.0协议开源。
+Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。
+容器是完全使用沙箱机制，相互之间不会有任何接口（类似 iPhone 的 app）,更重要的是容器性能开销极低。
+
+# kubernetes
+Kubernetes是一个开源的，用于管理云平台中多个主机上的容器化的应用，Kubernetes的目标是让部署容器化的应用简单并且高效（powerful）,Kubernetes提供了应用部署，规划，更新，维护的一种机制。
+一个K8S系统，通常称为一个K8S集群（Cluster）。
+
+这个集群主要包括两个部分：
+
+一个Master节点（主节点）
+
+一群Node节点（计算节点）
+
+### Master节点
+
+Master节点包括API Server、Scheduler、Controller manager、etcd。<br>
+API Server是整个系统的对外接口，供客户端和其它组件调用，相当于“营业厅”。<br>
+Scheduler负责对集群内部的资源进行调度，相当于“调度室”。<br>
+Controller manager负责管理控制器，相当于“大总管”。
+
+### Node节点
+Node节点包括Docker、kubelet、kube-proxy、Fluentd、kube-dns（可选），还有就是Pod。
+
+Pod是Kubernetes最基本的操作单元。一个Pod代表着集群中运行的一个进程，它内部封装了一个或多个紧密相关的容器。<br>
+Docker.<br>
+Kubelet，主要负责监视指派到它所在Node上的Pod，包括创建、修改、监控、删除等。<br>
+Kube-proxy，主要负责为Pod对象提供代理。<br>
+Fluentd，主要负责日志收集、存储与查询。
+
 
 
 # 参考
@@ -323,6 +355,23 @@ Galley 将担任 Istio 的配置验证，获取配置，处理和分配组件的
 
 [GetWay](https://www.yangcs.net/posts/istio-ingress/)
 
-# 号外
+[docker和k8s](https://www.jianshu.com/p/f1f94c6968f5)
 
 [为什么 kubernetes 天然适合微服务](https://www.cnblogs.com/163yun/p/8855360.html)
+
+# 问题
+如何实现代理和服务通信 
+
+##命令
+export PATH="$PATH:/home/sqshanyao/istio-1.0.0/bin" 
+
+* 查看网关
+
+kubectl get gateway
+
+kubectl exec -it $(kubectl get pod -l app=ratings -o jsonpath='{.items[0].metadata.name}') -c ratings -- curl productpage:9080/productpage | grep -o "<title>.*</title>"
+
+
+export INGRESS_HOST=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.status.loadBalancer.ingress[0].ip}')
+export INGRESS_PORT=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.ports[?(@.name=="http2")].port}')
+export SECURE_INGRESS_PORT=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.ports[?(@.name=="https")].port}')
