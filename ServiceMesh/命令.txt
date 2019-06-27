@@ -1,0 +1,29 @@
+参考地址：https://supereagle.github.io/2018/09/23/istio-on-gke/
+gcloud container clusters get-credentials istio-book-info --zone us-central1-a --project just-hook-242512
+下载 Istio 安装包
+curl -L https://git.io/getLatestIstio | ISTIO_VERSION=1.0.0 sh -
+将 Istio 加入 PATH 环境变量中
+export PATH="$PATH:/home/sqshanyao/istio-1.0.0/bin"
+# 进入 Istio 安装包目录
+ cd istio-1.0.0
+
+ 创建 Istio 自定义的 CRD
+kubectl apply -f install/kubernetes/helm/istio/templates/crds.yaml -n istio-system
+
+安装 Istio
+kubectl apply -f install/kubernetes/istio-demo-auth.yaml
+
+ 检查 Istio 所有组件态是否为 Running 或者 Completed
+kubectl get pods -n istio-system
+手动注入
+ kubectl apply -f <(istioctl kube-inject -f samples/bookinfo/platform/kube/bookinfo.yaml)
+ 安装gateway
+ kubectl apply -f samples/bookinfo/networking/bookinfo-gateway.yaml
+ 认所有的服务和 Pod 都已经正确的定义和启动
+ kubectl get services
+kubectl get pods
+
+使用外部负载均衡器时确定 IP 和端口
+export INGRESS_HOST=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.status.loadBalancer.ingress[0].ip}')
+export INGRESS_PORT=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.ports[?(@.name=="http2")].port}')
+export SECURE_INGRESS_PORT=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.ports[?(@.name=="https")].port}')
