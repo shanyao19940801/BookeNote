@@ -1,27 +1,41 @@
 参考地址：https://supereagle.github.io/2018/09/23/istio-on-gke/
 gcloud container clusters get-credentials istio-book-info --zone us-central1-a --project just-hook-242512
+
 下载 Istio 安装包
 curl -L https://git.io/getLatestIstio | ISTIO_VERSION=1.0.0 sh -
+
 将 Istio 加入 PATH 环境变量中
 export PATH="$PATH:/home/sqshanyao/istio-1.0.0/bin"
-# 进入 Istio 安装包目录
- cd istio-1.0.0
 
- 创建 Istio 自定义的 CRD
+# 进入 Istio 安装包目录
+cd istio-1.1.0
+
+创建 Istio 自定义的 CRD
 kubectl apply -f install/kubernetes/helm/istio/templates/crds.yaml -n istio-system
 
 安装 Istio
 kubectl apply -f install/kubernetes/istio-demo-auth.yaml
 
- 检查 Istio 所有组件态是否为 Running 或者 Completed
+检查 Istio 所有组件态是否为 Running 或者 Completed
 kubectl get pods -n istio-system
+
 手动注入
- kubectl apply -f <(istioctl kube-inject -f samples/bookinfo/platform/kube/bookinfo.yaml)
- 安装gateway
- kubectl apply -f samples/bookinfo/networking/bookinfo-gateway.yaml
- 认所有的服务和 Pod 都已经正确的定义和启动
- kubectl get services
+kubectl apply -f <(istioctl kube-inject -f samples/bookinfo/platform/kube/bookinfo.yaml)
+
+如果集群使用的是自动 Sidecar 注入，为 default 命名空间打上标签 istio-injection=enabled。
+$ kubectl label namespace default istio-injection=enabled
+使用 kubectl 部署简单的服务
+$ kubectl apply -f samples/bookinfo/platform/kube/bookinfo.yaml
+
+
+安装gateway
+kubectl apply -f samples/bookinfo/networking/bookinfo-gateway.yaml
+认所有的服务和 Pod 都已经正确的定义和启动
+kubectl get services
 kubectl get pods
+
+确认istio-ingressgateway是否有对外的IP
+kubectl get  service istio-ingressgateway -n istio-system
 
 使用外部负载均衡器时确定 IP 和端口
 export INGRESS_HOST=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.status.loadBalancer.ingress[0].ip}')
@@ -33,21 +47,83 @@ export SECURE_INGRESS_PORT=$(kubectl -n istio-system get service istio-ingressga
 istioctl create -f samples/bookinfo/networking/virtual-service-all-v1.yaml
 istioctl create -f samples/bookinfo/networking/destination-rule-all.yaml
 
-可以通过下面的命令来显示已创建的路由规则：
+
+获取各种配置命令：
 
 istioctl get virtualservices -o yaml
+istioctl get virtualservice reviews -o yaml
 
+kubectl get destinationrules -o yaml
+
+kubectl get gateways -o yaml
 
 
 
 ##############删除
 删除路由规则，并终结应用的 Pod
 samples/bookinfo/platform/kube/cleanup.sh
+确认删除
+kubectl get virtualservices   
+kubectl get destinationrules  
+kubectl get gateway           
+kubectl get pods              
+
+//重启pod
+
+kubectl get pod istio-ingressgateway-68849bfb97-5hl6j -n istio-system -o yaml | kubectl replace --force -f -
+kubectl get pod istio-ingressgateway-68849bfb97-78ttj -n istio-system -o yaml | kubectl replace --force -f -
+kubectl get pod istio-pilot-649578d5bf-fwp4r -n istio-system -o yaml | kubectl replace --force -f -
+kubectl get pod istio-policy-86c98c555f-mhdrh -n istio-system -o yaml | kubectl replace --force -f -
+
+//---------重启dns
+kubectl get pod kube-dns-autoscaler-76fcd5f658-zq9xm -n kube-system -o yaml | kubectl replace --force -f -
+kubectl get pod kube-dns-b46cc9485-8b8js -n kube-system -o yaml | kubectl replace --force -f -
+kubectl get pod kube-dns-b46cc9485-j47w4 -n kube-system -o yaml | kubectl replace --force -f -
+
+//查看某个namespace下面的所有pod
+kubectl get pod --namespace=istio-system
+kubectl get pod --namespace=kube-system
 
 
+//重启namespace下所有pod
+kubectl get pods -n istio-system |grep Running| awk '{print $1}'|xargs kubectl delete pod  -n istio-system
 
-
-
-istioctl -n istio-system pc listeners istio-ingressgateway-b6db8c46f-qcfks --port 80 -o json
-istioctl -n istio-system pc clusters istio-ingressgateway-b6db8c46f-qcfks --fqdn productpage.default.svc.cluster.local --port 9080 -o json
+kubectl get pods -n istio-system |grep Completed| awk '{print $1}'|xargs kubectl delete pod  -n istio-system
+   
+   
+将 10% 请求发送到 v2 版本而其余 90% 发送到 v1 版本
+cat <<EOF | istioctl replace -f -
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: reviews-v1
+spec:
+  hosts:
+    - reviews
+  http:
+  - route:
+    - destination:
+        host: reviews
+        subset: v1
+      weight: 90
+    - destination:
+        host: reviews
+        subset: v2
+      weight: 10
+EOF
+//所有流量都走v3
+cat <<EOF | istioctl replace -f -
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: reviews
+spec:
+  hosts:
+  - reviews
+  http:
+  - route:
+    - destination:
+        host: reviews
+        subset: v3
+EOF
 
