@@ -81,7 +81,7 @@ ListNode节点数据结构：
 ### 字典(Hash)
 >Redis的Hash，就是在数组+链表的基础上，进行了一些rehash优化等。
 
-
+![01](https://github.com/shanyao19940801/BookeNote/blob/master/Redis/image/02.png)
 
 
 
