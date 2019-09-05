@@ -105,6 +105,8 @@
 [数据库](https://github.com/shanyao19940801/BookeNote/blob/master/%E6%95%B0%E6%8D%AE%E5%BA%93/database.md)
 ----------
 
+## Redis
+[Redis](https://github.com/shanyao19940801/BookeNote/blob/master/Redis/Redis.md)
 
 ## 每天必须有产出，哪怕只是一行代码，半页书
 * 《我曾其次鄙视自己的灵魂》<br>

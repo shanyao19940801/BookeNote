@@ -40,3 +40,53 @@
 
 > Redis的链表在双向链表上扩展了头、尾节点、元素数等属性。
 
+![01](https://github.com/shanyao19940801/BookeNote/blob/master/Redis/image/01.png)
+
+* 源码
+
+ListNode节点数据结构：
+
+	typedef  struct listNode{
+	       //前置节点
+	       struct listNode *prev;
+	       //后置节点
+	       struct listNode *next;
+	       //节点的值
+	       void *value;  
+	}listNode
+	
+链表数据结构：
+	
+	typedef struct list{
+	     //表头节点
+	     listNode *head;
+	     //表尾节点
+	     listNode *tail;
+	     //链表所包含的节点数量
+	     unsigned long len;
+	     //节点值复制函数
+	     void (*free) (void *ptr);
+	     //节点值释放函数
+	     void (*free) (void *ptr);
+	     //节点值对比函数
+	     int (*match) (void *ptr,void *key);
+	}list;
+
+从上面可以看到，Redis的链表有这几个特点：
+
+- 可以直接获得头、尾节点。
+- 常数时间复杂度得到链表长度。
+- 是双向链表。
+
+### 字典(Hash)
+>Redis的Hash，就是在数组+链表的基础上，进行了一些rehash优化等。
+
+
+
+
+
+## 参考
+
+[面试官：你看过Redis数据结构底层实现吗？](https://www.cnblogs.com/javazhiyin/p/11063944.html)
+
+[Redis中的数据结构](https://www.cnblogs.com/neooelric/p/9621736.html)
